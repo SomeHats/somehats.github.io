@@ -5,7 +5,7 @@ set -ux
 current_branch=`git symbolic-ref HEAD`
 current_commit=`git log -1 --oneline`
 
-if [ $current_branch != "refs/heads/src"]; then
+if [ $current_branch != "refs/heads/src" ]; then
   echo "Not on branch 'src', skipping publish step"
   exit
 fi
@@ -19,5 +19,5 @@ git merge src
 rm -rf static build public scripts src *.{html,json,ico,md,lock}
 cp -r $work_dir/* .
 git add -A
-git commit -m "Publish from $current_commit"
+git commit -m "Build from $current_commit"
 git checkout src
