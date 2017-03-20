@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { H1 } from '../lib/styles';
 
 const HomePage = () => (
   <article>
