@@ -85,13 +85,13 @@ const NavDivider = cxsComponent(({ className }) => <span className={className}>â
 const Header = () => (
   <HeaderContainer>
     <HeaderMain>
-      <HeadingLink href="/">Alex Dytrych</HeadingLink>
+      <HeadingLink exact href="/">Alex Dytrych</HeadingLink>
 
       <Nav>
+        {/* <NavDivider />
+        <NavLink href="/projects">Projects</NavLink> */}
         <NavDivider />
-        <NavLink href="/projects">Projects</NavLink>
-        <NavDivider />
-        <NavLink href="/cv">CV</NavLink>
+        <NavLink external href="https://stackoverflow.com/story/alex.dytrych">CV</NavLink>
         <NavDivider />
         <NavLink href="/contact">Contact</NavLink>
       </Nav>

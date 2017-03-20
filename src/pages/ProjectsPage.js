@@ -1,9 +1,11 @@
 import React from 'react';
-import { H1 } from '../lib/styles';
+import Helmet from 'react-helmet';
+import { H3 } from '../lib/styles';
 
 const ProjectsPage = () => (
   <article>
-    <H1>Projects</H1>
+    <Helmet title="Projects | alex.dytry.ch" />
+    <H3>Projects</H3>
   </article>
 );
 

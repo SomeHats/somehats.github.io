@@ -1,10 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { cxsComponent } from '../lib/cxs';
-import { secondary } from '../lib/colors';
+import { NavLink } from 'react-router-dom';
+import cx from 'classnames';
+import cxs from '../lib/cxs';
+import { secondary, textColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
 
-const NavItem = cxsComponent(Link, {
+const activeClass = cxs({
+  span: {
+    color: textColor,
+  },
+  ':hover': {
+    span: {
+      transform: 'translateY(0)',
+    },
+  },
+});
+
+const navLinkClass = cxs({
   composes: headingsFont,
   color: secondary,
   cursor: 'pointer',
@@ -25,16 +37,30 @@ const NavItem = cxsComponent(Link, {
   },
 });
 
-const NavLink = ({ href, children, className }) => (
-  <NavItem className={className} to={href}>
-    <span>{children}</span>
-  </NavItem>
-);
+const NavItem = ({ href, children, className, exact, external }) => {
+  const cName = cx(navLinkClass(), className);
 
-NavLink.propTypes = {
+  if (external) {
+    return (
+      <a className={cName} href={href}>
+        <span>{children}</span>
+      </a>
+    );
+  }
+
+  return (
+    <NavLink className={cName} activeClassName={activeClass()} to={href} exact={exact}>
+      <span>{children}</span>
+    </NavLink>
+  );
+};
+
+NavItem.propTypes = {
   href: React.PropTypes.string.isRequired,
   children: React.PropTypes.node.isRequired,
   className: React.PropTypes.string,
+  exact: React.PropTypes.bool,
+  external: React.PropTypes.bool,
 };
 
-export default NavLink;
+export default NavItem;

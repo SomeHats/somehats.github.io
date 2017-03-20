@@ -14,6 +14,8 @@ const colors = {
   primary,
   secondary,
   primaryLightest: primary.lighten(0.5),
+  primaryDark: textColor.mix(primary, 0.2),
+  primaryDarker: textColor.mix(primary, 0.5),
 };
 
 const colorsSrc = Object

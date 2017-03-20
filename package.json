@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
     "cxs": "^3.0.4",
     "inline-style-prefixer": "^3.0.2",
     "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",
     "react-icons": "^2.2.3",
