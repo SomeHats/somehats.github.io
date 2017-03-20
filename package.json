@@ -23,6 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "colors": "node ./scripts/colors.js",
-    "postcommit": "bash ./scripts/publish.sh"
+    "postcommit": "bash ./scripts/publish.sh",
+    "postpush": "bash ./scripts/push.sh"
   }
 }
