@@ -42,12 +42,12 @@ const HeadingLink = cxsComponent(NavLink, {
   },
 });
 
-const Nav = cxsComponent('nav', {
-  [media.small]: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
-});
+// const Nav = cxsComponent('nav', {
+//   [media.small]: {
+//     display: 'flex',
+//     justifyContent: 'flex-start',
+//   },
+// });
 
 const HeaderSocialIcons = cxsComponent(SocialIcons, {
   position: 'absolute',
@@ -76,10 +76,6 @@ const NavDivider = cxsComponent(({ className }) => <span className={className}>â
       display: 'none',
     },
   },
-
-  [media.small]: {
-    margin: '0 0.3rem',
-  },
 });
 
 const Header = () => (
@@ -87,14 +83,14 @@ const Header = () => (
     <HeaderMain>
       <HeadingLink exact href="/">Alex Dytrych</HeadingLink>
 
-      <Nav>
+      <nav>
         {/* <NavDivider />
         <NavLink href="/projects">Projects</NavLink> */}
         <NavDivider />
         <NavLink external href="https://stackoverflow.com/story/alex.dytrych">CV</NavLink>
         <NavDivider />
         <NavLink href="/contact">Contact</NavLink>
-      </Nav>
+      </nav>
     </HeaderMain>
 
     <HeaderSocialIcons />
