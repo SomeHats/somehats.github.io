@@ -22,7 +22,6 @@
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "colors": "node ./scripts/colors.js",
-    "precommit": "npm run build && rm -rf docs && mv build docs && git add docs"
+    "colors": "node ./scripts/colors.js"
   }
 }
