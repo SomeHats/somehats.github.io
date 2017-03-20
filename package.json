@@ -22,6 +22,7 @@
     "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "colors": "node ./scripts/colors.js"
+    "colors": "node ./scripts/colors.js",
+    "postcommit": "bash ./scripts/publish.sh"
   }
 }

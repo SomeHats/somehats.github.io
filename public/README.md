@@ -1,1 +1,1 @@
-The docs/ folder actually contains the build site rather than any docs. This makes publishing on GH pages easier.
+The master branch is built on every commit to the src branch. Check there for the actual source.
