@@ -24,6 +24,6 @@
     "eject": "react-scripts eject",
     "colors": "node ./scripts/colors.js",
     "postcommit": "bash ./scripts/publish.sh",
-    "postpush": "bash ./scripts/push.sh"
+    "prepush": "bash ./scripts/push.sh"
   }
 }
