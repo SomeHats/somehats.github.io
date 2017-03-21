@@ -4,7 +4,7 @@ import { H3 } from '../lib/styles';
 
 const ProjectsPage = () => (
   <article>
-    <Helmet title="Projects | alex.dytry.ch" />
+    <Helmet title="Projects | Alex Dytrych" />
     <H3>Projects</H3>
   </article>
 );

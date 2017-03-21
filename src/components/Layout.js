@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 
 import { cxsComponent } from '../lib/cxs';
 import { primaryLightest } from '../lib/colors';
+import { media } from '../lib/styles';
 
 import Header from './Header';
 import SocialIcons from './SocialIcons';
@@ -15,11 +16,11 @@ const Main = cxsComponent('main', {
   minHeight: '100%',
   padding: '0 4rem',
 
-  '@media screen and (max-width: 800px)': {
+  [media.medium]: {
     padding: '0 2rem',
   },
 
-  '@media screen and (max-width: 380px)': {
+  [media.small]: {
     padding: '0 1rem',
   },
 });
@@ -35,7 +36,7 @@ const Footer = cxsComponent('footer', {
   paddingTop: '2rem',
 
   '@media screen and (min-height: 800px)': {
-    display: 'none',
+    visibility: 'hidden',
   },
 });
 

@@ -2,15 +2,10 @@ import React from 'react';
 
 import { cxsComponent } from '../lib/cxs';
 import { textColor } from '../lib/colors';
-import { headingsFont } from '../lib/styles';
+import { media, headingsFont } from '../lib/styles';
 
 import NavLink from './NavLink';
 import SocialIcons from './SocialIcons';
-
-const media = {
-  medium: '@media screen and (max-width: 800px)',
-  small: '@media screen and (max-width: 400px)',
-};
 
 const HeaderContainer = cxsComponent('header', {
   paddingBottom: '2rem',

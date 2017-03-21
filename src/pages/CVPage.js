@@ -4,7 +4,7 @@ import { H1 } from '../lib/styles';
 
 const CVPage = () => (
   <article>
-    <Helmet title="CV | alex.dytry.ch" />
+    <Helmet title="CV | Alex Dytrych" />
     <H1>CV</H1>
   </article>
 );

@@ -1,13 +1,13 @@
 import cxs from './lib/cxs';
-import { bodyFont, bgColor, textColor } from './lib/styles';
+import { media, bodyFont, bgColor, textColor } from './lib/styles';
 
 export default () => {
   cxs('html', {
     fontSize: 20,
-    '@media screen and (max-width: 900px)': {
+    [media.medium]: {
       fontSize: 18,
     },
-    '@media screen and (max-width: 600px)': {
+    [media.smallMedium]: {
       fontSize: 16,
     },
   })();
@@ -41,6 +41,7 @@ export default () => {
     opacity: 0,
     width: '100%',
     transform: 'scale(0.9)',
+    transformOrigin: 'center 20vh',
   })();
 
   cxs('.page-enter-active', {
@@ -55,6 +56,7 @@ export default () => {
     transform: 'scale(1)',
     position: 'absolute',
     top: 0,
+    transformOrigin: 'center 20vh',
   })();
 
   cxs('.page-leave-active', {

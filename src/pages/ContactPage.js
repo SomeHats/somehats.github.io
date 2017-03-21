@@ -5,7 +5,7 @@ import NoSSR from '../components/NoSSR';
 
 const ContactPage = () => (
   <article>
-    <Helmet title="Contact | alex.dytry.ch" />
+    <Helmet title="Contact | Alex Dytrych" />
     <H3>Say Hi</H3>
     <ul>
       <NoSSR><li><A href="mailto:alex@dytry.ch">Email - alex@dytry.ch</A></li></NoSSR>
