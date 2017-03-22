@@ -1,6 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import cxs, { cxsComponent } from './cxs';
-import { primary, primaryDark } from './colors';
+import { primary, primaryDark, bgColor } from './colors';
 
 export const media = {
   medium: '@media screen and (max-width: 850px)',
@@ -51,6 +51,7 @@ export const link = cxs({
   textDecoration: 'none',
   display: 'inline-block',
   position: 'relative',
+  textShadow: `0.05em 0.04em 0 ${bgColor}, -0.05em 0.04em 0 ${bgColor}, 0.05em -0.04em 0 ${bgColor}, -0.05em -0.04em 0 ${bgColor}`,
   ':before': {
     content: '""',
     position: 'absolute',
@@ -60,6 +61,7 @@ export const link = cxs({
     left: 0,
     bottom: '0.35em',
     opacity: 0,
+    zIndex: '-1',
     transform: 'scaleX(0.1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-in',
   },
