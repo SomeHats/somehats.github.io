@@ -37,7 +37,7 @@ const CVCoolStuff = () => (
           <A href="https://skillsmatter.com/skillscasts/9582-graphql-growing-pains">
             Watch on Skills Matter
           </A>.
-          A short talk on our use of <Em>GraphQL</Em> at Music Glue. I looked at how we'd made
+          A short talk on our use of <Em>GraphQL</Em> at Music Glue. I looked at how we had made
           error handling an explicit part of our data schema for extra resilience if a back-end
           service went down.
         </p>

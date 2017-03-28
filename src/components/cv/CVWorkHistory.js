@@ -76,7 +76,7 @@ const CVWorkHistory = () => (
         <p>
           As co-founder &amp; CTO, I was responsible for all the technical work on our product Erase
           All Kittens, a web-based game that teaches children how to code. I started the project in
-          my bedroom, and by the time I left we'd introduced hundreds of thousands of children to
+          my bedroom, and by the time I left we had introduced hundreds of thousands of children to
           code.
         </p>
         <p>
@@ -117,7 +117,7 @@ const CVWorkHistory = () => (
           I designed and built a live code editor for Decoded's coding workshops. It was written
           with a real-time framework called <Em>Derby.js</Em>, using <Em>MongoDB</Em>,
           {' '}<Em>Redis</Em>, and <Em>Stylus</Em>. Users could open their project on a phone and
-          watch it live-update via <Em>websockets</Em> with <Em>Socket.io</Em> as they worked.
+          watch it update live via <Em>websockets</Em> with <Em>Socket.io</Em> as they worked.
         </p>
         <p>
           I also worked built internal business-management tools in <Em>Angular.js</Em> and
