@@ -7,7 +7,6 @@ export const CVSection = cxsComponent('section', {
 });
 
 export const CVItem = cxsComponent('article', {
-  textAlign: 'justify',
   paddingBottom: '1rem',
   pageBreakInside: 'avoid',
 });
@@ -24,6 +23,7 @@ export const ItemName = cxsComponent(H5, {
   marginBottom: 0,
   marginRight: '1rem',
   flex: '1 0 auto',
+  maxWidth: '100%',
 });
 
 export const ItemDate = cxsComponent('time', {
@@ -37,6 +37,7 @@ export const ItemDate = cxsComponent('time', {
 export const ItemDesc = cxsComponent('div', {
   clear: 'both',
   marginBottom: '1rem',
+  textAlign: 'justify',
 });
 
 export const TagList = cxsComponent('ul', {
