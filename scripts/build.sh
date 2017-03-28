@@ -16,7 +16,7 @@ yarn run build
 cp -r build/ $work_dir
 git checkout master
 git merge src
-rm -rf static build public scripts src *.{html,json,ico,md,lock}
+rm -rf static build public scripts src assets icons *.{html,json,ico,md,lock,png,xml}
 cp -r $work_dir/* .
 git add -A
 git commit -m "Build from $current_commit"
