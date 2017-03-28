@@ -1,17 +1,19 @@
 import React from 'react';
 import { H3, A, Em } from '../../lib/styles';
-import { CVSection, CVItem, ItemName, ItemDate, ItemDesc, TagList, Tag } from './CVItem';
+import { CVSection, CVItem, ItemHead, ItemName, ItemDate, ItemDesc, TagList, Tag } from './CVItem';
 
 const CVWorkHistory = () => (
   <CVSection>
     <H3>Work History</H3>
 
     <CVItem>
-      <ItemName>
-        Software Engineer • {' '}
-        <A href="https://musicglue.com">Music Glue</A>
-      </ItemName>
-      <ItemDate>March 2016 - March 2017</ItemDate>
+      <ItemHead>
+        <ItemName>
+          Software Engineer • {' '}
+          <A href="https://musicglue.com">Music Glue</A>
+        </ItemName>
+        <ItemDate>March 2016 - March 2017</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <TagList>
           <Tag>JavaScript</Tag>
@@ -54,8 +56,10 @@ const CVWorkHistory = () => (
     </CVItem>
 
     <CVItem>
-      <ItemName>Co-Founder &amp; CTO • <A href="http://drumrollhq.com">Drum Roll HQ</A></ItemName>
-      <ItemDate>September 2013 - February 2016</ItemDate>
+      <ItemHead>
+        <ItemName>Co-Founder &amp; CTO • <A href="http://drumrollhq.com">Drum Roll HQ</A></ItemName>
+        <ItemDate>September 2013 - February 2016</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <TagList>
           <Tag>JavaScript</Tag>
@@ -90,8 +94,10 @@ const CVWorkHistory = () => (
     </CVItem>
 
     <CVItem>
-      <ItemName>Developer • <A href="http://decoded.com">Decoded</A></ItemName>
-      <ItemDate>September 2013 - September 2014</ItemDate>
+      <ItemHead>
+        <ItemName>Developer • <A href="http://decoded.com">Decoded</A></ItemName>
+        <ItemDate>September 2013 - September 2014</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <TagList>
           <Tag>JavaScript</Tag>

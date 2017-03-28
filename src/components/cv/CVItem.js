@@ -12,23 +12,30 @@ export const CVItem = cxsComponent('article', {
   pageBreakInside: 'avoid',
 });
 
+export const ItemHead = cxsComponent('header', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'baseline',
+  flexWrap: 'wrap',
+  paddingBottom: '0.5rem',
+});
+
 export const ItemName = cxsComponent(H5, {
-  float: 'left',
   marginBottom: 0,
+  marginRight: '1rem',
+  flex: '1 0 auto',
 });
 
 export const ItemDate = cxsComponent('time', {
   composes: headingsFont,
-  float: 'right',
   display: 'block',
+  flex: '0 1 auto',
   opacity: 0.5,
   fontStyle: 'italic',
-  paddingTop: '0.2rem',
 });
 
 export const ItemDesc = cxsComponent('div', {
   clear: 'both',
-  marginTop: '-1rem',
   marginBottom: '1rem',
 });
 

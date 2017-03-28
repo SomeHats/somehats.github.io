@@ -5,7 +5,7 @@ import GithubIcon from 'react-icons/lib/io/social-github';
 import TwitterIcon from 'react-icons/lib/io/social-twitter';
 
 import { cxsComponent } from '../../lib/cxs';
-import { A } from '../../lib/styles';
+import { media, A } from '../../lib/styles';
 import { primary } from '../../lib/colors';
 import NoSSR from '../NoSSR';
 
@@ -14,6 +14,10 @@ const List = cxsComponent('ul', {
   padding: 0,
   margin: 0,
   textAlign: 'right',
+
+  [media.smallMedium]: {
+    textAlign: 'left',
+  },
 });
 
 const ListItem = cxsComponent('li', {
@@ -21,7 +25,7 @@ const ListItem = cxsComponent('li', {
   margin: '0.5rem 0',
   a: {
     display: 'inline-block',
-    marginRight: '1rem',
+    margin: '0 1rem',
     ':after': {
       display: 'none',
     },
@@ -30,6 +34,16 @@ const ListItem = cxsComponent('li', {
     marginTop: '-0.2rem',
     width: '1.8rem',
     height: '1.8rem',
+  },
+
+  [media.smallMedium]: {
+    display: 'flex',
+    a: {
+      order: 1,
+    },
+    svg: {
+      order: 0,
+    },
   },
 });
 

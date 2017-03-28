@@ -1,14 +1,16 @@
 import React from 'react';
 import { H3, A, Em } from '../../lib/styles';
-import { CVSection, CVItem, ItemName, ItemDate, ItemDesc, TagList, Tag } from './CVItem';
+import { CVSection, CVItem, ItemHead, ItemName, ItemDate, ItemDesc, TagList, Tag } from './CVItem';
 
 const CVCoolStuff = () => (
   <CVSection>
     <H3>Projects, Prototypes, Talks</H3>
 
     <CVItem>
-      <ItemName>Teaching/Consulting • <A href="http://adacollege.org.uk">ADA College</A></ItemName>
-      <ItemDate>January 2017 - present</ItemDate>
+      <ItemHead>
+        <ItemName>Teaching/Consulting • <A href="http://adacollege.org.uk">ADA College</A></ItemName>
+        <ItemDate>January 2017 - present</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <p>
           Recently, I've been at ADA National College for Digital Skills, designing and delivering
@@ -26,8 +28,10 @@ const CVCoolStuff = () => (
     </CVItem>
 
     <CVItem>
-      <ItemName>Talk • Error Handling in GraphQL</ItemName>
-      <ItemDate>January 2017</ItemDate>
+      <ItemHead>
+        <ItemName>Talk • Error Handling in GraphQL</ItemName>
+        <ItemDate>January 2017</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <p>
           <A href="https://skillsmatter.com/skillscasts/9582-graphql-growing-pains">
@@ -41,8 +45,10 @@ const CVCoolStuff = () => (
     </CVItem>
 
     <CVItem>
-      <ItemName>Prototype • <A href="http://dytry.ch/programarble">Programarble</A></ItemName>
-      <ItemDate>September 2016</ItemDate>
+      <ItemHead>
+        <ItemName>Prototype • <A href="http://dytry.ch/programarble">Programarble</A></ItemName>
+        <ItemDate>September 2016</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <TagList>
           <Tag>JavaScript</Tag>
@@ -76,8 +82,10 @@ const CVCoolStuff = () => (
     </CVItem>
 
     <CVItem>
-      <ItemName>Project • Oulipo</ItemName>
-      <ItemDate>October 2015</ItemDate>
+      <ItemHead>
+        <ItemName>Project • Oulipo</ItemName>
+        <ItemDate>October 2015</ItemDate>
+      </ItemHead>
       <ItemDesc>
         <p>
           Oulipo is a programming language and IDE I hacked together whilst working on my startup,

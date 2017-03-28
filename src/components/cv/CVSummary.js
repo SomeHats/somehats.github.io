@@ -1,10 +1,14 @@
 import React from 'react';
 import { cxsComponent } from '../../lib/cxs';
-import { Em, A } from '../../lib/styles';
+import { media, Em, A } from '../../lib/styles';
 
 const SummarySection = cxsComponent('section', {
   paddingTop: '2rem',
   textAlign: 'justify',
+
+  [media.smallMedium]: {
+    paddingTop: '1rem',
+  },
 });
 
 const CVSummary = () => (

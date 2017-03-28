@@ -1,10 +1,14 @@
 import React from 'react';
-import { headingsFont, H1, Img } from '../../lib/styles';
+import { media, headingsFont, H1, Img } from '../../lib/styles';
 import { cxsComponent } from '../../lib/cxs';
 import CVContact from './CVContact';
 
 const Header = cxsComponent('header', {
   display: 'flex',
+
+  [media.smallMedium]: {
+    display: 'block',
+  },
 });
 
 const NameSection = cxsComponent('section', {
@@ -16,6 +20,10 @@ const ImageSection = cxsComponent('section', {
   order: '0',
   marginRight: '2rem',
   flex: '0 0 10rem',
+
+  '@media screen and (max-width: 950px)': {
+    display: 'none',
+  },
 });
 
 const ContactSection = cxsComponent('section', {
