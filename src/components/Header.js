@@ -19,6 +19,10 @@ const HeaderContainer = cxsComponent('header', {
   [media.small]: {
     paddingTop: '2rem',
   },
+
+  [media.print]: {
+    display: 'none',
+  },
 });
 
 const HeaderMain = cxsComponent('div', {
@@ -55,7 +59,6 @@ const HeaderSocialIcons = cxsComponent(SocialIcons, {
 
   [media.small]: {
     top: '2rem',
-    transform: 'scale(0.8)',
   },
 });
 
@@ -82,7 +85,7 @@ const Header = () => (
         {/* <NavDivider />
         <NavLink href="/projects">Projects</NavLink> */}
         <NavDivider />
-        <NavLink external href="https://stackoverflow.com/story/alex.dytrych">CV</NavLink>
+        <NavLink href="/cv">CV</NavLink>
         <NavDivider />
         <NavLink href="/contact">Contact</NavLink>
       </nav>

@@ -1,5 +1,6 @@
 import React from 'react';
 import cxs from 'cxs/monolithic';
+import merge from 'merge';
 import prefix from 'inline-style-prefixer/static';
 import getDisplayName from './getDisplayName';
 
@@ -62,7 +63,19 @@ const getFn = (selector, styles) => {
   return fn;
 };
 
-export const component = (Component, css) => {
+const getCssObj = (Component, css) => {
+  if (Component.cxsComponent) {
+    return {
+      Component: Component.component,
+      css: merge(true, Component.styles, css),
+    };
+  }
+
+  return { Component, css };
+};
+
+export const component = (RawComponent, cssSpec) => {
+  const { Component, css } = getCssObj(RawComponent, cssSpec);
   const cssFn = getFn(css);
   const wrapped = props =>
     React.createElement(Component, {
@@ -75,6 +88,11 @@ export const component = (Component, css) => {
   };
 
   wrapped.displayName = `cxs(${getDisplayName(Component)})`;
+
+  wrapped.cssFn = cssFn;
+  wrapped.styles = cssFn.styles;
+  wrapped.component = Component;
+  wrapped.cxsComponent = true;
 
   return wrapped;
 };

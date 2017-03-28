@@ -95,6 +95,11 @@ const HomePage = () => (
           introduced 7-year-olds to game design.
         </p>
         <p>
+          Previously, I created <A href="https://eraseallkittens.com">Erase All Kittens</A>, a game
+          that teaches children aged 8+ how to code. You should have a go! Over the last few years,
+          E.A.K. has introduced hundreds of thousands of children to coding.
+        </p>
+        <p>
           I'm currently available for part-time contract work as a full-stack developer. I can also
           offer workshops and training on front-end performance tuning, GraphQL, and React.
         </p>

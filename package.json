@@ -6,11 +6,13 @@
     "classnames": "^2.2.5",
     "cxs": "^3.0.4",
     "inline-style-prefixer": "^3.0.2",
+    "merge": "^1.2.0",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-helmet": "^4.0.0",
     "react-icons": "^2.2.3",
+    "react-overdrive": "^0.0.4",
     "react-router-dom": "^4.0.0"
   },
   "devDependencies": {

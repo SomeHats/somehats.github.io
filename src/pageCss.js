@@ -10,6 +10,9 @@ export default () => {
     [media.smallMedium]: {
       fontSize: 16,
     },
+    [media.print]: {
+      fontSize: 12,
+    },
   })();
 
   cxs('body', {

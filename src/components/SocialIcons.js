@@ -12,11 +12,16 @@ const Nav = cxsComponent('nav', {
   'a:not(:first-child)': {
     marginLeft: '1rem',
   },
+
+  svg: {
+    width: '1.8rem',
+    height: '1.8rem',
+  },
 });
 
 const NavItem = ({ href, icon: Icon }) => (
   <a href={href}>
-    <Icon size={30} color={primary} />
+    <Icon color={primary} />
   </a>
 );
 

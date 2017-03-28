@@ -1,11 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { H1 } from '../lib/styles';
+import {
+  CVCoolStuff,
+  CVHeader,
+  CVSummary,
+  CVWorkHistory,
+} from '../components/cv';
 
 const CVPage = () => (
   <article>
     <Helmet title="CV | Alex Dytrych" />
-    <H1>CV</H1>
+    <CVHeader />
+    <CVSummary />
+    <CVWorkHistory />
+    <CVCoolStuff />
   </article>
 );
 

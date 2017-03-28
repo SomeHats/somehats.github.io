@@ -23,6 +23,12 @@ const Main = cxsComponent('main', {
   [media.small]: {
     padding: '0 1rem',
   },
+
+  [media.print]: {
+    maxWidth: '100%',
+    padding: '0 2rem',
+    paddingTop: '2rem',
+  },
 });
 
 const Content = cxsComponent('div', {
@@ -37,6 +43,10 @@ const Footer = cxsComponent('footer', {
 
   '@media screen and (min-height: 800px)': {
     visibility: 'hidden',
+  },
+
+  [media.print]: {
+    display: 'none',
   },
 });
 

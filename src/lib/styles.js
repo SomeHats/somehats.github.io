@@ -6,6 +6,7 @@ export const media = {
   medium: '@media screen and (max-width: 850px)',
   smallMedium: '@media screen and (max-width: 600px)',
   small: '@media screen and (max-width: 400px)',
+  print: '@media print',
 };
 
 export const headingsFont = cxs({
@@ -46,6 +47,25 @@ export const H4 = cxsComponent('h4', {
   marginBottom: '1rem',
 });
 
+export const H5 = cxsComponent('h5', {
+  composes: headingsFont,
+  fontSize: '1.2rem',
+  marginTop: 0,
+  marginBottom: '1rem',
+});
+
+export const H6 = cxsComponent('h6', {
+  composes: headingsFont,
+  fontSize: '1rem',
+  marginTop: 0,
+  marginBottom: '1rem',
+});
+
+export const Em = cxsComponent('em', {
+  fontStyle: 'normal',
+  fontWeight: '600',
+});
+
 export const link = cxs({
   color: primaryDark,
   textDecoration: 'none',
@@ -69,6 +89,11 @@ export const link = cxs({
     opacity: 1,
     transform: 'scaleX(1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-out',
+  },
+  [media.print]: {
+    ':after': {
+      content: '" (" attr(href) ")"',
+    },
   },
 });
 
