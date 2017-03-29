@@ -4,7 +4,7 @@ set -ux
 
 current_branch=`git symbolic-ref HEAD`
 
-if [ $current_branch != "refs/heads/src"]; then
+if [ $current_branch != "refs/heads/src" ]; then
   echo "Not on branch 'src', skipping push of master"
   exit
 fi
