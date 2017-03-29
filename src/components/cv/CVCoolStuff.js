@@ -90,13 +90,12 @@ const CVCoolStuff = () => (
         <p>
           Oulipo is a programming language and IDE I hacked together whilst working on my startup,
           Drum Roll. The aim was to let my non-technical collaborators write interactive branching
-          dialogue trees for our game without me having to manually translate them into JavaScript,
+          dialogue trees for our game without me having to manually translate them into JavaScript.
         </p>
         <p>
-          I implemented the language from scratch over a few weeks, and I'm pretty pleased with how
-          it turned out. It certainly did the job&mdash;the screenplay-inspired syntax was pretty
-          easy for my collaborators to use. Check out the source code and some examples on
-          {' '}<A href="http://github.com/somehats/oulipo">GitHub</A>.
+          Although it was implemented hastily, Oulipo did its job well. The screenplay-inspired
+          syntax was easy for my collaborators to use, and they wrote some great dialogue. Check out
+          the source code and some examples on <A href="http://github.com/somehats/oulipo">GitHub</A>.
         </p>
       </ItemDesc>
     </CVItem>

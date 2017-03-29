@@ -16,7 +16,6 @@ export const ItemHead = cxsComponent('header', {
   justifyContent: 'space-between',
   alignItems: 'baseline',
   flexWrap: 'wrap',
-  paddingBottom: '0.5rem',
 });
 
 export const ItemName = cxsComponent(H5, {
@@ -44,6 +43,7 @@ export const TagList = cxsComponent('ul', {
   margin: 0,
   padding: 0,
   listStyle: 'none',
+  lineHeight: 1,
 });
 
 export const Tag = cxsComponent('li', {
@@ -52,8 +52,9 @@ export const Tag = cxsComponent('li', {
   background: primary,
   marginRight: '0.5rem',
   marginBottom: '0.5rem',
-  padding: '0 0.5rem',
+  padding: '0.3rem 0.5rem',
   opacity: 0.8,
   fontSize: '0.8rem',
+  verticalAlign: 'top',
 });
 
