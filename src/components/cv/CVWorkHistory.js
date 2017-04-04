@@ -120,7 +120,7 @@ const CVWorkHistory = () => (
           watch it update live via <Em>websockets</Em> with <Em>Socket.io</Em> as they worked.
         </p>
         <p>
-          I also worked built internal business-management tools in <Em>Angular.js</Em> and
+          I also built internal business-management tools in <Em>Angular.js</Em> and
           {' '}<Em>Node.js</Em> using a <Em>BDD</Em> approach. I maintained
           the existing website and course infrastructure (<Em>PHP</Em> and <Em>MySQL</Em>); and
           wrote a tool in <Em>Go</Em> that would automatically synchronise company data between a

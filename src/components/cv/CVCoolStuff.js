@@ -20,7 +20,7 @@ const CVCoolStuff = () => (
           The courses are aimed at 16/17 year old students with little to no coding experience. In
           the web programming course, we've covered the basics of web programming&mdash;
           <Em>HTML</Em>, <Em>CSS</Em>, <Em>responsive design</Em>, <Em>accessibility</Em>, and
-          {' '}<Em>JavaScript</Em>&mdash;as well UX. In the games course, we've looked at
+          {' '}<Em>JavaScript</Em>&mdash;as well as UX. In the games course, we've looked at
           {' '}<Em>user testing</Em>, <Em>rapid iteration</Em>, several aspects of <Em>game
           design</Em>, and building games with <Em>JavaScript</Em> and <Em>Phaser.js</Em>.
         </p>
