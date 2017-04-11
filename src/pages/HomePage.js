@@ -77,7 +77,7 @@ const HomePage = () => (
           <H4>Sometimes, I do both at the same time.</H4>
         </Tagline>
         <ProfilePic>
-          <Img src="/assets/profile-1-300.jpg" srcSet="/assets/profile-1-600.jpg 2x" />
+          <Img src="/assets/profile-2-300.jpg" srcSet="/assets/profile-2-600.jpg 2x" />
           <ProfilePicCaption>
             I hope you appreciate that my hair matches my website colour scheme.
           </ProfilePicCaption>
@@ -100,7 +100,7 @@ const HomePage = () => (
           E.A.K. has introduced hundreds of thousands of children to coding.
         </p>
         <p>
-          I'm currently available for part-time contract work as a full-stack developer. I can also
+          I'm currently available for part-time freelance work as a full-stack developer. I can also
           offer workshops and training on front-end performance tuning, GraphQL, and React.
         </p>
         <p>

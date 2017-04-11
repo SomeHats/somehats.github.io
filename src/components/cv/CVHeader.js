@@ -52,7 +52,7 @@ const CVHeader = () => (
       <Location>London, UK • Remote</Location>
     </NameSection>
     <ImageSection>
-      <Img src="/assets/profile-1-300.jpg" srcSet="/assets/profile-1-600.jpg 2x" />
+      <Img src="/assets/profile-2-300.jpg" srcSet="/assets/profile-2-600.jpg 2x" />
     </ImageSection>
     <ContactSection>
       <CVContact />
