@@ -12,7 +12,7 @@ fi
 
 work_dir=`mktemp -d`
 
-yarn run build
+npm run build
 cp -r build/ $work_dir
 git checkout master
 git merge src
