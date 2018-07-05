@@ -1,17 +1,6 @@
-import React from 'react';
-import { render } from 'react-snapshot';
-import cxs from 'cxs';
-import App from './App';
-import pageCss from './pageCss';
+import preact from 'preact';
+import styles from './index.block.css';
 
-const isServer = !!navigator.userAgent.match(/Node\.js/i);
-pageCss();
+const Home = () => <h1 className={styles}> this is a web page </h1>;
 
-render(<App />, document.getElementById('root'));
-
-if (isServer) {
-  const style = document.createElement('style');
-  style.textContent = cxs.css();
-  document.head.appendChild(style);
-  cxs.reset();
-}
+preact.render(<Home />, document.body);
