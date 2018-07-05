@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import GithubIcon from 'react-icons/lib/io/social-github';
 import TwitterIcon from 'react-icons/lib/io/social-twitter';
 
-import { cxsComponent } from '../lib/cxs';
+import cxsComponent from 'cxs/component';
 import { primary } from '../lib/colors';
 
-const Nav = cxsComponent('nav', {
+const Nav = cxsComponent('nav')({
   display: 'flex',
   flexWrap: 'nowrap',
 
@@ -26,8 +27,8 @@ const NavItem = ({ href, icon: Icon }) => (
 );
 
 NavItem.propTypes = {
-  href: React.PropTypes.string.isRequired,
-  icon: React.PropTypes.func.isRequired,
+  href: PropTypes.string.isRequired,
+  icon: PropTypes.func.isRequired,
 };
 
 const SocialIcons = ({ className }) => (
@@ -38,7 +39,7 @@ const SocialIcons = ({ className }) => (
 );
 
 SocialIcons.propTypes = {
-  className: React.PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default SocialIcons;

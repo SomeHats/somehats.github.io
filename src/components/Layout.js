@@ -1,14 +1,15 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import { cxsComponent } from '../lib/cxs';
+import cxsComponent from 'cxs/component';
 import { primaryLightest } from '../lib/colors';
 import { media } from '../lib/styles';
 
 import Header from './Header';
 import SocialIcons from './SocialIcons';
 
-const Main = cxsComponent('main', {
+const Main = cxsComponent('main')({
   display: 'flex',
   flexDirection: 'column',
   margin: 'auto',
@@ -31,11 +32,11 @@ const Main = cxsComponent('main', {
   },
 });
 
-const Content = cxsComponent('div', {
+const Content = cxsComponent('div')({
   flex: '1',
 });
 
-const Footer = cxsComponent('footer', {
+const Footer = cxsComponent('footer')({
   display: 'flex',
   justifyContent: 'center',
   paddingBottom: '2rem',
@@ -50,19 +51,13 @@ const Footer = cxsComponent('footer', {
   },
 });
 
-const metaTags = [
-  { name: 'theme-color', content: primaryLightest },
-];
+const metaTags = [{ name: 'theme-color', content: primaryLightest }];
 
 const Layout = ({ children }) => (
   <Main>
-    <Helmet
-      meta={metaTags}
-    />
+    <Helmet meta={metaTags} />
     <Header />
-    <Content>
-      {children}
-    </Content>
+    <Content>{children}</Content>
     <Footer>
       <SocialIcons />
     </Footer>
@@ -70,7 +65,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: React.PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

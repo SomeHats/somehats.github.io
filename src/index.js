@@ -1,20 +1,17 @@
 import React from 'react';
 import { render } from 'react-snapshot';
+import cxs from 'cxs';
 import App from './App';
-import { getCss, resetCss } from './lib/cxs';
 import pageCss from './pageCss';
 
 const isServer = !!navigator.userAgent.match(/Node\.js/i);
 pageCss();
 
-render(
-  <App />,
-  document.getElementById('root')
-);
+render(<App />, document.getElementById('root'));
 
 if (isServer) {
   const style = document.createElement('style');
-  style.textContent = getCss();
+  style.textContent = cxs.css();
   document.head.appendChild(style);
-  resetCss();
+  cxs.reset();
 }

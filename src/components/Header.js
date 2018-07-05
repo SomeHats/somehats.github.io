@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { cxsComponent } from '../lib/cxs';
+import cxsComponent from 'cxs/component';
 import { textColor } from '../lib/colors';
 import { media, headingsFont } from '../lib/styles';
 
 import NavLink from './NavLink';
 import SocialIcons from './SocialIcons';
 
-const HeaderContainer = cxsComponent('header', {
+const HeaderContainer = cxsComponent('header')({
   paddingBottom: '2rem',
   paddingTop: '5rem',
   position: 'relative',
@@ -25,7 +25,7 @@ const HeaderContainer = cxsComponent('header', {
   },
 });
 
-const HeaderMain = cxsComponent('div', {
+const HeaderMain = cxsComponent('div')({
   display: 'flex',
 
   [media.medium]: {
@@ -33,7 +33,7 @@ const HeaderMain = cxsComponent('div', {
   },
 });
 
-const HeadingLink = cxsComponent(NavLink, {
+const HeadingLink = cxsComponent(NavLink)({
   [media.medium]: {
     display: 'block',
     fontSize: '1.8rem',
@@ -41,14 +41,14 @@ const HeadingLink = cxsComponent(NavLink, {
   },
 });
 
-// const Nav = cxsComponent('nav', {
+// const Nav = cxsComponent('nav')({
 //   [media.small]: {
 //     display: 'flex',
 //     justifyContent: 'flex-start',
 //   },
 // });
 
-const HeaderSocialIcons = cxsComponent(SocialIcons, {
+const HeaderSocialIcons = cxsComponent(SocialIcons)({
   position: 'absolute',
   right: 0,
   top: '5rem',
@@ -62,7 +62,9 @@ const HeaderSocialIcons = cxsComponent(SocialIcons, {
   },
 });
 
-const NavDivider = cxsComponent(({ className }) => <span className={className}>•</span>, {
+const NavDivider = cxsComponent(({ className }) => (
+  <span className={className}>•</span>
+))({
   composes: headingsFont,
   color: textColor,
   fontSize: '1.5rem',
@@ -79,7 +81,9 @@ const NavDivider = cxsComponent(({ className }) => <span className={className}>�
 const Header = () => (
   <HeaderContainer>
     <HeaderMain>
-      <HeadingLink exact href="/">Alex Dytrych</HeadingLink>
+      <HeadingLink exact href="/">
+        Alex Dytrych
+      </HeadingLink>
 
       <nav>
         {/* <NavDivider />

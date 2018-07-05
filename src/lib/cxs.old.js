@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import cxs from 'cxs/monolithic';
 import merge from 'merge';
@@ -84,7 +85,7 @@ export const component = (RawComponent, cssSpec) => {
     });
 
   wrapped.propTypes = {
-    className: React.PropTypes.string,
+    className: PropTypes.string,
   };
 
   wrapped.displayName = `cxs(${getDisplayName(Component)})`;

@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
-import cxs from '../lib/cxs';
+import cxs from 'cxs';
 import { secondary, textColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
 
@@ -49,18 +50,23 @@ const NavItem = ({ href, children, className, exact, external }) => {
   }
 
   return (
-    <NavLink className={cName} activeClassName={activeClass()} to={href} exact={exact}>
+    <NavLink
+      className={cName}
+      activeClassName={activeClass()}
+      to={href}
+      exact={exact}
+    >
       <span>{children}</span>
     </NavLink>
   );
 };
 
 NavItem.propTypes = {
-  href: React.PropTypes.string.isRequired,
-  children: React.PropTypes.node.isRequired,
-  className: React.PropTypes.string,
-  exact: React.PropTypes.bool,
-  external: React.PropTypes.bool,
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  exact: PropTypes.bool,
+  external: PropTypes.bool,
 };
 
 export default NavItem;

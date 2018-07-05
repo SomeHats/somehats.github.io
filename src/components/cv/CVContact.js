@@ -4,12 +4,12 @@ import WebIcon from 'react-icons/lib/io/ios-world';
 import GithubIcon from 'react-icons/lib/io/social-github';
 import TwitterIcon from 'react-icons/lib/io/social-twitter';
 
-import { cxsComponent } from '../../lib/cxs';
+import cxsComponent from 'cxs/component';
 import { media, A } from '../../lib/styles';
 import { primary } from '../../lib/colors';
 import NoSSR from '../NoSSR';
 
-const List = cxsComponent('ul', {
+const List = cxsComponent('ul')({
   listStyle: 'none',
   padding: 0,
   margin: 0,
@@ -20,7 +20,7 @@ const List = cxsComponent('ul', {
   },
 });
 
-const ListItem = cxsComponent('li', {
+const ListItem = cxsComponent('li')({
   color: primary,
   margin: '0.5rem 0',
   a: {
@@ -49,9 +49,7 @@ const ListItem = cxsComponent('li', {
 
 const ContactItem = ({ href, icon: Icon, children }) => (
   <ListItem>
-    <A href={href}>
-      {children}
-    </A>
+    <A href={href}>{children}</A>
     <Icon />
   </ListItem>
 );
@@ -59,11 +57,19 @@ const ContactItem = ({ href, icon: Icon, children }) => (
 const CVContact = () => (
   <List>
     <NoSSR>
-      <ContactItem href="mailto:alex@dytry.ch" icon={EmailIcon}>alex@dytry.ch</ContactItem>
+      <ContactItem href="mailto:alex@dytry.ch" icon={EmailIcon}>
+        alex@dytry.ch
+      </ContactItem>
     </NoSSR>
-    <ContactItem href="https://alex.dytry.ch" icon={WebIcon}>alex.dytry.ch</ContactItem>
-    <ContactItem href="https://github.com/somehats" icon={GithubIcon}>SomeHats</ContactItem>
-    <ContactItem href="https://twitter.com/somehats" icon={TwitterIcon}>@SomeHats</ContactItem>
+    <ContactItem href="https://alex.dytry.ch" icon={WebIcon}>
+      alex.dytry.ch
+    </ContactItem>
+    <ContactItem href="https://github.com/somehats" icon={GithubIcon}>
+      SomeHats
+    </ContactItem>
+    <ContactItem href="https://twitter.com/somehats" icon={TwitterIcon}>
+      @SomeHats
+    </ContactItem>
   </List>
 );
 

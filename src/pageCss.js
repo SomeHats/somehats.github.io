@@ -1,4 +1,4 @@
-import cxs from './lib/cxs';
+import cxs from 'cxs';
 import { media, bodyFont, bgColor, textColor } from './lib/styles';
 
 export default () => {

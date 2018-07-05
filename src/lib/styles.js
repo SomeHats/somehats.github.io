@@ -1,6 +1,9 @@
 import { Link as RouterLink } from 'react-router-dom';
-import cxs, { cxsComponent } from './cxs';
+import cxs from 'cxs';
+import cxsComponent from 'cxs/component';
 import { primary, primaryDark, bgColor } from './colors';
+
+export * from './colors';
 
 export const media = {
   medium: '@media screen and (max-width: 850px)',
@@ -19,49 +22,49 @@ export const bodyFont = cxs({
   fontWeight: '400',
 });
 
-export const H1 = cxsComponent('h1', {
+export const H1 = cxsComponent('h1')({
   composes: headingsFont,
   fontSize: '2rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const H2 = cxsComponent('h2', {
+export const H2 = cxsComponent('h2')({
   composes: headingsFont,
   fontSize: '1.8rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const H3 = cxsComponent('h3', {
+export const H3 = cxsComponent('h3')({
   composes: headingsFont,
   fontSize: '1.6rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const H4 = cxsComponent('h4', {
+export const H4 = cxsComponent('h4')({
   composes: headingsFont,
   fontSize: '1.4rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const H5 = cxsComponent('h5', {
+export const H5 = cxsComponent('h5')({
   composes: headingsFont,
   fontSize: '1.2rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const H6 = cxsComponent('h6', {
+export const H6 = cxsComponent('h6')({
   composes: headingsFont,
   fontSize: '1rem',
   marginTop: 0,
   marginBottom: '1rem',
 });
 
-export const Em = cxsComponent('em', {
+export const Em = cxsComponent('em')({
   fontStyle: 'normal',
   fontWeight: '600',
 });
@@ -97,9 +100,9 @@ export const link = cxs({
   },
 });
 
-export const A = cxsComponent('a', { composes: link });
-export const Link = cxsComponent(RouterLink, { composes: link });
-export const ButtonLink = cxsComponent('button', {
+export const A = cxsComponent('a')({ composes: link });
+export const Link = cxsComponent(RouterLink)({ composes: link });
+export const ButtonLink = cxsComponent('button')({
   composes: link,
   background: 'transparent',
   border: 'none',
@@ -109,7 +112,7 @@ export const ButtonLink = cxsComponent('button', {
   cursor: 'pointer',
 });
 
-export const Img = cxsComponent('img', {
+export const Img = cxsComponent('img')({
   display: 'block',
   maxWidth: '100%',
   margin: 'auto',
