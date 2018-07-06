@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "@css-blocks/runtime": "^0.18.0",
+    "classnames": "^2.2.6",
+    "obj-str": "^1.0.0",
     "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
+    "preact-helmet": "^4.0.0-alpha-3",
     "preact-router": "^2.6.1"
   },
   "devDependencies": {

@@ -1,0 +1,50 @@
+:scope {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100%;
+  padding: 0 4rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+@media screen and (min-height: 800px) {
+  .footer {
+    visibility: hidden;
+  }
+}
+
+/* medium */
+@media screen and (max-width: 850px) {
+  :scope {
+    padding: 0 2rem;
+  }
+}
+
+/* small */
+@media screen and (max-width: 400px) {
+  :scope {
+    padding: 0 1rem;
+  }
+}
+
+@media print {
+  :scope {
+    max-width: 100%;
+    padding: 0 2rem;
+    padding-top: 2rem;
+  }
+  .footer {
+    display: none;
+  }
+}

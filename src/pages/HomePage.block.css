@@ -1,0 +1,74 @@
+.heading {
+  padding-top: 2rem;
+}
+
+.content {
+  display: flex;
+}
+
+.lead {
+  width: 33%;
+  margin-right: 4rem;
+  flex: 0 0 auto;
+}
+
+.profilePic {
+  padding-top: 1rem;
+  margin: 1rem;
+}
+
+.profilePicImg {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 300px;
+}
+
+.profilePicCaption {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  opacity: 0.6;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.bio {
+  text-align: justify;
+  display: block;
+}
+
+/* medium */
+@media screen and (max-width: 850px) {
+  .lead {
+    width: 40%;
+    margin-right: 2rem;
+  }
+}
+
+/* smallMedium */
+@media screen and (max-width: 600px) {
+  .heading {
+    padding-top: 0;
+  }
+  .content {
+    padding-top: 0;
+  }
+}
+
+/* single col */
+@media screen and (max-width: 500px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .lead {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .taglineHeading {
+    display: inline;
+  }
+}

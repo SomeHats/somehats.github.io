@@ -12,13 +12,13 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 const jsxCompilationOptions = {
   compilationOptions: {},
-  types: 'typescript',
+  types: 'flow',
   optimization: {
     rewriteIdents: true,
     mergeDeclarations: true,
     removeUnusedStyles: true,
     conflictResolution: true,
-    enabled: true,
+    enabled: isProduction,
   },
   aliases: {},
 };
@@ -37,7 +37,7 @@ const cssMinifier = new CleanCSS({
 });
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'site.js',
     path: path.resolve(__dirname, 'dist'),
@@ -45,7 +45,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.js$/,
+        test: /.jsx?$/,
         exclude: [path.resolve(__dirname, 'node_modules')],
         use: [
           {
@@ -56,6 +56,8 @@ module.exports = {
                   { rewriter: CssBlockRewriter }
                 ),
               ],
+              cacheDirectory: false,
+              compact: true,
             },
           },
           {
@@ -68,6 +70,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new CssBlocksPlugin({
