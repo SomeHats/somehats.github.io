@@ -57,4 +57,3 @@ export const Tag = cxsComponent('li')({
   fontSize: '0.8rem',
   verticalAlign: 'top',
 });
-

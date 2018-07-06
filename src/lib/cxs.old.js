@@ -11,7 +11,7 @@ const cache = process.env.NODE_ENV === 'production';
 export const getCss = () => {
   try {
     return cxs.getCss();
-  } catch(e) {
+  } catch (e) {
     console.log(e);
   }
 };
@@ -21,7 +21,7 @@ export const resetCss = () => {
   cxs.reset();
 };
 
-const toArray = (arr) => {
+const toArray = arr => {
   if (arr == null) return [];
   if (Array.isArray(arr)) return arr;
   return [arr];
@@ -38,11 +38,9 @@ const evalStyle = (selector, styles) => {
   const prefixed = cxs(prefix(rest));
   if (!composes) return prefixed;
 
-  const composeClasses = toArray(composes)
-    .map(className =>
-      (typeof className === 'function'
-        ? className()
-        : className));
+  const composeClasses = toArray(composes).map(
+    className => (typeof className === 'function' ? className() : className),
+  );
 
   return `${composeClasses.join(' ')} ${prefixed}`;
 };
