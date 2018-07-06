@@ -61,7 +61,7 @@ export default () =>
     .page-leave-active {
       opacity: 0;
       transform: scale(1.1);
-      transition: all 250 ease-in;
+      transition: all 250ms ease-in;
     }
 
     ${media.medium} {
