@@ -19,14 +19,14 @@ export const ItemHead = cxsComponent('header')({
 });
 
 export const ItemName = cxsComponent(H5)({
-  marginBottom: 0,
+  marginBottom: '0',
   marginRight: '1rem',
   flex: '1 0 auto',
   maxWidth: '100%',
 });
 
 export const ItemDate = cxsComponent('time')({
-  composes: headingsFont,
+  ...headingsFont,
   display: 'block',
   flex: '0 1 auto',
   opacity: 0.5,
@@ -40,10 +40,10 @@ export const ItemDesc = cxsComponent('div')({
 });
 
 export const TagList = cxsComponent('ul')({
-  margin: 0,
-  padding: 0,
+  margin: '0',
+  padding: '0',
   listStyle: 'none',
-  lineHeight: 1,
+  lineHeight: '1',
 });
 
 export const Tag = cxsComponent('li')({

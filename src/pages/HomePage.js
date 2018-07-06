@@ -17,7 +17,7 @@ const Heading = cxsComponent(H1)({
   paddingTop: '2rem',
 
   [media.smallMedium]: {
-    paddingTop: 0,
+    paddingTop: '0',
   },
 });
 
@@ -54,7 +54,7 @@ const ProfilePic = cxsComponent('figure')({
 });
 
 const ProfilePicCaption = cxsComponent('figcaption')({
-  composes: headingsFont,
+  ...headingsFont,
   fontStyle: 'italic',
   opacity: 0.6,
   fontSize: '0.7rem',
@@ -69,7 +69,7 @@ const Bio = cxsComponent('section')({
 const HomePage = () => (
   <article>
     <Helmet title="Alex Dytrych" />
-    <Heading>Hello! I'm Alex.</Heading>
+    <Heading>Hello! I&apos;m Alex.</Heading>
     <Content>
       <Lead>
         <Tagline>
@@ -91,15 +91,15 @@ const HomePage = () => (
       </Lead>
       <Bio>
         <p>
-          I'm a full-stack developer who specialises in creating delightful,
-          high-performance web applications with React and Node.js. I have 5
-          years experience building apps, games and tools for the web.
+          I&apos;m a full-stack developer who specialises in creating
+          delightful, high-performance web applications with React and Node.js.
+          I have 5 years experience building apps, games and tools for the web.
         </p>
         <p>
-          I've been teaching &amp; facilitating as long as I've been coding.
-          I've run courses on web programming for beginners, taught business
-          executives to build their own IoT devices, and introduced 7-year-olds
-          to game design.
+          I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
+          coding. I&apos;ve run courses on web programming for beginners, taught
+          business executives to build their own IoT devices, and introduced
+          7-year-olds to game design.
         </p>
         <p>
           Previously, I created{' '}
@@ -109,9 +109,9 @@ const HomePage = () => (
           children to coding.
         </p>
         <p>
-          I'm currently available for part-time freelance work as a full-stack
-          developer. I can also offer workshops and training on front-end
-          performance tuning, GraphQL, and React.
+          I&apos;m currently available for part-time freelance work as a
+          full-stack developer. I can also offer workshops and training on
+          front-end performance tuning, GraphQL, and React.
         </p>
         <p>
           <Link to="/contact">Get in touch</Link>! 🦄

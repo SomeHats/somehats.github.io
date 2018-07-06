@@ -38,11 +38,11 @@ const CVWorkHistory = () => (
 
         <p>
           In my role as Software Engineer, I helped design, develop, and
-          architect a rewrite of Music Glue's e-commerce system using{' '}
+          architect a rewrite of Music Glue&apos;s e-commerce system using{' '}
           <Em>React</Em>, <Em>Node.js</Em>, <Em>GraphQL</Em>, and <Em>Ruby</Em>.
         </p>
         <p>
-          I led work on the new platform's theming system which let users
+          I led work on the new platform&apos;s theming system which let users
           customise their website without having to write code. This involved
           writing <Em>RESTful Microservices</Em> with <Em>Node</Em> and{' '}
           <Em>Postgres</Em>, integrating with a large <Em>Ruby on Rails</Em>{' '}
@@ -56,7 +56,7 @@ const CVWorkHistory = () => (
           was a very fast, simple system.
         </p>
         <p>
-          One of the more interesting challenges was scale. Music Glue's
+          One of the more interesting challenges was scale. Music Glue&apos;s
           platform needs to deal with an event like a major band announcing a
           stadium tour, where hundreds of thousands of tickets might be sold in
           just a few minutes. I worked to <Em>profile</Em> and <Em>optimise</Em>{' '}
@@ -135,11 +135,11 @@ const CVWorkHistory = () => (
         <p>
           As a developer at Decoded I worked on a range of internal and external
           software products. I designed and built a live code editor for
-          Decoded's coding workshops. It was written with a real-time framework
-          called <Em>Derby.js</Em>, using <Em>MongoDB</Em>, <Em>Redis</Em>, and{' '}
-          <Em>Stylus</Em>. Users could open their project on a phone and watch
-          it update live via <Em>websockets</Em> with <Em>Socket.io</Em> as they
-          worked.
+          Decoded&apos;s coding workshops. It was written with a real-time
+          framework called <Em>Derby.js</Em>, using <Em>MongoDB</Em>,{' '}
+          <Em>Redis</Em>, and <Em>Stylus</Em>. Users could open their project on
+          a phone and watch it update live via <Em>websockets</Em> with{' '}
+          <Em>Socket.io</Em> as they worked.
         </p>
         <p>
           I also built internal business-management tools in <Em>Angular.js</Em>{' '}

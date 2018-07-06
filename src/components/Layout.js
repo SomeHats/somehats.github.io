@@ -13,7 +13,7 @@ const Main = cxsComponent('main')({
   display: 'flex',
   flexDirection: 'column',
   margin: 'auto',
-  maxWidth: 1000,
+  maxWidth: '1000px',
   minHeight: '100%',
   padding: '0 4rem',
 

@@ -25,16 +25,16 @@ const CVCoolStuff = () => (
       </ItemHead>
       <ItemDesc>
         <p>
-          Recently, I've been at ADA National College for Digital Skills,
+          Recently, I&apos;ve been at ADA National College for Digital Skills,
           designing and delivering courses on web programming and game design.
         </p>
         <p>
           The courses are aimed at 16/17 year old students with little to no
-          coding experience. In the web programming course, we've covered the
-          basics of web programming&mdash;
+          coding experience. In the web programming course, we&apos;ve covered
+          the basics of web programming&mdash;
           <Em>HTML</Em>, <Em>CSS</Em>, <Em>responsive design</Em>,{' '}
           <Em>accessibility</Em>, and <Em>JavaScript</Em>&mdash;as well as UX.
-          In the games course, we've looked at <Em>user testing</Em>,{' '}
+          In the games course, we&apos;ve looked at <Em>user testing</Em>,{' '}
           <Em>rapid iteration</Em>, several aspects of <Em>game design</Em>, and
           building games with <Em>JavaScript</Em> and <Em>Phaser.js</Em>.
         </p>
@@ -92,9 +92,9 @@ const CVCoolStuff = () => (
           This was my first time using a third-party renderer with React:{' '}
           <Em>react-pixi</Em>, which attempts to let you use React with{' '}
           <Em>Pixi.js</Em> (my favourite 2D renderer for the browser). The
-          integration wasn't quite as smooth as I'd like, but I learnt a lot
-          from reading the source and I'm excited for the official renderer API
-          that's coming with <Em>React Fiber</Em>.
+          integration wasn&apos;t quite as smooth as I&apos;d like, but I learnt
+          a lot from reading the source and I&apos;m excited for the official
+          renderer API that&apos;s coming with <Em>React Fiber</Em>.
         </p>
       </ItemDesc>
     </CVItem>
