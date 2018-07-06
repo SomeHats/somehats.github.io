@@ -37,7 +37,7 @@ const JobTitle = cxsComponent('h4')({
   margin: '1rem 0',
 });
 
-const Location = cxsComponent('p')({
+const LocationUpdate = cxsComponent('p')({
   ...headingsFont,
   fontStyle: 'italic',
   opacity: 0.5,
@@ -51,7 +51,7 @@ const CVHeader = () => (
       <JobTitle>
         Full-Stack Web Developer <br /> Teacher &amp; Facilitator
       </JobTitle>
-      <Location>London, UK • Remote</Location>
+      <LocationUpdate>London, UK / Remote • Updated April 2017</LocationUpdate>
     </NameSection>
     <ImageSection>
       <Img
