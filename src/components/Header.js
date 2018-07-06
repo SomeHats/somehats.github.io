@@ -50,7 +50,7 @@ const HeadingLink = cxsComponent(NavLink)({
 
 const HeaderSocialIcons = cxsComponent(SocialIcons)({
   position: 'absolute',
-  right: 0,
+  right: '0',
   top: '5rem',
 
   [media.medium]: {
@@ -65,7 +65,7 @@ const HeaderSocialIcons = cxsComponent(SocialIcons)({
 const NavDivider = cxsComponent(({ className }) => (
   <span className={className}>•</span>
 ))({
-  composes: headingsFont,
+  ...headingsFont,
   color: textColor,
   fontSize: '1.5rem',
   margin: '0 1rem',

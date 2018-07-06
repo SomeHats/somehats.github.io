@@ -24,7 +24,14 @@ const ContactPage = () => (
     </ul>
 
     <p>
-      I'm based in London, England. If you're in town, let's get coffee ☕️ 🦄
+      I&apos;m based in London, England. If you&apos;re in town, let&apos;s get
+      coffee{' '}
+      <span role="img" aria-label="coffee">
+        ☕️
+      </span>{' '}
+      <span role="img" aria-label="unicorn">
+        🦄
+      </span>
     </p>
   </article>
 );

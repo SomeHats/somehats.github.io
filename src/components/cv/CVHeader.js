@@ -32,13 +32,13 @@ const ContactSection = cxsComponent('section')({
 });
 
 const JobTitle = cxsComponent('h4')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1rem',
   margin: '1rem 0',
 });
 
 const Location = cxsComponent('p')({
-  composes: headingsFont,
+  ...headingsFont,
   fontStyle: 'italic',
   opacity: 0.5,
   fontSize: '0.8rem',

@@ -12,55 +12,55 @@ export const media = {
   print: '@media print',
 };
 
-export const headingsFont = cxs({
+export const headingsFont = {
   fontFamily: '"Libre Baskerville", serif',
   fontWeight: '400',
-});
+};
 
-export const bodyFont = cxs({
+export const bodyFont = {
   fontFamily: '"Montserrat", sans-serif',
   fontWeight: '400',
-});
+};
 
 export const H1 = cxsComponent('h1')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '2rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
 export const H2 = cxsComponent('h2')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1.8rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
 export const H3 = cxsComponent('h3')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1.6rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
 export const H4 = cxsComponent('h4')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1.4rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
 export const H5 = cxsComponent('h5')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1.2rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
 export const H6 = cxsComponent('h6')({
-  composes: headingsFont,
+  ...headingsFont,
   fontSize: '1rem',
-  marginTop: 0,
+  marginTop: '0',
   marginBottom: '1rem',
 });
 
@@ -69,7 +69,7 @@ export const Em = cxsComponent('em')({
   fontWeight: '600',
 });
 
-export const link = cxs({
+export const linkStyles = {
   color: primaryDark,
   textDecoration: 'none',
   display: 'inline-block',
@@ -81,15 +81,15 @@ export const link = cxs({
     background: primary,
     height: '0.08em',
     width: '100%',
-    left: 0,
+    left: '0',
     bottom: '0.35em',
-    opacity: 0,
+    opacity: '0',
     zIndex: '-1',
     transform: 'scaleX(0.1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-in',
   },
   ':hover:before': {
-    opacity: 1,
+    opacity: '1',
     transform: 'scaleX(1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-out',
   },
@@ -98,17 +98,19 @@ export const link = cxs({
       content: '" (" attr(href) ")"',
     },
   },
-});
+};
 
-export const A = cxsComponent('a')({ composes: link });
-export const Link = cxsComponent(RouterLink)({ composes: link });
+export const link = cxs(linkStyles);
+
+export const A = cxsComponent('a')(linkStyles);
+export const Link = cxsComponent(RouterLink)(linkStyles);
 export const ButtonLink = cxsComponent('button')({
-  composes: link,
+  ...linkStyles,
   background: 'transparent',
   border: 'none',
   font: 'inherit',
-  padding: 0,
-  margin: 0,
+  padding: '0',
+  margin: '0',
   cursor: 'pointer',
 });
 

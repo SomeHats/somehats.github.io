@@ -6,40 +6,36 @@ import cxs from 'cxs';
 import { secondary, textColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
 
-const activeClass = cxs({
-  span: {
-    color: textColor,
-  },
-  ':hover': {
-    span: {
-      transform: 'translateY(0)',
-    },
-  },
-});
-
 const navLinkClass = cxs({
-  composes: headingsFont,
+  ...headingsFont,
   color: secondary,
   cursor: 'pointer',
   display: 'inline-block',
   fontSize: '1.5rem',
   textDecoration: 'none',
 
-  span: {
+  '> span': {
     display: 'inline-block',
-    transition: 'all 0.2s ease',
+    transition: 'transform 0.2s ease',
     width: 'auto',
   },
 
-  ':hover': {
-    span: {
-      transform: 'translateY(-0.2rem)',
-    },
+  ':hover > span': {
+    transform: 'translateY(-0.2rem)',
+  },
+});
+
+const activeClass = cxs({
+  '> span': {
+    color: textColor,
+  },
+  ':hover > span': {
+    transform: 'translateY(0)',
   },
 });
 
 const NavItem = ({ href, children, className, exact, external }) => {
-  const cName = cx(navLinkClass(), className);
+  const cName = cx(navLinkClass, className);
 
   if (external) {
     return (
@@ -52,7 +48,7 @@ const NavItem = ({ href, children, className, exact, external }) => {
   return (
     <NavLink
       className={cName}
-      activeClassName={activeClass()}
+      activeClassName={activeClass}
       to={href}
       exact={exact}
     >

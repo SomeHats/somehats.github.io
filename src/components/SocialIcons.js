@@ -3,6 +3,7 @@ import React from 'react';
 import GithubIcon from 'react-icons/lib/io/social-github';
 import TwitterIcon from 'react-icons/lib/io/social-twitter';
 
+import cxs from 'cxs';
 import cxsComponent from 'cxs/component';
 import { primary } from '../lib/colors';
 
@@ -10,19 +11,19 @@ const Nav = cxsComponent('nav')({
   display: 'flex',
   flexWrap: 'nowrap',
 
-  'a:not(:first-child)': {
+  '> a:not(:first-child)': {
     marginLeft: '1rem',
   },
+});
 
-  svg: {
-    width: '1.8rem',
-    height: '1.8rem',
-  },
+const iconClass = cxs({
+  width: '1.8rem',
+  height: '1.8rem',
 });
 
 const NavItem = ({ href, icon: Icon }) => (
   <a href={href}>
-    <Icon color={primary} />
+    <Icon color={primary} className={iconClass} />
   </a>
 );
 

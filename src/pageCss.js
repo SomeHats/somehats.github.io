@@ -1,70 +1,84 @@
-import cxs from 'cxs';
-import { media, bodyFont, bgColor, textColor } from './lib/styles';
+import { media, bgColor, textColor } from './lib/styles';
 
-export default () => {
-  cxs('html', {
-    fontSize: 20,
-    [media.medium]: {
-      fontSize: 18,
-    },
-    [media.smallMedium]: {
-      fontSize: 16,
-    },
-    [media.print]: {
-      fontSize: 12,
-    },
-  })();
+const css = String.raw;
 
-  cxs('body', {
-    ...bodyFont.styles,
-    background: bgColor,
-    color: textColor,
-    fontSize: '100%',
-    lineHeight: '1.7',
-  })();
+export default () =>
+  css`
+    html {
+      font-size: 20px;
+    }
 
-  cxs('html, body, #root', {
-    width: '100%',
-    height: '100%',
-    margin: 0,
-    padding: 0,
-  })();
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 100%;
+      line-height: 1.7;
+      background: ${bgColor};
+      color: ${textColor};
+    }
 
-  cxs('p', {
-    marginTop: 0,
-    marginBottom: '1rem',
-  })();
+    html,
+    body,
+    #root {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-  cxs('.page-transition', {
-    position: 'relative',
-    display: 'block',
-  })();
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
 
-  cxs('.page-enter', {
-    opacity: 0,
-    width: '100%',
-    transform: 'scale(0.9)',
-    transformOrigin: 'center 20vh',
-  })();
+    .page-transition {
+      position: relative;
+      display: block;
+    }
 
-  cxs('.page-enter-active', {
-    opacity: 1,
-    transition: 'all 250ms 100ms ease-out',
-    transform: 'scale(1)',
-  })();
+    .page-enter {
+      opacity: 0;
+      width: 100%;
+      transform: scale(0.9);
+      transform-origin: center 20vh;
+    }
 
-  cxs('.page-leave', {
-    opacity: 1,
-    width: '100%',
-    transform: 'scale(1)',
-    position: 'absolute',
-    top: 0,
-    transformOrigin: 'center 20vh',
-  })();
+    .page-enter-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 250ms 100ms ease-out;
+    }
 
-  cxs('.page-leave-active', {
-    opacity: 0,
-    transform: 'scale(1.1)',
-    transition: 'all 250ms ease-in',
-  })();
-};
+    .page-leave {
+      opacity: 1;
+      width: 100%;
+      transform: scale(1);
+      position: absolute;
+      top: 0;
+      transform-origin: center 20vh;
+    }
+
+    .page-leave-active {
+      opacity: 0;
+      transform: scale(1.1);
+      transition: all 250 ease-in;
+    }
+
+    ${media.medium} {
+      html {
+        font-size: 18px;
+      }
+    }
+
+    ${media.smallMedium} {
+      html {
+        font-size: 16px;
+      }
+    }
+
+    ${media.print} {
+      html {
+        font-size: 12px;
+      }
+    }
+  `.replace(/\s\s/g, ' ');
