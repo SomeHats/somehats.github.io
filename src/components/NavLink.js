@@ -3,8 +3,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
 import cxs from 'cxs';
-import { secondary, textColor } from '../lib/colors';
+import { ThemeNames } from '../lib/Themes';
+import { secondary, textColor, darkTextColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
+import { ThemeConsumer } from './Layout';
 
 const navLinkClass = cxs({
   ...headingsFont,
@@ -25,9 +27,18 @@ const navLinkClass = cxs({
   },
 });
 
-const activeClass = cxs({
+const activeClassLight = cxs({
   '> span': {
     color: textColor,
+  },
+  ':hover > span': {
+    transform: 'translateY(0)',
+  },
+});
+
+const activeClassDark = cxs({
+  '> span': {
+    color: darkTextColor,
   },
   ':hover > span': {
     transform: 'translateY(0)',
@@ -46,14 +57,20 @@ const NavItem = ({ href, children, className, exact, external }) => {
   }
 
   return (
-    <NavLink
-      className={cName}
-      activeClassName={activeClass}
-      to={href}
-      exact={exact}
-    >
-      <span>{children}</span>
-    </NavLink>
+    <ThemeConsumer>
+      {theme => (
+        <NavLink
+          className={cName}
+          activeClassName={
+            theme.id === ThemeNames.DARK ? activeClassDark : activeClassLight
+          }
+          to={href}
+          exact={exact}
+        >
+          <span>{children}</span>
+        </NavLink>
+      )}
+    </ThemeConsumer>
   );
 };
 

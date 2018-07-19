@@ -81,8 +81,8 @@ const HomePage = () => (
         </Tagline>
         <ProfilePic>
           <Img
-            src="/assets/profile-2-300.jpg"
-            srcSet="/assets/profile-2-600.jpg 2x"
+            src="/assets/profile-3-300.jpg"
+            srcSet="/assets/profile-3-600.jpg 2x"
           />
           <ProfilePicCaption>
             I hope you appreciate that my hair matches my website colour scheme.

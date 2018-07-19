@@ -26,6 +26,10 @@ const ImageSection = cxsComponent('section')({
   },
 });
 
+const ProfilePicture = cxsComponent(Img)({
+  borderRadius: '100%',
+});
+
 const ContactSection = cxsComponent('section')({
   order: '2',
   flex: '0 0 12rem',
@@ -54,9 +58,9 @@ const CVHeader = () => (
       <LocationUpdate>London, UK / Remote • Updated April 2017</LocationUpdate>
     </NameSection>
     <ImageSection>
-      <Img
-        src="/assets/profile-2-300.jpg"
-        srcSet="/assets/profile-2-600.jpg 2x"
+      <ProfilePicture
+        src="/assets/profile-3-300.jpg"
+        srcSet="/assets/profile-3-600.jpg 2x"
       />
     </ImageSection>
     <ContactSection>

@@ -4,6 +4,7 @@ const color = require('color');
 
 const bgColor = color('#FFFFFF');
 const textColor = color('#333333');
+const darkTextColor = color('#eeeeee');
 
 const primary = color('#8E54E9');
 const secondary = primary;
@@ -11,15 +12,16 @@ const secondary = primary;
 const colors = {
   bgColor,
   textColor,
+  darkTextColor,
   primary,
   secondary,
   primaryLightest: primary.lighten(0.5),
+  primaryLight: primary.mix(darkTextColor, 0.1),
   primaryDark: textColor.mix(primary, 0.2),
   primaryDarker: textColor.mix(primary, 0.5),
 };
 
-const colorsSrc = Object
-  .keys(colors)
+const colorsSrc = Object.keys(colors)
   .map(key => `export const ${key} = '${colors[key].string()}';`)
   .join('\n');
 

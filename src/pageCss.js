@@ -1,4 +1,4 @@
-import { media, bgColor, textColor } from './lib/styles';
+import { media, textColor, primary } from './lib/styles';
 
 const css = String.raw;
 
@@ -13,7 +13,7 @@ export default () =>
       font-weight: 400;
       font-size: 100%;
       line-height: 1.7;
-      background: ${bgColor};
+      background: ${primary};
       color: ${textColor};
     }
 
@@ -21,7 +21,7 @@ export default () =>
     body,
     #root {
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       margin: 0;
       padding: 0;
     }

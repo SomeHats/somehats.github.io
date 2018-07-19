@@ -1,8 +1,7 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import { ThemeNames } from './lib/Themes';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
@@ -10,11 +9,19 @@ import CVPage from './pages/CVPage';
 import ContactPage from './pages/ContactPage';
 import Error404Page from './pages/Error404Page';
 
+const doesPathUseDarkTheme = path => path === '/';
+
 const App = () => (
   <Router>
     <Route
       render={({ location }) => (
-        <Layout>
+        <Layout
+          theme={
+            doesPathUseDarkTheme(location.pathname)
+              ? ThemeNames.DARK
+              : ThemeNames.LIGHT
+          }
+        >
           <ScrollToTop />
           <CSSTransitionGroup
             className="page-transition"

@@ -1,7 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import cxs from 'cxs';
 import cxsComponent from 'cxs/component';
-import { primary, primaryDark, bgColor } from './colors';
 
 export * from './colors';
 
@@ -69,16 +68,18 @@ export const Em = cxsComponent('em')({
   fontWeight: '600',
 });
 
-export const linkStyles = {
-  color: primaryDark,
+export const linkStyles = ({ theme }) => ({
+  color: theme.primaryText,
   textDecoration: 'none',
   display: 'inline-block',
   position: 'relative',
-  textShadow: `0.05em 0.04em 0 ${bgColor}, -0.05em 0.04em 0 ${bgColor}, 0.05em -0.04em 0 ${bgColor}, -0.05em -0.04em 0 ${bgColor}`,
-  ':before': {
+  textShadow: `0.05em 0.04em 0 ${theme.bg}, -0.05em 0.04em 0 ${
+    theme.bg
+  }, 0.05em -0.04em 0 ${theme.bg}, -0.05em -0.04em 0 ${theme.bg}`,
+  '::before': {
     content: '""',
     position: 'absolute',
-    background: primary,
+    background: theme.primaryText,
     height: '0.08em',
     width: '100%',
     left: '0',
@@ -88,31 +89,31 @@ export const linkStyles = {
     transform: 'scaleX(0.1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-in',
   },
-  ':hover:before': {
+  ':hover::before': {
     opacity: '1',
     transform: 'scaleX(1)',
     transition: 'opacity 0.2s linear, transform 0.2s ease-out',
   },
   [media.print]: {
-    ':after': {
+    '::after': {
       content: '" (" attr(href) ")"',
     },
   },
-};
+});
 
 export const link = cxs(linkStyles);
 
 export const A = cxsComponent('a')(linkStyles);
 export const Link = cxsComponent(RouterLink)(linkStyles);
-export const ButtonLink = cxsComponent('button')({
-  ...linkStyles,
+export const ButtonLink = cxsComponent('button')(props => ({
+  ...linkStyles(props),
   background: 'transparent',
   border: 'none',
   font: 'inherit',
   padding: '0',
   margin: '0',
   cursor: 'pointer',
-});
+}));
 
 export const Img = cxsComponent('img')({
   display: 'block',

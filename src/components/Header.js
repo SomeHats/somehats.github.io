@@ -1,7 +1,6 @@
 import React from 'react';
 
 import cxsComponent from 'cxs/component';
-import { textColor } from '../lib/colors';
 import { media, headingsFont } from '../lib/styles';
 
 import NavLink from './NavLink';
@@ -64,9 +63,9 @@ const HeaderSocialIcons = cxsComponent(SocialIcons)({
 
 const NavDivider = cxsComponent(({ className }) => (
   <span className={className}>•</span>
-))({
+))(({ theme }) => ({
   ...headingsFont,
-  color: textColor,
+  color: theme.text,
   fontSize: '1.5rem',
   margin: '0 1rem',
   opacity: 0.6,
@@ -76,7 +75,7 @@ const NavDivider = cxsComponent(({ className }) => (
       display: 'none',
     },
   },
-});
+}));
 
 const Header = () => (
   <HeaderContainer>
