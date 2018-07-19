@@ -58,6 +58,7 @@ const ProfilePicCaption = cxsComponent('figcaption')({
   fontStyle: 'italic',
   opacity: 0.6,
   fontSize: '0.7rem',
+  fontWeight: 300,
   textAlign: 'center',
 });
 
@@ -73,10 +74,7 @@ const HomePage = () => (
     <Content>
       <Lead>
         <Tagline>
-          <H4>
-            I <A href="https://github.com/somehats">write code</A> and teach
-            people stuff.{' '}
-          </H4>
+          <H4>I build digital products and teach people stuff.</H4>
           <H4>Sometimes, I do both at the same time.</H4>
         </Tagline>
         <ProfilePic>
@@ -85,15 +83,16 @@ const HomePage = () => (
             srcSet="/assets/profile-3-600.jpg 2x"
           />
           <ProfilePicCaption>
-            I hope you appreciate that my hair matches my website colour scheme.
+            This is what I look like. My hair is probably a different colour
+            though. It changes.
           </ProfilePicCaption>
         </ProfilePic>
       </Lead>
       <Bio>
         <p>
-          I&apos;m a full-stack developer who specialises in creating
-          delightful, high-performance web applications with React and Node.js.
-          I have 5 years experience building apps, games and tools for the web.
+          I&apos;m a full-stack JavaScript developer who specialises in creating
+          delightful, playful web applications with React and Node.js. I have 6
+          years experience building apps, games and tools for the web.
         </p>
         <p>
           I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been

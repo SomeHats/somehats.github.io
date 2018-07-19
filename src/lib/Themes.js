@@ -11,11 +11,13 @@ export const Themes = Object.freeze({
     bg: Colors.bgColor,
     text: Colors.textColor,
     primaryText: Colors.primaryDark,
+    androidThemeColor: Colors.primaryLightest,
   },
   [ThemeNames.DARK]: {
     id: ThemeNames.DARK,
     bg: 'black',
     text: Colors.darkTextColor,
     primaryText: Colors.primaryLight,
+    androidThemeColor: 'black',
   },
 });

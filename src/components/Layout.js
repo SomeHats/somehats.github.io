@@ -83,8 +83,6 @@ const Footer = cxsComponent('footer')({
   },
 });
 
-const metaTags = [{ name: 'theme-color', content: primaryLightest }];
-
 const {
   Provider: ThemeProvider,
   Consumer: ThemeConsumer,
@@ -93,7 +91,11 @@ const {
 const Layout = ({ children, theme = ThemeNames.LIGHT }) => (
   <CxsThemeProvider theme={Themes[theme]}>
     <ThemeProvider value={Themes[theme]}>
-      <Helmet meta={metaTags} />
+      <Helmet
+        meta={[
+          { name: 'theme-color', content: Themes[theme].androidThemeColor },
+        ]}
+      />
       <Main>
         <PageBackground />
         <PageContainer>

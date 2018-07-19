@@ -3,14 +3,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
 import cxs from 'cxs';
-import { ThemeNames } from '../lib/Themes';
-import { secondary, textColor, darkTextColor } from '../lib/colors';
+import { ThemeNames, Themes } from '../lib/Themes';
+import { primary, primaryLight, textColor, darkTextColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
 import { ThemeConsumer } from './Layout';
 
 const navLinkClass = cxs({
   ...headingsFont,
-  color: secondary,
   cursor: 'pointer',
   display: 'inline-block',
   fontSize: '1.5rem',
@@ -25,6 +24,13 @@ const navLinkClass = cxs({
   ':hover > span': {
     transform: 'translateY(-0.2rem)',
   },
+});
+
+const navLinkClassLight = cxs({
+  color: primary,
+});
+const navLinkClassDark = cxs({
+  color: primaryLight,
 });
 
 const activeClassLight = cxs({
@@ -46,30 +52,37 @@ const activeClassDark = cxs({
 });
 
 const NavItem = ({ href, children, className, exact, external }) => {
-  const cName = cx(navLinkClass, className);
-
-  if (external) {
-    return (
-      <a className={cName} href={href}>
-        <span>{children}</span>
-      </a>
-    );
-  }
-
+  console.log({ navLinkClass, navLinkClassDark, navLinkClassLight });
   return (
     <ThemeConsumer>
-      {theme => (
-        <NavLink
-          className={cName}
-          activeClassName={
-            theme.id === ThemeNames.DARK ? activeClassDark : activeClassLight
-          }
-          to={href}
-          exact={exact}
-        >
-          <span>{children}</span>
-        </NavLink>
-      )}
+      {theme => {
+        const cName = cx(
+          navLinkClass,
+          theme.id === ThemeNames.DARK ? navLinkClassDark : navLinkClassLight,
+          className,
+        );
+
+        if (external) {
+          return (
+            <a className={cName} href={href}>
+              <span>{children}</span>
+            </a>
+          );
+        }
+
+        return (
+          <NavLink
+            className={cName}
+            activeClassName={
+              theme.id === ThemeNames.DARK ? activeClassDark : activeClassLight
+            }
+            to={href}
+            exact={exact}
+          >
+            <span>{children}</span>
+          </NavLink>
+        );
+      }}
     </ThemeConsumer>
   );
 };
