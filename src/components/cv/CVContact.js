@@ -51,9 +51,11 @@ const ContactLink = cxsComponent(A)({
   },
 });
 
-const ContactItem = ({ href, icon: Icon, children }) => (
+const ContactItem = ({ href, icon: Icon, title, children }) => (
   <ListItem>
-    <ContactLink href={href}>{children}</ContactLink>
+    <ContactLink href={href} title={title}>
+      {children}
+    </ContactLink>
     <Icon className={iconClass} />
   </ListItem>
 );
@@ -61,17 +63,25 @@ const ContactItem = ({ href, icon: Icon, children }) => (
 const CVContact = () => (
   <List>
     <NoSSR>
-      <ContactItem href="mailto:alex@dytry.ch" icon={EmailIcon}>
+      <ContactItem href="mailto:alex@dytry.ch" icon={EmailIcon} title="Email">
         alex@dytry.ch
       </ContactItem>
     </NoSSR>
-    <ContactItem href="https://alex.dytry.ch" icon={WebIcon}>
+    <ContactItem href="https://alex.dytry.ch" icon={WebIcon} title="Website">
       alex.dytry.ch
     </ContactItem>
-    <ContactItem href="https://github.com/somehats" icon={GithubIcon}>
+    <ContactItem
+      href="https://github.com/somehats"
+      icon={GithubIcon}
+      title="GitHub"
+    >
       SomeHats
     </ContactItem>
-    <ContactItem href="https://twitter.com/somehats" icon={TwitterIcon}>
+    <ContactItem
+      href="https://twitter.com/somehats"
+      icon={TwitterIcon}
+      title="Twitter"
+    >
       @SomeHats
     </ContactItem>
   </List>

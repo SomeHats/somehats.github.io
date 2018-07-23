@@ -85,18 +85,18 @@ export const linkStyles = ({ theme }) => ({
     left: '0',
     bottom: '0.35em',
     borderRadius: '0.16em / 0.08em',
-    opacity: '0.5',
+    opacity: '0.6',
     zIndex: '-1',
     transformOrigin: 'right',
     transform: 'scaleX(0)',
     transition:
-      'opacity 0.2s 0.05s linear, transform 0.2s 0.05s ease-in-out, transform-origin 0.05s linear',
+      'opacity 0.2s 0.04s linear, transform 0.2s 0.04s ease-in-out, transform-origin 0.05s linear',
   },
   ':hover::before': {
     opacity: '1',
     transform: 'scaleX(1)',
     transition:
-      'opacity 0.2s 0.05s linear, transform 0.2s 0.05s ease-in-out, transform-origin 0.05s linear',
+      'opacity 0.2s 0.04s linear, transform 0.2s 0.04s ease-in-out, transform-origin 0.05s linear',
     transformOrigin: 'left',
   },
   [media.print]: {

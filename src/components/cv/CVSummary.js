@@ -15,7 +15,7 @@ const CVSummary = () => (
   <SummarySection>
     <p>
       I&apos;m a freelance full-stack <Em>JavaScript</Em> developer &amp;
-      Designer who specialises in creating delightful, playful, high-performance
+      designer who specialises in creating delightful, playful, high-performance
       web applications with tech like <Em>React</Em>, <Em>Node.js</Em>, and{' '}
       <Em>PostgreSQL</Em>. I have over 6 years experience building <Em>apps</Em>,{' '}
       <Em>games</Em> and <Em>tools</Em> for the web.

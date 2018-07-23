@@ -63,6 +63,7 @@ const CVHeader = () => (
       <ProfilePicture
         src="/assets/profile-3-300.jpg"
         srcSet="/assets/profile-3-600.jpg 2x"
+        alt="A photo of me! A woman with pink and blue hair, wearing a stripy t-shirt and a suede jacket."
       />
     </ImageSection>
     <ContactSection>

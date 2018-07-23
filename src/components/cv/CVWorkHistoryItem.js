@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import cxsComponent from 'cxs/component';
 import { bgColor, primary } from '../../lib/colors';
 import { headingsFont, H5 } from '../../lib/styles';
@@ -57,3 +59,28 @@ export const Tag = cxsComponent('li')({
   fontSize: '0.8rem',
   verticalAlign: 'top',
 });
+
+const CVWorkHistoryItem = ({ name, date, tags = [], children }) => (
+  <CVItem>
+    <ItemHead>
+      <ItemName>{name}</ItemName>
+      <ItemDate>{date}</ItemDate>
+    </ItemHead>
+    <ItemDesc>
+      {tags.length > 0 && (
+        <TagList>{tags.map((tag, i) => <Tag key={i}>{tag}</Tag>)}</TagList>
+      )}
+
+      {children}
+    </ItemDesc>
+  </CVItem>
+);
+
+CVWorkHistoryItem.propTypes = {
+  name: PropTypes.node.isRequired,
+  date: PropTypes.node.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.node.isRequired),
+  children: PropTypes.node.isRequired,
+};
+
+export default CVWorkHistoryItem;

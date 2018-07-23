@@ -17,7 +17,7 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
   bottom: 0,
   right: 0,
   background: 'white',
-  zIndex: -2,
+  zIndex: 1,
 
   '::before': {
     content: '""',
@@ -27,6 +27,11 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
     width: '100%',
     height: '3px',
     background: primary,
+    zIndex: 1,
+
+    '@media print': {
+      display: 'none',
+    },
   },
 
   '::after': {
@@ -39,7 +44,6 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
     background: 'black',
     transition: 'opacity 0.25s 0.1s ease',
     opacity: theme.id === ThemeNames.DARK ? 1 : 0,
-    zIndex: -2,
   },
 }));
 
@@ -47,15 +51,18 @@ const Main = cxsComponent('main')(({ theme }) => ({
   position: 'absolute',
   width: '100%',
   minHeight: '100%',
+  background: theme.bg,
 }));
 
 const PageContainer = cxsComponent('div')({
+  position: 'relative',
   margin: 'auto',
   maxWidth: '1000px',
   padding: '0 4rem',
   display: 'flex',
   flexDirection: 'column',
   minHeight: '100%',
+  zIndex: 2,
 
   [media.medium]: {
     padding: '0 2rem',

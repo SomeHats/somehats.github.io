@@ -84,6 +84,7 @@ const HomePage = () => (
             <Img
               src="/assets/profile-3-300.jpg"
               srcSet="/assets/profile-3-600.jpg 2x"
+              alt="A photo of me! A woman with pink and blue hair, wearing a stripy t-shirt and a suede jacket."
             />
             <ProfilePicCaption>
               This is what I look like. My hair is probably a different colour
@@ -93,16 +94,16 @@ const HomePage = () => (
         </Lead>
         <Bio>
           <p>
-            I&apos;m a full-stack designer + JavaScript developer who
-            specialises in creating delightful, playful web applications with
-            React and Node.js. I have over 6 years experience building apps,
-            games and tools for the web.
+            I&apos;m a full-stack designer &amp; JavaScript developer who
+            creates delightful, playful web applications with React and Node.js.
+            I have over 6 years experience building apps, games and tools for
+            the web.
           </p>
           <p>
             I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
-            coding. I&apos;ve run courses on web programming for beginners,
-            taught business executives to build their own IoT devices, and
-            introduced 7-year-olds to game design.
+            coding. I&apos;ve designed and delivered degree-level software
+            engineering courses, taught business executives to build their own
+            IoT devices, and introduced 7-year-olds to game design.
           </p>
           <p>
             Previously, I created{' '}
@@ -113,7 +114,7 @@ const HomePage = () => (
           </p>
           <p>
             I&apos;m currently available for freelance work as a full-stack
-            designer + developer. I can also offer workshops and training on
+            designer &amp; developer. I can also offer workshops and training on
             front-end performance tuning, GraphQL, and React.
           </p>
           <p>

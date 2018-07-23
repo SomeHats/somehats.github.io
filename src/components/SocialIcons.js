@@ -21,21 +21,30 @@ const iconClass = cxs({
   height: '1.8rem',
 });
 
-const NavItem = ({ href, icon: Icon }) => (
-  <a href={href}>
+const NavItem = ({ href, title, icon: Icon }) => (
+  <a href={href} title={title}>
     <Icon color={primary} className={iconClass} />
   </a>
 );
 
 NavItem.propTypes = {
   href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   icon: PropTypes.func.isRequired,
 };
 
 const SocialIcons = ({ className }) => (
   <Nav className={className}>
-    <NavItem href="https://github.com/somehats" icon={GithubIcon} />
-    <NavItem href="https://twitter.com/somehats" icon={TwitterIcon} />
+    <NavItem
+      href="https://github.com/somehats"
+      icon={GithubIcon}
+      title="GitHub"
+    />
+    <NavItem
+      href="https://twitter.com/somehats"
+      icon={TwitterIcon}
+      title="Twitter"
+    />
   </Nav>
 );
 
