@@ -10,5 +10,5 @@ if [ $current_branch != "refs/heads/src" ]; then
 fi
 
 git checkout master
-git push origin master
+git push origin master --force
 git checkout src
