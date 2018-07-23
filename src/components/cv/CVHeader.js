@@ -53,9 +53,11 @@ const CVHeader = () => (
     <NameSection>
       <H1>Alex Dytrych</H1>
       <JobTitle>
-        Full-Stack Web Developer <br /> Teacher &amp; Facilitator
+        Full-Stack Developer &amp; Designer<br /> Teacher &amp; Facilitator
       </JobTitle>
-      <LocationUpdate>London, UK / Remote • Updated April 2017</LocationUpdate>
+      <LocationUpdate>
+        She/her • London, UK / Remote • Updated April 2017
+      </LocationUpdate>
     </NameSection>
     <ImageSection>
       <ProfilePicture

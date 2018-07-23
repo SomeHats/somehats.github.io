@@ -7,5 +7,5 @@ export const primary = 'rgb(142, 84, 233)';
 export const secondary = 'rgb(142, 84, 233)';
 export const primaryLightest = 'hsl(263.4, 77.2%, 93.2%)';
 export const primaryLight = 'rgb(152, 99, 234)';
-export const primaryDark = 'rgb(69, 58, 87)';
+export const primaryDark = 'rgb(124, 77, 197)';
 export const primaryDarker = 'rgb(97, 68, 142)';
