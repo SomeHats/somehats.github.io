@@ -90,9 +90,10 @@ const HomePage = () => (
       </Lead>
       <Bio>
         <p>
-          I&apos;m a full-stack JavaScript developer who specialises in creating
-          delightful, playful web applications with React and Node.js. I have 6
-          years experience building apps, games and tools for the web.
+          I&apos;m a full-stack designer + JavaScript developer who specialises
+          in creating delightful, playful web applications with React and
+          Node.js. I have over 6 years experience building apps, games and tools
+          for the web.
         </p>
         <p>
           I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
@@ -108,8 +109,8 @@ const HomePage = () => (
           children to coding.
         </p>
         <p>
-          I&apos;m currently available for part-time freelance work as a
-          full-stack developer. I can also offer workshops and training on
+          I&apos;m currently available for freelance work as a full-stack
+          designer + developer. I can also offer workshops and training on
           front-end performance tuning, GraphQL, and React.
         </p>
         <p>
