@@ -51,41 +51,38 @@ const activeClassDark = cxs({
   },
 });
 
-const NavItem = ({ href, children, className, exact, external }) => {
-  console.log({ navLinkClass, navLinkClassDark, navLinkClassLight });
-  return (
-    <ThemeConsumer>
-      {theme => {
-        const cName = cx(
-          navLinkClass,
-          theme.id === ThemeNames.DARK ? navLinkClassDark : navLinkClassLight,
-          className,
-        );
+const NavItem = ({ href, children, className, exact, external }) => (
+  <ThemeConsumer>
+    {theme => {
+      const cName = cx(
+        navLinkClass,
+        theme.id === ThemeNames.DARK ? navLinkClassDark : navLinkClassLight,
+        className,
+      );
 
-        if (external) {
-          return (
-            <a className={cName} href={href}>
-              <span>{children}</span>
-            </a>
-          );
-        }
-
+      if (external) {
         return (
-          <NavLink
-            className={cName}
-            activeClassName={
-              theme.id === ThemeNames.DARK ? activeClassDark : activeClassLight
-            }
-            to={href}
-            exact={exact}
-          >
+          <a className={cName} href={href}>
             <span>{children}</span>
-          </NavLink>
+          </a>
         );
-      }}
-    </ThemeConsumer>
-  );
-};
+      }
+
+      return (
+        <NavLink
+          className={cName}
+          activeClassName={
+            theme.id === ThemeNames.DARK ? activeClassDark : activeClassLight
+          }
+          to={href}
+          exact={exact}
+        >
+          <span>{children}</span>
+        </NavLink>
+      );
+    }}
+  </ThemeConsumer>
+);
 
 NavItem.propTypes = {
   href: PropTypes.string.isRequired,
