@@ -81,4 +81,6 @@ export default () =>
         font-size: 12px;
       }
     }
-  `.replace(/\s\s/g, ' ');
+  `
+    .replace(/\n/g, ' ')
+    .replace(/\s\s/g, ' ');

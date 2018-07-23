@@ -3,11 +3,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import cxsComponent from 'cxs/component';
-import CxsThemeProvider from 'cxs/ThemeProvider';
-import { primaryLightest } from '../lib/colors';
-import { media } from '../lib/styles';
+import { media, primary } from '../lib/styles';
 import { Themes, ThemeNames } from '../lib/Themes';
 
+import ThemeProvider from './ThemeProvider';
 import Header from './Header';
 import SocialIcons from './SocialIcons';
 
@@ -20,6 +19,16 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
   background: 'white',
   zIndex: -2,
 
+  '::before': {
+    content: '""',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '3px',
+    background: primary,
+  },
+
   '::after': {
     content: '""',
     position: 'absolute',
@@ -28,14 +37,13 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
     bottom: 0,
     right: 0,
     background: 'black',
-    transition: 'opacity 0.2s ease',
+    transition: 'opacity 0.25s 0.1s ease',
     opacity: theme.id === ThemeNames.DARK ? 1 : 0,
     zIndex: -2,
   },
 }));
 
 const Main = cxsComponent('main')(({ theme }) => ({
-  color: theme.text,
   position: 'absolute',
   width: '100%',
   minHeight: '100%',
@@ -83,31 +91,22 @@ const Footer = cxsComponent('footer')({
   },
 });
 
-const {
-  Provider: ThemeProvider,
-  Consumer: ThemeConsumer,
-} = React.createContext();
-
 const Layout = ({ children, theme = ThemeNames.LIGHT }) => (
-  <CxsThemeProvider theme={Themes[theme]}>
-    <ThemeProvider value={Themes[theme]}>
-      <Helmet
-        meta={[
-          { name: 'theme-color', content: Themes[theme].androidThemeColor },
-        ]}
-      />
-      <Main>
-        <PageBackground />
-        <PageContainer>
-          <Header />
-          <Content>{children}</Content>
-          <Footer>
-            <SocialIcons />
-          </Footer>
-        </PageContainer>
-      </Main>
-    </ThemeProvider>
-  </CxsThemeProvider>
+  <ThemeProvider theme={theme}>
+    <Helmet
+      meta={[{ name: 'theme-color', content: Themes[theme].androidThemeColor }]}
+    />
+    <Main>
+      <PageBackground />
+      <PageContainer>
+        <Header />
+        <Content>{children}</Content>
+        <Footer>
+          <SocialIcons />
+        </Footer>
+      </PageContainer>
+    </Main>
+  </ThemeProvider>
 );
 
 Layout.propTypes = {
@@ -115,4 +114,3 @@ Layout.propTypes = {
 };
 
 export default Layout;
-export { ThemeConsumer };

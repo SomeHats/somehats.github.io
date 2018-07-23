@@ -3,10 +3,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cx from 'classnames';
 import cxs from 'cxs';
-import { ThemeNames, Themes } from '../lib/Themes';
+import { ThemeNames } from '../lib/Themes';
 import { primary, primaryLight, textColor, darkTextColor } from '../lib/colors';
 import { headingsFont } from '../lib/styles';
-import { ThemeConsumer } from './Layout';
+import { ThemeConsumer } from './ThemeProvider';
 
 const navLinkClass = cxs({
   ...headingsFont,

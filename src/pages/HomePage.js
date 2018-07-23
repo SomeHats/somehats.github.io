@@ -2,6 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import cxsComponent from 'cxs/component';
 import { media, H1, H4, A, Link, Img, headingsFont } from '../lib/styles';
+import { ThemeNames } from '../lib/Themes';
+import ThemeProvider from '../components/ThemeProvider';
 
 const singleCol = '@media screen and (max-width: 500px)';
 
@@ -68,57 +70,59 @@ const Bio = cxsComponent('section')({
 });
 
 const HomePage = () => (
-  <article>
-    <Helmet title="Alex Dytrych" />
-    <Heading>Hello! I&apos;m Alex.</Heading>
-    <Content>
-      <Lead>
-        <Tagline>
-          <H4>I build digital products and teach people stuff.</H4>
-          <H4>Sometimes, I do both at the same time.</H4>
-        </Tagline>
-        <ProfilePic>
-          <Img
-            src="/assets/profile-3-300.jpg"
-            srcSet="/assets/profile-3-600.jpg 2x"
-          />
-          <ProfilePicCaption>
-            This is what I look like. My hair is probably a different colour
-            though. It changes.
-          </ProfilePicCaption>
-        </ProfilePic>
-      </Lead>
-      <Bio>
-        <p>
-          I&apos;m a full-stack designer + JavaScript developer who specialises
-          in creating delightful, playful web applications with React and
-          Node.js. I have over 6 years experience building apps, games and tools
-          for the web.
-        </p>
-        <p>
-          I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
-          coding. I&apos;ve run courses on web programming for beginners, taught
-          business executives to build their own IoT devices, and introduced
-          7-year-olds to game design.
-        </p>
-        <p>
-          Previously, I created{' '}
-          <A href="https://eraseallkittens.com">Erase All Kittens</A>, a game
-          that teaches children aged 8+ how to code. You should have a go! Over
-          the last few years, E.A.K. has introduced hundreds of thousands of
-          children to coding.
-        </p>
-        <p>
-          I&apos;m currently available for freelance work as a full-stack
-          designer + developer. I can also offer workshops and training on
-          front-end performance tuning, GraphQL, and React.
-        </p>
-        <p>
-          <Link to="/contact">Get in touch</Link>! 🦄
-        </p>
-      </Bio>
-    </Content>
-  </article>
+  <ThemeProvider theme={ThemeNames.DARK}>
+    <article>
+      <Helmet title="Alex Dytrych" />
+      <Heading>Hello! I&apos;m Alex.</Heading>
+      <Content>
+        <Lead>
+          <Tagline>
+            <H4>I build digital products and teach people stuff.</H4>
+            <H4>Sometimes, I do both at the same time.</H4>
+          </Tagline>
+          <ProfilePic>
+            <Img
+              src="/assets/profile-3-300.jpg"
+              srcSet="/assets/profile-3-600.jpg 2x"
+            />
+            <ProfilePicCaption>
+              This is what I look like. My hair is probably a different colour
+              though. It changes.
+            </ProfilePicCaption>
+          </ProfilePic>
+        </Lead>
+        <Bio>
+          <p>
+            I&apos;m a full-stack designer + JavaScript developer who
+            specialises in creating delightful, playful web applications with
+            React and Node.js. I have over 6 years experience building apps,
+            games and tools for the web.
+          </p>
+          <p>
+            I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
+            coding. I&apos;ve run courses on web programming for beginners,
+            taught business executives to build their own IoT devices, and
+            introduced 7-year-olds to game design.
+          </p>
+          <p>
+            Previously, I created{' '}
+            <A href="https://eraseallkittens.com">Erase All Kittens</A>, a game
+            that teaches children aged 8+ how to code. You should have a go!
+            Over the last few years, E.A.K. has introduced hundreds of thousands
+            of children to coding.
+          </p>
+          <p>
+            I&apos;m currently available for freelance work as a full-stack
+            designer + developer. I can also offer workshops and training on
+            front-end performance tuning, GraphQL, and React.
+          </p>
+          <p>
+            <Link to="/contact">Get in touch</Link>! 🦄
+          </p>
+        </Bio>
+      </Content>
+    </article>
+  </ThemeProvider>
 );
 
 export default HomePage;
