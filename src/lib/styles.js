@@ -84,15 +84,20 @@ export const linkStyles = ({ theme }) => ({
     width: '100%',
     left: '0',
     bottom: '0.35em',
-    opacity: '0',
+    borderRadius: '0.16em / 0.08em',
+    opacity: '0.5',
     zIndex: '-1',
-    transform: 'scaleX(0.1)',
-    transition: 'opacity 0.2s linear, transform 0.2s ease-in',
+    transformOrigin: 'right',
+    transform: 'scaleX(0)',
+    transition:
+      'opacity 0.2s 0.05s linear, transform 0.2s 0.05s ease-in-out, transform-origin 0.05s linear',
   },
   ':hover::before': {
     opacity: '1',
     transform: 'scaleX(1)',
-    transition: 'opacity 0.2s linear, transform 0.2s ease-out',
+    transition:
+      'opacity 0.2s 0.05s linear, transform 0.2s 0.05s ease-in-out, transform-origin 0.05s linear',
+    transformOrigin: 'left',
   },
   [media.print]: {
     '::after': {
