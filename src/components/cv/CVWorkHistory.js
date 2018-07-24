@@ -1,10 +1,61 @@
 import React, { Fragment } from 'react';
-import { H3, A, Em } from '../../lib/styles';
+import { H3, H4, A, Em } from '../../lib/styles';
 import CVWorkHistoryItem, { CVSection } from './CVWorkHistoryItem';
 
 const CVWorkHistory = () => (
   <CVSection>
     <H3>Work History</H3>
+
+    <CVWorkHistoryItem
+      name={
+        <Fragment>
+          Developer &amp; Designer • <A href="http://airtable.com">Airtable</A>
+        </Fragment>
+      }
+      date="April 2017 - present"
+      tags={['Freelance / Consulting']}
+    >
+      blocks
+    </CVWorkHistoryItem>
+
+    <CVWorkHistoryItem
+      name={
+        <Fragment>
+          Educator &amp; Facilitator - Apprentices •{' '}
+          <A href="http://ada.ac.uk">Ada College</A>
+        </Fragment>
+      }
+      date="September 2017 - present"
+      tags={['Freelance / Consulting']}
+    >
+      Teaching
+    </CVWorkHistoryItem>
+
+    <CVWorkHistoryItem
+      name={
+        <Fragment>
+          Product Manager &amp; Developer •{' '}
+          <A href="http://bitetheballot.co.uk">Bite The Ballot</A>
+        </Fragment>
+      }
+      date="May 2017 - June 2018"
+      tags={['Freelance / Consulting']}
+    >
+      Verto
+    </CVWorkHistoryItem>
+
+    <CVWorkHistoryItem
+      name={
+        <Fragment>
+          Educator &amp; Facilitator - 6th Form •{' '}
+          <A href="http://ada.ac.uk">Ada College</A>
+        </Fragment>
+      }
+      date="January 2017 - July 2017"
+      tags={['Freelance / Consulting']}
+    >
+      Teaching
+    </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
       name={
