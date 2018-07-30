@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import cxsComponent from 'cxs/component';
 import { bgColor, primary } from '../../lib/colors';
@@ -59,6 +59,48 @@ export const Tag = cxsComponent('li')({
   fontSize: '0.8rem',
   verticalAlign: 'top',
 });
+
+const CVQuoteContainer = cxsComponent('div')({
+  position: 'relative',
+  paddingLeft: '3em',
+  borderLeft: '3px solid ${}',
+});
+
+const CVQuoteContent = cxsComponent('blockquote')({
+  ...headingsFont,
+  display: 'inline',
+  margin: 0,
+  opacity: 0.8,
+  fontStyle: 'italic',
+
+  '::before': {
+    content: '"“"',
+    position: 'absolute',
+    left: 0,
+    top: '2.5rem',
+    fontSize: '5rem',
+    fontStyle: 'normal',
+    lineHeight: 0,
+    opacity: 0.4,
+  },
+});
+
+const CVQuoteCite = cxsComponent('cite')({
+  display: 'inline',
+  fontStyle: 'normal',
+  opacity: 0.6,
+
+  '::before': {
+    content: '" — "',
+  },
+});
+
+export const CVQuote = ({ from, children }) => (
+  <CVQuoteContainer>
+    <CVQuoteContent>{children}</CVQuoteContent>
+    <CVQuoteCite>{from}</CVQuoteCite>
+  </CVQuoteContainer>
+);
 
 const CVWorkHistoryItem = ({ name, date, tags = [], children }) => (
   <CVItem>

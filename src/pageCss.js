@@ -17,6 +17,12 @@ export default () =>
       color: ${textColor};
     }
 
+    @media print {
+      body {
+        background: white;
+      }
+    }
+
     html,
     body,
     #root {

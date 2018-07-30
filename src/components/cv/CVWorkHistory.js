@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { H3, H4, A, Em } from '../../lib/styles';
-import CVWorkHistoryItem, { CVSection } from './CVWorkHistoryItem';
+import CVWorkHistoryItem, { CVSection, CVQuote } from './CVWorkHistoryItem';
 
 const CVWorkHistory = () => (
   <CVSection>
@@ -15,7 +15,20 @@ const CVWorkHistory = () => (
       date="April 2017 - present"
       tags={['Freelance / Consulting']}
     >
-      blocks
+      <p>
+        Airtable was looking for help developing Blocks - apps embedded in your
+        spreadsheat/database. I would take ideas for blocks along with any
+        relevant customer feedback, then spec-out, design, and implement them on
+        top of their Blocks SDK. The Blocks I created are killer features for
+        several large Airtable clients, including well known social media and
+        video streaming companies.
+      </p>
+      <p>
+        I've also spent considerable time working on the Blocks SDK itself -
+        adding new features for tighter integration with the rest of Airtable,
+        or working to smooth out the experience for other developers building
+        Blocks.
+      </p>
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
@@ -25,36 +38,27 @@ const CVWorkHistory = () => (
           <A href="http://ada.ac.uk">Ada College</A>
         </Fragment>
       }
-      date="September 2017 - present"
+      date="January 2017 - present"
       tags={['Freelance / Consulting']}
     >
-      Teaching
+      <p>Teaching</p>
+      <CVQuote from="Ali Blackwell, Lead Lecturer, Ada College">
+        Alex&apos;s name badge at Ada says Code Witch which I think gives a fab
+        hint of the positive magic she produces on a daily basis
+      </CVQuote>
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
       name={
         <Fragment>
           Product Manager &amp; Developer •{' '}
-          <A href="http://bitetheballot.co.uk">Bite The Ballot</A>
+          <A href="http://bitetheballot.co.uk">Verto</A>
         </Fragment>
       }
       date="May 2017 - June 2018"
       tags={['Freelance / Consulting']}
     >
       Verto
-    </CVWorkHistoryItem>
-
-    <CVWorkHistoryItem
-      name={
-        <Fragment>
-          Educator &amp; Facilitator - 6th Form •{' '}
-          <A href="http://ada.ac.uk">Ada College</A>
-        </Fragment>
-      }
-      date="January 2017 - July 2017"
-      tags={['Freelance / Consulting']}
-    >
-      Teaching
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
@@ -79,31 +83,20 @@ const CVWorkHistory = () => (
     >
       <p>
         In my role as Software Engineer, I helped design, develop, and architect
-        a rewrite of Music Glue&apos;s e-commerce system using <Em>React</Em>,{' '}
-        <Em>Node.js</Em>, <Em>GraphQL</Em>, and <Em>Ruby</Em>.
+        a rewrite of Music Glue&apos;s e-commerce system. We replace a legacy
+        PHP + MySQL monolith with a collection of loosely coupled{' '}
+        <Em>Node.JS</Em> + <Em>PostgreSQL</Em> services, ultimately exposed to
+        clients via a single unified <Em>GraphQL</Em> API. The result was a
+        system that was orders of magnitude faster and more scalable, with far
+        greater flexibility for users than was possible before.
       </p>
       <p>
-        I led work on the new platform&apos;s theming system which let users
-        customise their website without having to write code. This involved
-        writing <Em>RESTful Microservices</Em> with <Em>Node</Em> and{' '}
-        <Em>Postgres</Em>, integrating with a large <Em>Ruby on Rails</Em> app,
-        and writing a UI with <Em>React</Em>, <Em>Redux</Em>, <Em>Relay</Em>,
-        and <Em>Immutable.js</Em>.
-      </p>
-      <p>
-        I also architected the light-weight <Em>React/Redux</Em> shop front-end
-        used on all Music Glue stores. Keeping within our performance budget
-        here was an interesting challenge, but the result was a very fast,
-        simple system.
-      </p>
-      <p>
-        One of the more interesting challenges was scale. Music Glue&apos;s
-        platform needs to deal with an event like a major band announcing a
-        stadium tour, where hundreds of thousands of tickets might be sold in
-        just a few minutes. I worked to <Em>profile</Em> and <Em>optimise</Em>{' '}
-        the use of <Em>PostgreSQL</Em> by our microservices; and designed &amp;
-        implemented a caching strategy using <Em>Memcached</Em> for our{' '}
-        <Em>GraphQL API</Em>.
+        On the client-side, I architected a light-weight, performance-oriented{' '}
+        <Em>React/Redux</Em> shop front-end used on all Music Glue stores. We
+        set a tight performance budget and were able to keep quite comfortably
+        within it. I was also responsible for creating the themeing system that
+        let us build new HTML/CSS templates for customer websites and provide
+        customisation to users through a live-updating editor page.
       </p>
     </CVWorkHistoryItem>
 
@@ -124,7 +117,7 @@ const CVWorkHistory = () => (
         'Pixi.js',
         'UI/UX',
         'AWS',
-        'Project Management',
+        'Project & Product Management',
       ]}
     >
       <p>
@@ -134,17 +127,11 @@ const CVWorkHistory = () => (
         we had introduced hundreds of thousands of children to code.
       </p>
       <p>
-        I designed and implemented a custom game engine in <Em>JavaScript</Em>,
-        using <Em>Pixi.js</Em>, <Em>Backbone.js</Em>, <Em>WebGL</Em>,{' '}
-        <Em>React.js</Em>, and the <Em>WebAudio API</Em>. I wrote a backend API
-        in <Em>Node.JS</Em>, using <Em>PostgreSQL</Em>, <Em>MongoDB</Em>, and{' '}
-        <Em>Stripe</Em>.
-      </p>
-      <p>
-        As well as implementing the engine, I was responsible for most of the
-        in-game <Em>UI &amp; UX design</Em>, writing all the educational{' '}
-        <Em>content &amp; curriculum</Em>, level &amp; puzzle design, some
-        character &amp; UI <Em>animation</Em>, and <Em>project management</Em>.
+        I was responsible for all of the educational content in the game, and
+        much of the game-mechanic &amp; puzzle design. I created a custom
+        browser-based game engine to support E.A.K.&apos;s core mechanic - the
+        ability to edit the HTML and CSS source code to levels in real time, as
+        you were playing them.
       </p>
     </CVWorkHistoryItem>
 
@@ -161,7 +148,7 @@ const CVWorkHistory = () => (
         'PHP',
         'Salesforce',
         'PostgreSQL',
-        'Websockets',
+        'Realtime',
         'Go',
         'Redis',
         'TDD/BDD',
@@ -169,21 +156,17 @@ const CVWorkHistory = () => (
       ]}
     >
       <p>
-        As a developer at Decoded I worked on a range of internal and external
-        software products. I designed and built a live code editor for
-        Decoded&apos;s coding workshops. It was written with a real-time
-        framework called <Em>Derby.js</Em>, using <Em>MongoDB</Em>,{' '}
-        <Em>Redis</Em>, and <Em>Stylus</Em>. Users could open their project on a
-        phone and watch it update live via <Em>websockets</Em> with{' '}
-        <Em>Socket.io</Em> as they worked.
+        At Decoded I worked on a range of internal and external software
+        products. Notably, I designed and built the live coding environment
+        Decoded used to deliver all their coding workshops. The web-based editor
+        was specifically designed to have the lowest possible barrier to entry
+        and a very tight feedback loop to help new coders understand the effects
+        of their changes.
       </p>
       <p>
-        I also built internal business-management tools in <Em>Angular.js</Em>{' '}
-        and <Em>Node.js</Em> using a <Em>BDD</Em> approach. I maintained the
-        existing website and course infrastructure (<Em>PHP</Em> and{' '}
-        <Em>MySQL</Em>); and wrote a tool in <Em>Go</Em> that would
-        automatically synchronise company data between a <Em>PostgreSQL</Em>{' '}
-        database and <Em>Salesforce</Em>.
+        I also built internal business-management tools and wrote a tool that
+        would automatically synchronise company data between <Em>PostgreSQL</Em>{' '}
+        and <Em>Salesforce</Em>.
       </p>
     </CVWorkHistoryItem>
   </CVSection>

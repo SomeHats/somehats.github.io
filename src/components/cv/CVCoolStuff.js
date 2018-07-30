@@ -9,21 +9,32 @@ const CVCoolStuff = () => (
     <CVWorkHistoryItem
       name={
         <Fragment>
-          Author &amp; Consultant • JavaScript Made Easy •{' '}
+          Co-Author &amp; Consultant • JavaScript Made Easy •{' '}
           <A href="http://dk.com">DK</A>
         </Fragment>
       }
       date="February 2018"
     >
-      done a boosk
+      <A href="https://amzn.to/2mIPmQc">The book on Amazon</A>. A short exercise
+      book for children aimed 7-11, introducing them to programming in
+      JavaScript with a series of short, fun projects. The book was published by
+      DK, part of Penguin Random House.
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem name="Talk • Intro to GraphQL" date="August 2017">
-      {'https://speakerdeck.com/somehats/intro-to-graphql'}
+      <A href="https://speakerdeck.com/somehats/intro-to-graphql">
+        Check out the slides
+      </A>. A talk about GraphQL at Node Workshops, a meetup group. What it is,
+      how it works, how it compares to other tech, and how to get started with
+      it.
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem name="Talk • Teaching Tech" date="July 2017">
-      Teaching tech talk
+      <A href="https://speakerdeck.com/somehats/teaching-tech">
+        Check out the slides
+      </A>. A talk given at Queer Code London about how everyone in tech -
+      especially those who are new to the industry - has something to offer when
+      it comes to teaching others.
     </CVWorkHistoryItem>
     <CVWorkHistoryItem
       name="Talk • Error Handling in GraphQL"
@@ -33,8 +44,8 @@ const CVCoolStuff = () => (
         <A href="https://skillsmatter.com/skillscasts/9582-graphql-growing-pains">
           Watch on Skills Matter
         </A>. A short talk on our use of <Em>GraphQL</Em> at Music Glue. I
-        looked at how we had made error handling an explicit part of our data
-        schema for extra resilience if a back-end service went down.
+        discussed the decision to make error states an explicit part of our
+        graph schema for extra resilience if a service went down.
       </p>
     </CVWorkHistoryItem>
   </CVSection>

@@ -49,7 +49,8 @@ const PageBackground = cxsComponent('div')(({ theme }) => ({
 
 const Main = cxsComponent('main')(({ theme }) => ({
   position: 'absolute',
-  width: '100%',
+  // width: '100%',
+  // width: '21cm',
   minHeight: '100%',
   background: theme.bg,
 }));

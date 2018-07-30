@@ -56,7 +56,7 @@ const CVHeader = () => (
         Full-Stack Developer &amp; Designer<br /> Teacher &amp; Facilitator
       </JobTitle>
       <LocationUpdate>
-        She/her • London, UK / Remote • Updated April 2017
+        She/her • London, UK / Remote • Updated July 2018
       </LocationUpdate>
     </NameSection>
     <ImageSection>
