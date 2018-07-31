@@ -4,7 +4,7 @@ import CVWorkHistoryItem, { CVSection } from './CVWorkHistoryItem';
 
 const CVCoolStuff = () => (
   <CVSection>
-    <H3>Talks, Publications, Projects</H3>
+    <H3>Talks &amp; Publications</H3>
 
     <CVWorkHistoryItem
       name={
@@ -22,26 +22,23 @@ const CVCoolStuff = () => (
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem name="Talk • Intro to GraphQL" date="August 2017">
-      <A href="https://speakerdeck.com/somehats/intro-to-graphql">
-        Check out the slides
-      </A>. A talk about GraphQL at Node Workshops, a meetup group. What it is,
-      how it works, how it compares to other tech, and how to get started with
-      it.
+      <A href="http://bit.ly/intro-graphql">Check out the slides</A>. A talk
+      about GraphQL I gave at Node Workshops London. What it is, how it works,
+      how it compares to other technology, and how to get started with it.
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem name="Talk • Teaching Tech" date="July 2017">
-      <A href="https://speakerdeck.com/somehats/teaching-tech">
-        Check out the slides
-      </A>. A talk given at Queer Code London about how everyone in tech -
-      especially those who are new to the industry - has something to offer when
-      it comes to teaching others.
+      <A href="http://bit.ly/teaching-tech">Check out the slides</A>. A talk I
+      gave at Queer Code London about how everyone in tech - especially those
+      who are new to the industry - has something to offer when it comes to
+      teaching others.
     </CVWorkHistoryItem>
     <CVWorkHistoryItem
       name="Talk • Error Handling in GraphQL"
       date="January 2017"
     >
       <p>
-        <A href="https://skillsmatter.com/skillscasts/9582-graphql-growing-pains">
+        <A href="http://bit.ly/graphql-error-handling">
           Watch on Skills Matter
         </A>. A short talk on our use of <Em>GraphQL</Em> at Music Glue. I
         discussed the decision to make error states an explicit part of our

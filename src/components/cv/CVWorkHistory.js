@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { H3, H4, A, Em } from '../../lib/styles';
-import CVWorkHistoryItem, { CVSection, CVQuote } from './CVWorkHistoryItem';
+import CVWorkHistoryItem, { CVSection } from './CVWorkHistoryItem';
 
 const CVWorkHistory = () => (
   <CVSection>
@@ -13,52 +13,99 @@ const CVWorkHistory = () => (
         </Fragment>
       }
       date="April 2017 - present"
-      tags={['Freelance / Consulting']}
+      tags={[
+        'Freelance / Consulting',
+        'Product',
+        'UI/UX Design',
+        'JavaScript',
+        'React.js',
+        'Data Visualisation',
+      ]}
     >
       <p>
         Airtable was looking for help developing Blocks - apps embedded in your
-        spreadsheat/database. I would take ideas for blocks along with any
-        relevant customer feedback, then spec-out, design, and implement them on
-        top of their Blocks SDK. The Blocks I created are killer features for
-        several large Airtable clients, including well known social media and
+        spreadsheet/database. With only rough direction and customer feedback, I
+        designed, and implemented several blocks. The Blocks I created are key
+        features for large Airtable clients, such as well known social media and
         video streaming companies.
       </p>
       <p>
-        I've also spent considerable time working on the Blocks SDK itself -
-        adding new features for tighter integration with the rest of Airtable,
-        or working to smooth out the experience for other developers building
-        Blocks.
+        I also improved the Blocks SDK itself. I added new features for tighter
+        integration with the rest of Airtable, and made several API UX changes
+        to make things faster and easier for other developers working on the
+        platform.
       </p>
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
       name={
         <Fragment>
-          Educator &amp; Facilitator - Apprentices •{' '}
+          Educator &amp; Facilitator •{' '}
           <A href="http://ada.ac.uk">Ada College</A>
         </Fragment>
       }
       date="January 2017 - present"
-      tags={['Freelance / Consulting']}
+      tags={[
+        'Freelance / Consulting',
+        'Education',
+        'JavaScript',
+        'Java',
+        'Games',
+        'Agile',
+      ]}
     >
-      <p>Teaching</p>
-      <CVQuote from="Ali Blackwell, Lead Lecturer, Ada College">
-        Alex&apos;s name badge at Ada says Code Witch which I think gives a fab
-        hint of the positive magic she produces on a daily basis
-      </CVQuote>
+      <p>
+        At Ada, The National College for Digital Skills, I've designed and
+        delivered several courses and programs. My work recently has been on the
+        2-year degree-equivalent Digital Innovation Apprenticeship. The course
+        has seen candidates go from absolute beginners to valued members of
+        their software teams at companies like Google, Facebook, and EY.
+      </p>
+      <p>
+        I co-led the software engineering modules. My personal focus is in
+        ensuring we emphasize the "soft" skills required to be a successful
+        developer. As a result, students learning faster and more
+        collaboratively, in a highly self-directed environment. I also supported
+        delivery of modules on user-centered design, agile methodologies, data
+        structures, and algorithms.
+      </p>
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
       name={
         <Fragment>
-          Product Manager &amp; Developer •{' '}
+          Product Designer &amp; Lead Developer •{' '}
           <A href="http://bitetheballot.co.uk">Verto</A>
         </Fragment>
       }
       date="May 2017 - June 2018"
-      tags={['Freelance / Consulting']}
+      tags={[
+        'Freelance / Consulting',
+        'Product',
+        'UI/UX Design',
+        'Games',
+        'JavaScript',
+        'React.js',
+        'GraphQL',
+        'PostgreSQL',
+      ]}
     >
-      Verto
+      <p>
+        At youth politics charity Bite The Ballot, I designed and built Verto -
+        a playful survey &amp; interactive video platform. With the help of a
+        colleague, I took BTB's team right through the product development
+        process. I facilitated ideation sessions, produced initial prototypes,
+        and tested with some real-world users.
+      </p>
+      <p>
+        After several design iterations, we built out and launched the platform
+        - testing as we went. My focus was on the technical architecture; UX;
+        and the playful, high-performance frontend. The project has been a huge
+        success - the playful surveys have a very high completion rate beyond
+        our initial expectations, and BTB has been able to start becoming
+        self-sufficient by offering a white-labeled version of Verto to
+        businesses.
+      </p>
     </CVWorkHistoryItem>
 
     <CVWorkHistoryItem
@@ -74,29 +121,25 @@ const CVWorkHistory = () => (
         'React.js',
         'Redux',
         'GraphQL',
-        'Relay.js',
         'PostgreSQL',
-        'TDD',
         'Ruby',
-        'Microservices',
       ]}
     >
       <p>
         In my role as Software Engineer, I helped design, develop, and architect
-        a rewrite of Music Glue&apos;s e-commerce system. We replace a legacy
-        PHP + MySQL monolith with a collection of loosely coupled{' '}
-        <Em>Node.JS</Em> + <Em>PostgreSQL</Em> services, ultimately exposed to
-        clients via a single unified <Em>GraphQL</Em> API. The result was a
-        system that was orders of magnitude faster and more scalable, with far
-        greater flexibility for users than was possible before.
+        a rewrite of Music Glue's e-commerce system. We replaced a legacy PHP
+        &amp; MySQL monolith with a collection of <Em>Node.JS</Em> &amp;{' '}
+        <Em>PostgreSQL</Em>
+        services, exposed to clients via a single unified <Em>GraphQL</Em> API.
+        The new system was orders of magnitude faster and more scalable, with
+        far greater flexibility for our users.
       </p>
       <p>
-        On the client-side, I architected a light-weight, performance-oriented{' '}
+        On the client-side, I architected a light-weight, performance-oriented
         <Em>React/Redux</Em> shop front-end used on all Music Glue stores. We
         set a tight performance budget and were able to keep quite comfortably
-        within it. I was also responsible for creating the themeing system that
-        let us build new HTML/CSS templates for customer websites and provide
-        customisation to users through a live-updating editor page.
+        within it. I also created a new theming system that dramatically
+        increased the customization options available to customers.
       </p>
     </CVWorkHistoryItem>
 
@@ -109,29 +152,29 @@ const CVWorkHistory = () => (
       }
       date="September 2013 - February 2016"
       tags={[
+        'Co-Founder',
+        'Product',
+        'UI/UX Design',
         'JavaScript',
         'Node.js',
         'React.js',
         'PostgreSQL',
         'MongoDB',
         'Pixi.js',
-        'UI/UX',
         'AWS',
-        'Project & Product Management',
       ]}
     >
       <p>
         As co-founder &amp; CTO, I was responsible for all the technical work on
         our product Erase All Kittens, a web-based game that teaches children
-        how to code. I started the project in my bedroom, and by the time I left
-        we had introduced hundreds of thousands of children to code.
+        how to code. I started the project in my bedroom, and by the time I
+        left, we had introduced hundreds of thousands of children to coding.
       </p>
       <p>
-        I was responsible for all of the educational content in the game, and
-        much of the game-mechanic &amp; puzzle design. I created a custom
-        browser-based game engine to support E.A.K.&apos;s core mechanic - the
-        ability to edit the HTML and CSS source code to levels in real time, as
-        you were playing them.
+        I was responsible for the educational content, and much of the mechanics
+        &amp; puzzle design. I created a custom browser-based game engine to
+        support E.A.K.'s core mechanic - the ability to edit the HTML and CSS
+        source code to levels in real time, as you were playing.
       </p>
     </CVWorkHistoryItem>
 
@@ -146,12 +189,9 @@ const CVWorkHistory = () => (
         'JavaScript',
         'Node.js',
         'PHP',
-        'Salesforce',
         'PostgreSQL',
-        'Realtime',
+        'Real-time',
         'Go',
-        'Redis',
-        'TDD/BDD',
         'Angular.js',
       ]}
     >
@@ -159,14 +199,9 @@ const CVWorkHistory = () => (
         At Decoded I worked on a range of internal and external software
         products. Notably, I designed and built the live coding environment
         Decoded used to deliver all their coding workshops. The web-based editor
-        was specifically designed to have the lowest possible barrier to entry
-        and a very tight feedback loop to help new coders understand the effects
-        of their changes.
-      </p>
-      <p>
-        I also built internal business-management tools and wrote a tool that
-        would automatically synchronise company data between <Em>PostgreSQL</Em>{' '}
-        and <Em>Salesforce</Em>.
+        was designed to have the lowest possible barrier to entry and a very
+        tight feedback loop to help new coders understand the effects of their
+        changes.
       </p>
     </CVWorkHistoryItem>
   </CVSection>
