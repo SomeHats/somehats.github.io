@@ -27,7 +27,7 @@ const CVSummary = () => (
       business executives to build their own <Em>IoT devices</Em>, and
       introduced 7-year-olds to <Em>game design</Em>. I&apos;m also the creator
       of <A href="https://eraseallkittens.com">Erase All Kittens</A>, an{' '}
-      <Em>open-source</Em> game that teaches children aged 8+ to code.
+      <Em>award-winning</Em> game that teaches children aged 8+ to code.
     </p>
   </SummarySection>
 );

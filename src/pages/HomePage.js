@@ -107,10 +107,10 @@ const HomePage = () => (
           </p>
           <p>
             Previously, I created{' '}
-            <A href="https://eraseallkittens.com">Erase All Kittens</A>, a game
-            that teaches children aged 8+ how to code. You should have a go!
-            Over the last few years, E.A.K. has introduced hundreds of thousands
-            of children to coding.
+            <A href="https://eraseallkittens.com">Erase All Kittens</A>, an
+            award-winning game that teaches children aged 8+ how to code. You
+            should have a go! Over the last few years, E.A.K. has introduced
+            hundreds of thousands of children to coding.
           </p>
           <p>
             I&apos;m currently available for freelance work as a full-stack

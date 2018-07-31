@@ -25,7 +25,7 @@ const CVWorkHistory = () => (
       <p>
         Airtable was looking for help developing Blocks - apps embedded in your
         spreadsheet/database. With only rough direction and customer feedback, I
-        designed, and implemented several blocks. The Blocks I created are key
+        designed, and implemented several Blocks. The Blocks I created are key
         features for large Airtable clients, such as well known social media and
         video streaming companies.
       </p>
@@ -56,7 +56,7 @@ const CVWorkHistory = () => (
     >
       <p>
         At Ada, The National College for Digital Skills, I've designed and
-        delivered several courses and programs. My work recently has been on the
+        delivered several courses and programs. My recent work has been on the
         2-year degree-equivalent Digital Innovation Apprenticeship. The course
         has seen candidates go from absolute beginners to valued members of
         their software teams at companies like Google, Facebook, and EY.
@@ -64,10 +64,10 @@ const CVWorkHistory = () => (
       <p>
         I co-led the software engineering modules. My personal focus is in
         ensuring we emphasize the "soft" skills required to be a successful
-        developer. As a result, students learning faster and more
-        collaboratively, in a highly self-directed environment. I also supported
-        delivery of modules on user-centered design, agile methodologies, data
-        structures, and algorithms.
+        developer. As a result, students learn faster and more collaboratively,
+        in a highly self-directed environment. I also supported delivery of
+        modules on user-centered design, agile methodologies, data structures,
+        and algorithms.
       </p>
     </CVWorkHistoryItem>
 
@@ -102,9 +102,8 @@ const CVWorkHistory = () => (
         - testing as we went. My focus was on the technical architecture; UX;
         and the playful, high-performance frontend. The project has been a huge
         success - the playful surveys have a very high completion rate beyond
-        our initial expectations, and BTB has been able to start becoming
-        self-sufficient by offering a white-labeled version of Verto to
-        businesses.
+        our initial expectations. BTB has started to become self-sufficient by
+        offering Verto to comercial businesses.
       </p>
     </CVWorkHistoryItem>
 
@@ -126,18 +125,17 @@ const CVWorkHistory = () => (
       ]}
     >
       <p>
-        In my role as Software Engineer, I helped design, develop, and architect
-        a rewrite of Music Glue's e-commerce system. We replaced a legacy PHP
+        As a Software Engineer, I helped design, develop, and architect a
+        rewrite of Music Glue's e-commerce system. We replaced a legacy PHP
         &amp; MySQL monolith with a collection of <Em>Node.JS</Em> &amp;{' '}
-        <Em>PostgreSQL</Em>
-        services, exposed to clients via a single unified <Em>GraphQL</Em> API.
-        The new system was orders of magnitude faster and more scalable, with
-        far greater flexibility for our users.
+        <Em>PostgreSQL</Em> services, exposed to clients via a single unified{' '}
+        <Em>GraphQL</Em> API. The new system was orders of magnitude faster and
+        more scalable, with far greater flexibility for our users.
       </p>
       <p>
-        On the client-side, I architected a light-weight, performance-oriented
-        <Em>React/Redux</Em> shop front-end used on all Music Glue stores. We
-        set a tight performance budget and were able to keep quite comfortably
+        On the client-side, I architected a light-weight, performance-oriented{' '}
+        <Em>React/Redux</Em> shop frontend used on all Music Glue stores. We set
+        a tight performance budget and were able to keep quite comfortably
         within it. I also created a new theming system that dramatically
         increased the customization options available to customers.
       </p>
@@ -166,9 +164,10 @@ const CVWorkHistory = () => (
     >
       <p>
         As co-founder &amp; CTO, I was responsible for all the technical work on
-        our product Erase All Kittens, a web-based game that teaches children
-        how to code. I started the project in my bedroom, and by the time I
-        left, we had introduced hundreds of thousands of children to coding.
+        our product Erase All Kittens, an award-winning game that teaches
+        children how to code. I started the project in my bedroom, and by the
+        time I left, we had introduced hundreds of thousands of children to
+        coding.
       </p>
       <p>
         I was responsible for the educational content, and much of the mechanics
