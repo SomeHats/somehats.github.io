@@ -29,5 +29,6 @@
     "colors": "node ./scripts/colors.js",
     "postcommit": "bash ./scripts/build.sh",
     "prepush": "bash ./scripts/push.sh"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
