@@ -40,9 +40,6 @@ jobs:
             - name: Install dependencies
               run: yarn --immutable
 
-            - name: Check types
-              run: yarn types
-
             - name: Build web
               run: yarn build
 
