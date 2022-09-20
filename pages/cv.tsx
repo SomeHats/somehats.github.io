@@ -260,18 +260,18 @@ function CvWorkHistory() {
                 ]}
             >
                 <p>
-                    At Ada, The National College for Digital Skills, I've designed and delivered
-                    several courses and programs. My recent work has been on the 2-year
+                    At Ada, The National College for Digital Skills, I&apos;ve designed and
+                    delivered several courses and programs. My recent work has been on the 2-year
                     degree-equivalent Digital Innovation Apprenticeship. The course has seen
                     candidates go from absolute beginners to valued members of their software teams
                     at companies like Google, Facebook, and EY.
                 </p>
                 <p>
                     I co-led the software engineering modules. My personal focus is in ensuring we
-                    emphasize the "soft" skills required to be a successful developer. As a result,
-                    students learn faster and more collaboratively, in a highly self-directed
-                    environment. I also supported delivery of modules on user-centered design, agile
-                    methodologies, data structures, and algorithms.
+                    emphasize the &ldquo;soft&rdquo; skills required to be a successful developer.
+                    As a result, students learn faster and more collaboratively, in a highly
+                    self-directed environment. I also supported delivery of modules on user-centered
+                    design, agile methodologies, data structures, and algorithms.
                 </p>
             </CvItem>
 
@@ -297,9 +297,9 @@ function CvWorkHistory() {
                 <p>
                     At youth politics charity Bite The Ballot, I designed and built Verto - a
                     playful survey &amp; interactive video platform. With the help of a colleague, I
-                    took BTB's team right through the product development process. I facilitated
-                    ideation sessions, produced initial prototypes, and tested with some real-world
-                    users.
+                    took BTB&apos;s team right through the product development process. I
+                    facilitated ideation sessions, produced initial prototypes, and tested with some
+                    real-world users.
                 </p>
                 <p>
                     After several design iterations, we built out and launched the platform -
@@ -330,11 +330,11 @@ function CvWorkHistory() {
             >
                 <p>
                     As a Software Engineer, I helped design, develop, and architect a rewrite of
-                    Music Glue's e-commerce system. We replaced a legacy PHP &amp; MySQL monolith
-                    with a collection of <Em>Node.JS</Em> &amp; <Em>PostgreSQL</Em> services,
-                    exposed to clients via a single unified <Em>GraphQL</Em> API. The new system was
-                    orders of magnitude faster and more scalable, with far greater flexibility for
-                    our users.
+                    Music Glue&apos;s e-commerce system. We replaced a legacy PHP &amp; MySQL
+                    monolith with a collection of <Em>Node.JS</Em> &amp; <Em>PostgreSQL</Em>{" "}
+                    services, exposed to clients via a single unified <Em>GraphQL</Em> API. The new
+                    system was orders of magnitude faster and more scalable, with far greater
+                    flexibility for our users.
                 </p>
                 <p>
                     On the client-side, I architected a light-weight, performance-oriented{" "}
@@ -373,9 +373,9 @@ function CvWorkHistory() {
                 </p>
                 <p>
                     I was responsible for the educational content, and much of the mechanics &amp;
-                    puzzle design. I created a custom browser-based game engine to support E.A.K.'s
-                    core mechanic - the ability to edit the HTML and CSS source code to levels in
-                    real time, as you were playing.
+                    puzzle design. I created a custom browser-based game engine to support
+                    E.A.K.&apos;s core mechanic - the ability to edit the HTML and CSS source code
+                    to levels in real time, as you were playing.
                 </p>
             </CvItem>
 
