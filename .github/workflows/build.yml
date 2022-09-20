@@ -76,6 +76,9 @@ jobs:
               with:
                   name: github-pages
 
+            - name: Disable jekyll
+              run: touch .nojekyll
+
             - name: Commit & push changes
               run: |
                   set -eux
