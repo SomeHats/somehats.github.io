@@ -32,11 +32,11 @@ function CvHeader() {
             <section className="CvHeader-nameSection">
                 <H1>Alex Dytrych</H1>
                 <h4 className="CvHeader-jobTitle">
-                    Full-Stack Developer &amp; Designer
-                    <br /> Teacher &amp; Facilitator
+                    Staff product engineer
+                    <br /> Interaction designer
                 </h4>
                 <p className="CvHeader-locationUpdate">
-                    She/her • London, UK / Remote • Updated July 2018
+                    She/her • London, UK / Remote • Updated September 2022
                 </p>
             </section>
             <section className="CvHeader-imageSection">
@@ -180,20 +180,21 @@ function CvSummary() {
     return (
         <section className="CvSummary">
             <p>
-                I&apos;m a freelance full-stack <Em>JavaScript</Em> developer &amp; designer who
-                specializes in creating delightful, playful, high-performance web applications with
-                tech like <Em>React</Em>, <Em>Node.js</Em>, and <Em>PostgreSQL</Em>. I have over 6
-                years experience building <Em>apps</Em>, <Em>games</Em>, and <Em>tools</Em> for the
-                web.
+                I&apos;m a staff product engineer &amp; interaction designer with ~10 years
+                experience building apps, games and tools for the web. I specialize in creative
+                tools, developer experience, and education. I spent the last few years at Airtable
+                leading work on their{" "}
+                <A href="https://www.airtable.com/developers">developer platform</A> and{" "}
+                <A href="https://www.airtable.com/product/interface-designer">interface designer</A>{" "}
+                products.
             </p>
             <p>
                 I spend a lot of time thinking about coding, computational thinking, and how we
-                teach it. As a teacher/facilitator, I&apos;ve designed &amp; delivered{" "}
-                <Em>degree-level</Em> software engineering courses, taught business executives to
-                build their own <Em>IoT devices</Em>, and introduced 7-year-olds to{" "}
-                <Em>game design</Em>. I&apos;m also the creator of{" "}
-                <A href="https://eraseallkittens.com">Erase All Kittens</A>, an{" "}
-                <Em>award-winning</Em> game that teaches children aged 8+ to code.
+                teach it. As a teacher/facilitator, I&apos;ve designed &amp; delivered degree-level
+                software engineering courses, taught business executives to build their own IoT
+                devices, and introduced 7-year-olds to game design. I&apos;m also the creator of{" "}
+                <A href="https://eraseallkittens.com">Erase All Kittens</A>, an award-winning game
+                that teaches children aged 8+ to code.
             </p>
             <style jsx>{`
                 .CvSummary {
@@ -216,99 +217,19 @@ function CvWorkHistory() {
             <CvItem
                 name={
                     <>
-                        Developer &amp; Designer • <A href="http://airtable.com">Airtable</A>
+                        Staff Product Engineer • <A href="http://airtable.com">Airtable</A>
                     </>
                 }
-                date="April 2017 - present"
-                tags={[
-                    "Freelance / Consulting",
-                    "Product",
-                    "UI/UX Design",
-                    "JavaScript",
-                    "React.js",
-                    "Data Visualisation",
-                ]}
+                date="January 2019 - July 2022"
             >
-                <p>
-                    Airtable was looking for help developing Blocks - apps embedded in your
-                    spreadsheet/database. With only rough direction and customer feedback, I
-                    designed, and implemented several Blocks. The Blocks I created are key features
-                    for large Airtable clients, such as well known social media and video streaming
-                    companies.
-                </p>
-                <p>
-                    I also improved the Blocks SDK itself. I added new features for tighter
-                    integration with the rest of Airtable, and made several API UX changes to make
-                    things faster and easier for other developers working on the platform.
-                </p>
+                <p>words go here</p>
             </CvItem>
 
             <CvItem
-                name={
-                    <>
-                        Educator &amp; Facilitator • <A href="http://ada.ac.uk">Ada College</A>
-                    </>
-                }
-                date="January 2017 - present"
-                tags={[
-                    "Freelance / Consulting",
-                    "Education",
-                    "JavaScript",
-                    "Java",
-                    "Games",
-                    "Agile",
-                ]}
+                name={<>Freelance Product Engineer &amp; Facilitator • Space Dog Ltd</>}
+                date="March 2017 - January 2019"
             >
-                <p>
-                    At Ada, The National College for Digital Skills, I&apos;ve designed and
-                    delivered several courses and programs. My recent work has been on the 2-year
-                    degree-equivalent Digital Innovation Apprenticeship. The course has seen
-                    candidates go from absolute beginners to valued members of their software teams
-                    at companies like Google, Facebook, and EY.
-                </p>
-                <p>
-                    I co-led the software engineering modules. My personal focus is in ensuring we
-                    emphasize the &ldquo;soft&rdquo; skills required to be a successful developer.
-                    As a result, students learn faster and more collaboratively, in a highly
-                    self-directed environment. I also supported delivery of modules on user-centered
-                    design, agile methodologies, data structures, and algorithms.
-                </p>
-            </CvItem>
-
-            <CvItem
-                name={
-                    <>
-                        Product Designer &amp; Lead Developer •{" "}
-                        <A href="http://bitetheballot.co.uk">Verto</A>
-                    </>
-                }
-                date="May 2017 - June 2018"
-                tags={[
-                    "Freelance / Consulting",
-                    "Product",
-                    "UI/UX Design",
-                    "Games",
-                    "JavaScript",
-                    "React.js",
-                    "GraphQL",
-                    "PostgreSQL",
-                ]}
-            >
-                <p>
-                    At youth politics charity Bite The Ballot, I designed and built Verto - a
-                    playful survey &amp; interactive video platform. With the help of a colleague, I
-                    took BTB&apos;s team right through the product development process. I
-                    facilitated ideation sessions, produced initial prototypes, and tested with some
-                    real-world users.
-                </p>
-                <p>
-                    After several design iterations, we built out and launched the platform -
-                    testing as we went. My focus was on the technical architecture; UX; and the
-                    playful, high-performance frontend. The project has been a huge success - the
-                    playful surveys have a very high completion rate beyond our initial
-                    expectations. BTB has started to become self-sufficient by offering Verto to
-                    comercial businesses.
-                </p>
+                <p>words go here</p>
             </CvItem>
 
             <CvItem
@@ -318,30 +239,20 @@ function CvWorkHistory() {
                     </>
                 }
                 date="March 2016 - March 2017"
-                tags={[
-                    "JavaScript",
-                    "Node.js",
-                    "React.js",
-                    "Redux",
-                    "GraphQL",
-                    "PostgreSQL",
-                    "Ruby",
-                ]}
             >
                 <p>
                     As a Software Engineer, I helped design, develop, and architect a rewrite of
                     Music Glue&apos;s e-commerce system. We replaced a legacy PHP &amp; MySQL
-                    monolith with a collection of <Em>Node.JS</Em> &amp; <Em>PostgreSQL</Em>{" "}
-                    services, exposed to clients via a single unified <Em>GraphQL</Em> API. The new
-                    system was orders of magnitude faster and more scalable, with far greater
-                    flexibility for our users.
+                    monolith with a collection of Node.js &amp; PostgreSQL services, exposed to
+                    clients via a single unified GraphQL API. The new system was orders of magnitude
+                    faster and more scalable, with far greater flexibility for our users.
                 </p>
                 <p>
-                    On the client-side, I architected a light-weight, performance-oriented{" "}
-                    <Em>React/Redux</Em> shop frontend used on all Music Glue stores. We set a tight
-                    performance budget and were able to keep quite comfortably within it. I also
-                    created a new theming system that dramatically increased the customization
-                    options available to customers.
+                    On the client-side, I architected a light-weight, performance-oriented React
+                    shop frontend used on all Music Glue stores. We set a tight performance budget
+                    and were able to keep quite comfortably within it. I also created a new theming
+                    system that significantly increased the customization options available to
+                    customers.
                 </p>
             </CvItem>
 
@@ -352,18 +263,6 @@ function CvWorkHistory() {
                     </>
                 }
                 date="September 2013 - February 2016"
-                tags={[
-                    "Co-Founder",
-                    "Product",
-                    "UI/UX Design",
-                    "JavaScript",
-                    "Node.js",
-                    "React.js",
-                    "PostgreSQL",
-                    "MongoDB",
-                    "Pixi.js",
-                    "AWS",
-                ]}
             >
                 <p>
                     As co-founder &amp; CTO, I was responsible for all the technical work on our
@@ -386,15 +285,6 @@ function CvWorkHistory() {
                     </>
                 }
                 date="September 2013 - September 2014"
-                tags={[
-                    "JavaScript",
-                    "Node.js",
-                    "PHP",
-                    "PostgreSQL",
-                    "Real-time",
-                    "Go",
-                    "Angular.js",
-                ]}
             >
                 <p>
                     At Decoded I worked on a range of internal and external software products.

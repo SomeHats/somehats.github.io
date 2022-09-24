@@ -170,13 +170,13 @@ export function getLinkStyles(theme: Theme) {
             z-index: -1;
             transform-origin: right;
             transform: scaleX(0);
-            transition: opacity 0.2s 0.04s linear, transform 0.2s 0.04s ease-in-out,
+            transition: opacity 0.2s 0.04s linear, transform 0.15s 0.04s ease-in-out,
                 transform-origin 0.05s linear;
         }
         .Link:hover::before {
             opacity: 1;
             transform: scaleX(1);
-            transition: opacity 0.2s 0.04s linear, transform 0.2s 0.04s ease-in-out,
+            transition: opacity 0.2s 0.04s linear, transform 0.15s 0.04s ease-in-out,
                 transform-origin 0.05s linear;
             transform-origin: left;
         }

@@ -17,10 +17,7 @@ export default function Home() {
                             <H4>Sometimes, I do both at the same time.</H4>
                         </div>
                         <figure className="Home-profilePic">
-                            <Img
-                                src={ProfileImage}
-                                alt="A photo of me! A woman with pink and blue hair, wearing a stripy t-shirt and a suede jacket."
-                            />
+                            <Img src={ProfileImage} alt="A photo of me!" />
                             <figcaption className="Home-profilePicCaption">
                                 This is what I look like. I was on a hike where I made friends with
                                 a bee.
@@ -29,9 +26,9 @@ export default function Home() {
                     </section>
                     <section className="Home-bio">
                         <p>
-                            I&apos;m a full-stack designer &amp; JavaScript developer who creates
-                            delightful, playful web applications with React and Node.js. I have over
-                            6 years experience building apps, games and tools for the web.
+                            I&apos;m a product engineer &amp; interaction designer with ~10 years
+                            experience building apps, games and tools for the web. I specialize in
+                            creative tools, developer experience, and education.
                         </p>
                         <p>
                             I&apos;ve been teaching &amp; facilitating as long as I&apos;ve been
@@ -40,18 +37,14 @@ export default function Home() {
                             devices, and introduced 7-year-olds to game design.
                         </p>
                         <p>
-                            Previously, I created{" "}
+                            A long time ago, I started{" "}
                             <A href="https://eraseallkittens.com">Erase All Kittens</A>, an
                             award-winning game that teaches children aged 8+ how to code. You should
                             have a go! Over the last few years, E.A.K. has introduced hundreds of
                             thousands of children to coding.
                         </p>
                         <p>
-                            I&apos;m currently available for freelance work as a full-stack designer
-                            &amp; developer. I can also offer workshops and training on front-end
-                            performance tuning, GraphQL, and React.
-                        </p>
-                        <p>
+                            You can hire me to help build your cool JavaScript thing!{" "}
                             <Link href="/contact">Get in touch</Link>! 🦄
                         </p>
                     </section>
