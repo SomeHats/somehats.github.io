@@ -275,7 +275,7 @@ function CvWorkHistory() {
                 <p>
                     I also offered services as an educator and facilitator. For one of my clients,
                     an apprenticeship provider, I designed and delivered an intensive degree-level
-                    software engineering boot-camp program. The course has seen candidates go from
+                    software engineering boot-camp program. The course has seen candidates grow from
                     absolute beginners to valued members of their software teams at companies like
                     Google, Facebook, and EY.
                 </p>
