@@ -16,7 +16,7 @@ export function Header() {
                         <NavDivider />
                         <NavLink href="/cv">CV</NavLink>
                         <NavDivider />
-                        <NavLink href="https://alex.dytry.ch/toys">Toys</NavLink>
+                        <NavLink href="https://alex.dytry.ch/toys/">Toys</NavLink>
                         <NavDivider />
                         <NavLink href="/contact">Contact</NavLink>
                     </nav>
