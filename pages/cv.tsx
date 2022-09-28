@@ -262,7 +262,7 @@ function CvWorkHistory() {
             </CvItem>
 
             <CvItem
-                name={<>Consultant Product Engineer &amp; Facilitator • Space Dog Ltd</>}
+                name={<>Consultant Product Engineer &amp; Facilitator</>}
                 date="March 2017 - January 2019"
             >
                 <p>

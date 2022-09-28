@@ -84,7 +84,7 @@ export default function Home() {
                         flex-direction: column;
                     }
                     .Home-lead {
-                        width: 100%;
+                        width: 100% !important;
                     }
                 }
                 @media ${media.small} {
