@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             <style jsx global>{`
                 html,
                 body {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
                 body {
                     font-family: "Montserrat", sans-serif;

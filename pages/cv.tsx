@@ -79,7 +79,9 @@ function CvHeader() {
                     font-size: 0.8rem;
                 }
                 @media ${media.smallMedium} {
-                    display: block;
+                    .CvHeader {
+                        display: block;
+                    }
                 }
                 @media screen and (max-width: 950px) {
                     .CvHeader-imageSection {
@@ -184,8 +186,16 @@ function CvSummary() {
                 experience building apps, games and tools for the web. I specialize in creative
                 tools, developer experience, and education. I spent the last few years at Airtable
                 leading work on their{" "}
-                <A href="https://www.airtable.com/developers">developer platform</A> and{" "}
-                <A href="https://www.airtable.com/product/interface-designer">interface designer</A>{" "}
+                <A href="https://www.airtable.com/developers" showUrlWhenPrinting={false}>
+                    developer platform
+                </A>{" "}
+                and{" "}
+                <A
+                    href="https://www.airtable.com/product/interface-designer"
+                    showUrlWhenPrinting={false}
+                >
+                    interface designer
+                </A>{" "}
                 products.
             </p>
             <p>
@@ -222,14 +232,48 @@ function CvWorkHistory() {
                 }
                 date="January 2019 - July 2022"
             >
-                <p>words go here</p>
+                <p>
+                    In my time at Airtable my role grew and changed with the company as it scaled
+                    from 70 to over 1,000 people. As tech lead on the platform/ecosystem team, I was
+                    responsible for developing our ecosystem strategy, leading the team to ship our
+                    3rd party extension tools &amp; marketplace, and coordinating work with a group
+                    of external contractors.
+                </p>
+                <p>
+                    I designed the extension SDK and DX, and created Airtable&apos;s scripting
+                    environment&mdash;a product that started life as a 1-week prototype, and quickly
+                    grew to one the top priorities for our ecosystem strategy &amp; the company as a
+                    whole as it made the step from &lsquo;no-code&rsquo; to &lsquo;low-code&rsquo;.
+                    I wrote and delivered customer facing training webinars on these tools, and gave
+                    a talk at AWS re:Invent 2020 on our work on these tools.
+                </p>
+                <p>
+                    After the platform/ecosystem team, I switched over to become one of 3 founding
+                    engineers on newly formed Interface Designer team. ID was the 3rd and final
+                    pillar of Airtable&apos;s product strategy, and the most ambitious product
+                    I&apos;ve ever worked on. I created the layout system and drag &amp; drop layout
+                    builder at the core of the product.
+                </p>
             </CvItem>
 
             <CvItem
                 name={<>Freelance Product Engineer &amp; Facilitator • Space Dog Ltd</>}
                 date="March 2017 - January 2019"
             >
-                <p>words go here</p>
+                <p>
+                    In my two years freelancing, I worked for a range of clients as a one-person
+                    digital product design &amp; dev shop. Most clients were smaller non-profit orgs
+                    in London without tech experience. I would help develop a rough idea into a
+                    fully fledged product concept before iterating towards an MVP through the
+                    design, implementation, and user testing process.
+                </p>
+                <p>
+                    I also offered services as an educator and facilitator. For one of my clients,
+                    an apprenticeship provider, I designed and delivered an intensive degree-level
+                    software engineering boot camp program. The course has seen candidates go from
+                    absolute beginners to valued members of their software teams at companies like
+                    Google, Facebook, and EY.
+                </p>
             </CvItem>
 
             <CvItem
@@ -391,6 +435,23 @@ function CvCoolStuff() {
             <H3>Talks &amp; Publications</H3>
 
             <CvItem
+                name="Talk • How Airtable safely runs custom user scripts "
+                date="December 2020"
+            >
+                <A href="https://bit.ly/reinvent-scripting">Watch the talk</A>. A talk for AWS
+                re:Invent 2020 about how Airtable securely runs untrusted code on the server as part
+                of scripting and automations. The talk describes the architecture of our script
+                runner and the security considerations that went into it.
+            </CvItem>
+
+            <CvItem name="Blog • Creating a scripting tool anyone can use" date="March 2020">
+                <A href="https://bit.ly/creating-scripting">Read the post</A>. A detailed breakdown
+                of the design decisions that went into Airtable Scripting. The goal of the project
+                was to build a JavaScript environment that felt like a natural progression from
+                spreadsheet formulas, and this post describes how we got there.
+            </CvItem>
+
+            <CvItem
                 name={
                     <>
                         Co-Author &amp; Consultant • JavaScript Made Easy •{" "}
@@ -404,7 +465,7 @@ function CvCoolStuff() {
                 short, fun projects. The book was published by DK, part of Penguin Random House.
             </CvItem>
 
-            <CvItem name="Talk • Intro to GraphQL" date="August 2017">
+            {/* <CvItem name="Talk • Intro to GraphQL" date="August 2017">
                 <A href="http://bit.ly/intro-graphql">Check out the slides</A>. A talk about GraphQL
                 I gave at Node Workshops London. What it is, how it works, how it compares to other
                 technology, and how to get started with it.
@@ -422,7 +483,7 @@ function CvCoolStuff() {
                     decision to make error states an explicit part of our graph schema for extra
                     resilience if a service went down.
                 </p>
-            </CvItem>
+            </CvItem> */}
             <style jsx>{`
                 .CvCoolStuff {
                     padding-top: 1rem;

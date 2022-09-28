@@ -64,7 +64,7 @@ export function Layout({ children }: { children: ReactNode }) {
                 .Layout-container {
                     position: relative;
                     margin: auto;
-                    max-width: 1000px;
+                    max-width: 900px;
                     padding: 0 4rem;
                     display: flex;
                     flex-direction: column;

@@ -14,7 +14,7 @@ export * from "./colors";
 export const media = {
     medium: "screen and (max-width: 850px)",
     smallMedium: "screen and (max-width: 600px)",
-    small: "screen and (max-width: 400px)",
+    small: "screen and (max-width: 450px)",
 } as const;
 
 export const fonts = {
@@ -147,7 +147,7 @@ export function Em(props: ComponentProps<"em">) {
     );
 }
 
-export function getLinkStyles(theme: Theme) {
+export function getLinkStyles(theme: Theme, showUrlWhenPrinting = true) {
     return css.resolve`
         .Link {
             color: ${theme.primaryText};
@@ -182,14 +182,20 @@ export function getLinkStyles(theme: Theme) {
         }
         @media print {
             .Link::after {
-                content: " (" attr(href) ")";
+                ${showUrlWhenPrinting ? 'content: " (" attr(href) ")";' : ""}
+            }
+            .Link {
+                color: ${showUrlWhenPrinting ? theme.primaryText : "inherit"};
             }
         }
     `;
 }
 
-export function A(props: ComponentProps<"a">) {
-    const { className, styles } = getLinkStyles(useTheme());
+export function A({
+    showUrlWhenPrinting = true,
+    ...props
+}: ComponentProps<"a"> & { showUrlWhenPrinting?: boolean }) {
+    const { className, styles } = getLinkStyles(useTheme(), showUrlWhenPrinting);
     return (
         <>
             <a {...props} className={classNames(className, "Link", props.className)} />

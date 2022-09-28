@@ -26,21 +26,22 @@ export function Header() {
             </header>
             <style jsx>{`
                 .Header-container {
+                    position: relative;
                     padding-bottom: 2rem;
                     padding-top: 5rem;
-                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                 }
                 .Header-main {
                     display: flex;
                 }
                 .Header-container :global(.Header-socialIcons) {
-                    position: absolute;
-                    right: 0;
-                    top: 5rem;
                 }
                 @media ${media.medium} {
                     .Header-container {
                         padding-top: 3rem;
+                        align-items: start;
                     }
                     .Header-main {
                         display: block;
@@ -50,16 +51,15 @@ export function Header() {
                         font-size: 1.8rem;
                         padding-bottom: 1rem;
                     }
-                    .Header-socialIcons {
-                        top: 3rem;
+                    .Header-container :global(.Header-socialIcons) {
+                        position: absolute;
+                        right: 0;
+                        margin-top: 0.2rem;
                     }
                 }
                 @media ${media.small} {
                     .Header-container {
                         padding-top: 2rem;
-                    }
-                    .Header-socialIcons {
-                        top: 2rem;
                     }
                 }
                 @media print {
