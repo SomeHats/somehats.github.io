@@ -21,10 +21,7 @@ export default function Document() {
                     property="og:description"
                     content="Hello! I'm Alex. I build digital products and teach people stuff. Sometimes, I do both at the same time."
                 />
-                <meta
-                    property="og:image"
-                    content="https://alex.dytry.ch/assets/profile-3-600.jpg"
-                />
+                <meta property="og:image" content="https://alex.dytry.ch/assets/profile-tmp.jpg" />
 
                 <link rel="shortcut icon" href="/favicon.ico" />
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
