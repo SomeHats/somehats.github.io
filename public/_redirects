@@ -1,1 +1,2 @@
+/toys    /toys/
 /toys/*  https://alex-toys.netlify.app/:splat  200
