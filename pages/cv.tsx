@@ -183,7 +183,7 @@ function CvSummary() {
         <section className="CvSummary">
             <p>
                 I&apos;m a staff product engineer &amp; interaction designer with ~10 years
-                experience building apps, games and tools for the web. I specialize in creative
+                experience building apps, games, and tools for the web. I specialize in creative
                 tools, developer experience, and education. I spent the last few years at Airtable
                 leading work on their{" "}
                 <A href="https://www.airtable.com/developers" showUrlWhenPrinting={false}>
@@ -240,28 +240,33 @@ function CvWorkHistory() {
                     of external contractors.
                 </p>
                 <p>
-                    I designed the extension SDK and DX, and created Airtable&apos;s scripting
-                    environment&mdash;a product that started life as a 1-week prototype, and quickly
-                    grew to one the top priorities for our ecosystem strategy &amp; the company as a
-                    whole as it made the step from &lsquo;no-code&rsquo; to &lsquo;low-code&rsquo;.
-                    I wrote and delivered customer facing training webinars on these tools, and gave
-                    a talk at AWS re:Invent 2020 on our work on these tools.
+                    One of my most significant contributions was Airtable&apos;s scripting
+                    environment. After my initial idea and 1-week prototype proved popular with
+                    users and internal stakeholders, scripting became one of the top priorities for
+                    our developer ecosystem strategy as the company made the step from
+                    &lsquo;no-code&rsquo; to &lsquo;low-code&rsquo;. I wrote and delivered customer
+                    facing training webinars on these tools, and gave a talk at AWS re:Invent 2020
+                    about some of the security considerations for scripting.
                 </p>
                 <p>
-                    After the platform/ecosystem team, I switched over to become one of 3 founding
-                    engineers on newly formed Interface Designer team. ID was the 3rd and final
-                    pillar of Airtable&apos;s product strategy, and the most ambitious product
-                    I&apos;ve ever worked on. I created the layout system and drag &amp; drop layout
-                    builder at the core of the product.
+                    After the platform/ecosystem team, I moved on to become one of 3 founding
+                    engineers on the newly formed Interface Designer team. ID was the most ambitious
+                    project I&apos;ve workded on. We went from nothing to shipping the 3rd and final
+                    pillar of Airtable&apos;s overall product strategy in less than a year. I was
+                    responsible for designing and implementing an intuitive drag and drop layout
+                    builder sitting at the core of the product. The project was an opportunity to
+                    question some of the ways Airtable was building software at the time, and after
+                    launch we rolled out improvements to our tooling and processes to the entire
+                    engineering org.
                 </p>
             </CvItem>
 
             <CvItem
-                name={<>Freelance Product Engineer &amp; Facilitator • Space Dog Ltd</>}
+                name={<>Consultant Product Engineer &amp; Facilitator • Space Dog Ltd</>}
                 date="March 2017 - January 2019"
             >
                 <p>
-                    In my two years freelancing, I worked for a range of clients as a one-person
+                    In my two years consulting, I worked for a range of clients as a one-person
                     digital product design &amp; dev shop. Most clients were smaller non-profit orgs
                     in London without tech experience. I would help develop a rough idea into a
                     fully fledged product concept before iterating towards an MVP through the
@@ -270,7 +275,7 @@ function CvWorkHistory() {
                 <p>
                     I also offered services as an educator and facilitator. For one of my clients,
                     an apprenticeship provider, I designed and delivered an intensive degree-level
-                    software engineering boot camp program. The course has seen candidates go from
+                    software engineering boot-camp program. The course has seen candidates go from
                     absolute beginners to valued members of their software teams at companies like
                     Google, Facebook, and EY.
                 </p>
