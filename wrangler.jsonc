@@ -14,6 +14,7 @@
         "run_worker_first": ["/toys", "/toys/*", "/tentacles", "/tentacles/*"],
     },
     "observability": { "enabled": true },
-    // Uncomment at cutover. Remove the existing alex.dytry.ch DNS record first.
-    // "routes": [{ "pattern": "alex.dytry.ch", "custom_domain": true }],
+    "routes": [{ "pattern": "alex.dytry.ch", "custom_domain": true }],
+    // Keep alex-dytrych.somehats.workers.dev, and preview URLs for branch builds.
+    "workers_dev": true,
 }
