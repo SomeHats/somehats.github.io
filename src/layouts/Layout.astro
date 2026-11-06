@@ -1,0 +1,152 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import SocialIcons from "../components/SocialIcons.astro";
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+const description =
+    "Hello! I'm Alex. I build digital products and teach people stuff. Sometimes, I do both at the same time.";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="theme-color" content="hsl(263.4, 77.2%, 93.2%)" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@somehats" />
+        <meta property="og:url" content="https://alex.dytry.ch" />
+        <meta property="og:title" content="Alex Dytrych • freelance developer/designer/educator" />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://alex.dytry.ch/assets/profile-tmp.jpg" />
+
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Montserrat:400,600&display=block"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <main class="Layout-main">
+            <div class="Layout-bg"></div>
+            <div class="Layout-container">
+                <Header />
+                <div class="Layout-content">
+                    <slot />
+                </div>
+                <footer class="Layout-footer">
+                    <SocialIcons />
+                </footer>
+            </div>
+        </main>
+
+        <script>
+            for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-email]")) {
+                const address = `${link.dataset.email}@${link.dataset.emailDomain}`;
+                link.href = `mailto:${address}`;
+                link.querySelector("[data-email-text]")!.textContent = address;
+                link.closest("[data-email-container]")?.removeAttribute("hidden");
+                link.hidden = false;
+            }
+        </script>
+    </body>
+</html>
+
+<style>
+    .Layout-main {
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        background: var(--bg);
+        color: var(--text);
+    }
+    .Layout-bg {
+        position: absolute;
+        inset: 0;
+        background: white;
+        z-index: 1;
+    }
+    .Layout-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary);
+        z-index: 1;
+    }
+    .Layout-container {
+        position: relative;
+        margin: auto;
+        max-width: 900px;
+        padding: 0 4rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        z-index: 2;
+    }
+    .Layout-content {
+        flex: 1;
+        view-transition-name: page;
+    }
+    .Layout-footer {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+    @media screen and (max-width: 850px) {
+        .Layout-container {
+            padding: 0 2rem;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .Layout-container {
+            padding: 0 1rem;
+        }
+    }
+    @media print {
+        .Layout-bg::before {
+            display: none;
+        }
+        .Layout-container {
+            max-width: 100%;
+            padding: 0 2rem;
+            padding-top: 2rem;
+        }
+        .Layout-footer {
+            display: none;
+        }
+    }
+    @media screen and (min-height: 800px) {
+        .Layout-footer {
+            visibility: hidden;
+        }
+    }
+</style>

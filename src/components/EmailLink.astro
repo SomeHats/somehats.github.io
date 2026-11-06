@@ -1,0 +1,24 @@
+---
+/**
+ * The old site added the email address only in the browser, to keep it out of the
+ * static HTML. This does the same: the link stays hidden until the script in
+ * Layout.astro fills it in.
+ */
+interface Props {
+    class?: string;
+    title?: string;
+}
+
+const { class: className, title } = Astro.props;
+---
+
+<a
+    class:list={["Link", className]}
+    title={title}
+    data-email="alex"
+    data-email-domain="dytry.ch"
+    hidden
+>
+    <slot name="before" />
+    <span data-email-text></span>
+</a>

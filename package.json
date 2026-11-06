@@ -1,32 +1,28 @@
 {
     "name": "dytry.ch",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro build && wrangler dev",
+        "deploy": "pnpm check && astro build && wrangler deploy",
+        "check": "astro sync && tsc --noEmit --runExternalCode && wrangler types worker/worker-configuration.d.ts && tsc -p worker",
+        "types": "wrangler types worker/worker-configuration.d.ts",
+        "format": "prettier --write ."
+    },
+    "packageManager": "pnpm@12.18.0",
+    "engines": {
+        "node": ">=22"
+    },
     "dependencies": {
-        "classnames": "^2.2.6",
-        "next": "^12.3.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-icons": "^2.2.7",
-        "react-transition-group": "^4.4.5"
+        "astro": "^7.4.5"
     },
     "devDependencies": {
-        "@types/node": "18.7.18",
-        "@types/react": "18.0.20",
-        "@types/react-dom": "18.0.6",
-        "@types/react-transition-group": "^4.4.5",
-        "color": "^3.0.0",
-        "eslint": "^8.23.1",
-        "eslint-config-next": "^12.3.1",
-        "typescript": "^4.8.3"
-    },
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build && next export",
-        "start": "next start",
-        "lint": "next lint",
-        "colors": "node ./scripts/colors.js",
-        "types": "tsc --build"
-    },
-    "packageManager": "yarn@3.2.3"
+        "@astrojs/ts-content-mapper": "^0.2.0",
+        "prettier": "^3.9.10",
+        "typescript": "7.1.0-beta",
+        "wrangler": "^4.157.0"
+    }
 }

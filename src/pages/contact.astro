@@ -1,0 +1,37 @@
+---
+import EmailLink from "../components/EmailLink.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact | Alex Dytrych">
+    <article class="Contact">
+        <h3>Say Hi</h3>
+        <ul>
+            <li data-email-container hidden>
+                <EmailLink>
+                    <Fragment slot="before">Email - </Fragment>
+                </EmailLink>
+            </li>
+            <li>
+                <a class="Link" href="https://twitter.com/somehats">
+                    Twitter - @SomeHats
+                </a>
+            </li>
+            <li>
+                <a class="Link" href="https://www.linkedin.com/in/alex-dytrych-5b1aa8a3">
+                    LinkedIn (lol)
+                </a>
+            </li>
+        </ul>
+
+        <p>
+            I'm based in London, England. If you're in town, let's get coffee{" "}
+            <span role="img" aria-label="coffee">
+                ☕️
+            </span>{" "}
+            <span role="img" aria-label="unicorn">
+                🦄
+            </span>
+        </p>
+    </article>
+</Layout>

@@ -1,0 +1,171 @@
+:root {
+    /* The old scripts/colors.js made these from #8E54E9, #333333 and #EEEEEE. */
+    --bg: rgb(255, 255, 255);
+    --text: rgb(51, 51, 51);
+    --primary: rgb(142, 84, 233);
+    --primary-lightest: hsl(263.4, 77.2%, 93.2%);
+    --primary-dark: rgb(124, 77, 197);
+
+    --font-heading: "Libre Baskerville", serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+/*
+ * Media queries cannot use custom properties. These are the old breakpoints:
+ *   medium:      max-width 850px
+ *   smallMedium: max-width 600px
+ *   small:       max-width 450px
+ */
+
+html,
+body {
+    font-size: 18px;
+}
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.7;
+    background: var(--primary);
+    color: var(--text);
+}
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+[hidden] {
+    display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media print {
+    html {
+        font-size: 12px;
+    }
+    body {
+        background: white;
+    }
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+h3 {
+    font-size: 1.6rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+h5 {
+    font-size: 1.2rem;
+}
+h6 {
+    font-size: 1rem;
+}
+
+/* Inline links */
+
+.Link {
+    color: var(--primary-dark);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    text-shadow:
+        0.05em 0.04em 0 var(--bg),
+        -0.05em 0.04em 0 var(--bg),
+        0.05em -0.04em 0 var(--bg),
+        -0.05em -0.04em 0 var(--bg);
+}
+.Link::before {
+    content: "";
+    position: absolute;
+    background: var(--primary-dark);
+    height: 0.08em;
+    width: 100%;
+    left: 0;
+    bottom: 0.35em;
+    border-radius: 0.16em / 0.08em;
+    opacity: 0.6;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition:
+        opacity 0.2s 0.04s linear,
+        transform 0.15s 0.04s ease-in-out,
+        transform-origin 0.05s linear;
+}
+.Link:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+@media print {
+    .Link:not(.Link--noPrintUrl)::after {
+        content: " (" attr(href) ")";
+    }
+    .Link--noPrintUrl {
+        color: inherit;
+    }
+}
+
+/* Page transitions between pages on this site. */
+
+@view-transition {
+    navigation: auto;
+}
+::view-transition-group(root) {
+    animation: none;
+}
+::view-transition-old(page) {
+    animation: page-exit 250ms ease-in both;
+    transform-origin: center 20vh;
+}
+::view-transition-new(page) {
+    animation: page-enter 250ms 100ms ease-out both;
+    transform-origin: center 20vh;
+}
+@keyframes page-exit {
+    to {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(page),
+    ::view-transition-new(page) {
+        animation: none;
+    }
+}

@@ -1,0 +1,69 @@
+---
+import NavLink from "./NavLink.astro";
+import SocialIcons from "./SocialIcons.astro";
+---
+
+<header class="Header-container">
+    <div class="Header-main">
+        <NavLink href="/">Alex Dytrych</NavLink>
+
+        <nav>
+            <span class="NavDivider">•</span>
+            <NavLink href="/cv">CV</NavLink>
+            <span class="NavDivider">•</span>
+            <NavLink href="/toys/">Toys</NavLink>
+            <span class="NavDivider">•</span>
+            <NavLink href="/contact">Contact</NavLink>
+        </nav>
+    </div>
+
+    <SocialIcons class="Header-socialIcons" />
+</header>
+
+<style>
+    .Header-container {
+        position: relative;
+        padding-bottom: 2rem;
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .Header-main {
+        display: flex;
+    }
+    .NavDivider {
+        font-family: var(--font-heading);
+        color: var(--text);
+        font-size: 1.5rem;
+        margin: 0 1rem;
+        opacity: 0.6;
+    }
+    @media screen and (max-width: 850px) {
+        .Header-container {
+            padding-top: 3rem;
+            align-items: start;
+        }
+        .Header-main {
+            display: block;
+        }
+        .NavDivider:first-child {
+            display: none;
+        }
+        .Header-container :global(.Header-socialIcons) {
+            position: absolute;
+            right: 0;
+            margin-top: 0.2rem;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .Header-container {
+            padding-top: 2rem;
+        }
+    }
+    @media print {
+        .Header-container {
+            display: none;
+        }
+    }
+</style>

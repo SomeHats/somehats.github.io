@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import profile from "../assets/profile.jpg";
+---
+
+<Layout title="Alex Dytrych">
+    <article class="Home">
+        <h1 class="Home-heading">Hello! I'm Alex.</h1>
+        <div class="Home-content">
+            <section class="Home-lead">
+                <div class="Home-tagline">
+                    <h4>I build digital products and teach people stuff.</h4>
+                    <h4>Sometimes, I do both at the same time.</h4>
+                </div>
+                <figure class="Home-profilePic">
+                    <Image src={profile} alt="A photo of me!" class="Home-profileImg" />
+                    <figcaption class="Home-profilePicCaption">
+                        This is what I look like. I was on a hike where I made friends with a bee.
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="Home-bio">
+                <p>
+                    I'm a product engineer &amp; interaction designer with ~10 years experience
+                    building apps, games and tools for the web. I specialize in creative tools,
+                    developer experience, and education.
+                </p>
+                <p>
+                    I've been teaching &amp; facilitating as long as I've been coding. I've designed
+                    and delivered degree-level software engineering courses, taught business
+                    executives to build their own IoT devices, and introduced 7-year-olds to game
+                    design.
+                </p>
+                <p>
+                    A long time ago, I started{" "}
+                    <a class="Link" href="https://eraseallkittens.com">
+                        Erase All Kittens
+                    </a>
+                    , an award-winning game that teaches children aged 8+ how to code. You should
+                    have a go! Over the last few years, E.A.K. has introduced hundreds of thousands
+                    of children to coding.
+                </p>
+                <p>
+                    You can hire me to help build your cool JavaScript thing!{" "}
+                    <a class="Link" href="/contact">
+                        Get in touch
+                    </a>
+                    ! 🦄
+                </p>
+            </section>
+        </div>
+    </article>
+</Layout>
+
+<style>
+    .Home-content {
+        display: flex;
+    }
+    .Home-heading {
+        padding-top: 2rem;
+    }
+    .Home-lead {
+        width: 33%;
+        margin-right: 4rem;
+        flex: 0 0 auto;
+    }
+    .Home-profilePic {
+        padding-top: 1rem;
+        margin: 0;
+    }
+    .Home-profilePic :global(.Home-profileImg) {
+        max-width: 100%;
+        height: auto;
+    }
+    .Home-profilePicCaption {
+        font-family: var(--font-heading);
+        font-weight: 300;
+        font-style: italic;
+        opacity: 0.6;
+        font-size: 0.7rem;
+        text-align: center;
+        margin: 0 1rem;
+    }
+    .Home-bio {
+        text-align: justify;
+        display: block;
+    }
+    @media screen and (max-width: 500px) {
+        .Home-content {
+            flex-direction: column;
+        }
+        .Home-lead {
+            width: 100% !important;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .Home-heading {
+            padding-top: 0;
+        }
+    }
+    @media screen and (max-width: 850px) {
+        .Home-lead {
+            width: 40%;
+            margin-right: 2rem;
+        }
+    }
+</style>

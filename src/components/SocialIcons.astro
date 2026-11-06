@@ -1,0 +1,38 @@
+---
+import Icon from "./Icon.astro";
+
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+const items = [
+    { href: "https://github.com/somehats", icon: "github", title: "GitHub" },
+    { href: "https://twitter.com/somehats", icon: "twitter", title: "Twitter" },
+] as const;
+---
+
+<nav class:list={["SocialIcons", className]}>
+    {items.map((item) => (
+        <a href={item.href} title={item.title} class="NavItem">
+            <Icon name={item.icon} class="NavItem-icon" />
+        </a>
+    ))}
+</nav>
+
+<style>
+    .SocialIcons {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .NavItem {
+        color: var(--primary);
+    }
+    .NavItem:not(:first-child) {
+        margin-left: 1rem;
+    }
+    .NavItem :global(.NavItem-icon) {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+</style>
