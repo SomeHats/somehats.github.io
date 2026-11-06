@@ -16,3 +16,9 @@ pnpm deploy    # check, build and deploy with wrangler
 [tentacles](https://github.com/SomeHats/tentacles) repos. Each deploys its own Worker on a route
 (`alex.dytry.ch/toys/*`, `alex.dytry.ch/tentacles/*`), and routes run before this site's custom
 domain. `public/_redirects` adds the trailing slash to `/toys` and `/tentacles`.
+
+## Licences
+
+The site icon is the "fallen leaf" emoji from
+[Noto Emoji](https://github.com/googlefonts/noto-emoji), recoloured. It is under the Apache License
+2.0: see `LICENSES/Apache-2.0.txt` and the notice in `src/assets/icons/fallen-leaf.svg`.

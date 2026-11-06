@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import CvItem from "../components/CvItem.astro";
 import EmailLink from "../components/EmailLink.astro";
 import Icon from "../components/Icon.astro";
@@ -27,7 +27,15 @@ const contacts = [
                 </p>
             </section>
             <section class="CvHeader-imageSection">
-                <Image src={profile} alt="" class="CvHeader-profilePicture" />
+                {/* Not `priority`: the CV hides this image on narrow screens, where an eager image would still download. */}
+                <Picture
+                    src={profile}
+                    alt=""
+                    class="CvHeader-profilePicture"
+                    formats={["avif", "webp"]}
+                    widths={[180, 360, 540]}
+                    sizes="180px"
+                />
             </section>
             <section class="CvHeader-contactSection">
                 <ul class="CvContact">
@@ -233,12 +241,12 @@ const contacts = [
                 of Penguin Random House.
             </CvItem>
 
-            <!--
+            {/*
             Hidden talks from the old site:
             - Talk • Intro to GraphQL (August 2017): http://bit.ly/intro-graphql
             - Talk • Teaching Tech (July 2017): http://bit.ly/teaching-tech
             - Talk • Error Handling in GraphQL (January 2017): http://bit.ly/graphql-error-handling
-            -->
+            */}
         </section>
     </article>
 </Layout>
