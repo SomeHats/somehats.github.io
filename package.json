@@ -8,8 +8,7 @@
         "build": "astro build",
         "preview": "astro build && wrangler dev",
         "deploy": "pnpm check && astro build && wrangler deploy",
-        "check": "astro sync && tsc --noEmit --runExternalCode && wrangler types worker/worker-configuration.d.ts && tsc -p worker",
-        "types": "wrangler types worker/worker-configuration.d.ts",
+        "check": "astro sync && tsc --noEmit --runExternalCode",
         "format": "prettier --write ."
     },
     "packageManager": "pnpm@12.18.0",

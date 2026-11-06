@@ -4,14 +4,15 @@ Static [Astro](https://astro.build) site, served by a Cloudflare Worker with sta
 
 ```sh
 pnpm install
-pnpm dev       # Astro dev server (no /toys or /tentacles proxy)
-pnpm preview   # build, then run the full Worker locally with wrangler
-pnpm check     # type-check the Worker
-pnpm deploy    # build and deploy with wrangler
+pnpm dev       # Astro dev server
+pnpm preview   # build, then serve the built site locally with wrangler
+pnpm check     # type-check, including .astro files
+pnpm deploy    # check, build and deploy with wrangler
 ```
 
 ## Other repos on this domain
 
-`/toys/*` and `/tentacles/*` come from other repos. `worker/index.ts` proxies them to their Netlify
-deployments. All other paths are static files from `dist/`, and the Worker does not run for them
-(see `run_worker_first` in `wrangler.jsonc`).
+`/toys/*` and `/tentacles/*` come from the [toys](https://github.com/SomeHats/toys) and
+[tentacles](https://github.com/SomeHats/tentacles) repos. Each deploys its own Worker on a route
+(`alex.dytry.ch/toys/*`, `alex.dytry.ch/tentacles/*`), and routes run before this site's custom
+domain. `public/_redirects` adds the trailing slash to `/toys` and `/tentacles`.

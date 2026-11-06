@@ -1,0 +1,4 @@
+# /toys/* and /tentacles/* are served by their own Workers, on routes that run
+# before this one. Those routes do not match the paths with no trailing slash.
+/toys /toys/ 301
+/tentacles /tentacles/ 301

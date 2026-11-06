@@ -1,7 +1,7 @@
 {
     "extends": "astro/tsconfigs/strict",
     "include": [".astro/types.d.ts", "**/*"],
-    "exclude": ["dist", "worker"],
+    "exclude": ["dist"],
     // Lets tsc read .astro files. Needs TypeScript 7.1+ and `tsc --runExternalCode`.
     "contentMappers": [{ "package": "@astrojs/ts-content-mapper", "extensions": [".astro"] }]
 }
