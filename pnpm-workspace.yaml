@@ -3,6 +3,6 @@ minimumReleaseAge: 1440
 
 # Packages that may run install scripts.
 allowBuilds:
-  esbuild: true
-  sharp: true
-  workerd: true
+    esbuild: true
+    sharp: true
+    workerd: true
