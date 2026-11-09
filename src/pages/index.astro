@@ -6,17 +6,14 @@ import profile from "../assets/profile.jpg";
 
 <Layout title="Alex Dytrych">
     <article class="Home">
-        <h1 class="Home-heading">Hello! I'm Alex.</h1>
+        <h1 class="Home-heading">Hello! I’m Alex.</h1>
         <div class="Home-content">
             <section class="Home-lead">
-                <div class="Home-tagline">
-                    <h4>I build digital products and teach people stuff.</h4>
-                    <h4>Sometimes, I do both at the same time.</h4>
-                </div>
+                <h2 class="Home-tagline">I make things for people who make things.</h2>
                 <figure class="Home-profilePic">
                     <Picture
                         src={profile}
-                        alt="A photo of me!"
+                        alt="A person in a purple cap, with mountains in the distance"
                         class="Home-profileImg"
                         formats={["avif", "webp"]}
                         widths={[300, 450, 600, 900]}
@@ -24,37 +21,83 @@ import profile from "../assets/profile.jpg";
                         priority
                     />
                     <figcaption class="Home-profilePicCaption">
-                        This is what I look like. I was on a hike where I made friends with a bee.
+                        In my natural habitat, up some mountain.
                     </figcaption>
                 </figure>
             </section>
             <section class="Home-bio">
                 <p>
-                    I'm a product engineer &amp; interaction designer with ~10 years experience
-                    building apps, games and tools for the web. I specialize in creative tools,
-                    developer experience, and education.
+                    I’m a product engineer with over 12 years of experience building creative tools,
+                    apps, and games for the web. Good tools (and the skills to go with them) feel
+                    like superpowers. Giving people that feeling is what drives my work.
                 </p>
                 <p>
-                    I've been teaching &amp; facilitating as long as I've been coding. I've designed
-                    and delivered degree-level software engineering courses, taught business
-                    executives to build their own IoT devices, and introduced 7-year-olds to game
-                    design.
+                    At previous employers like{" "}
+                    <a class="Link" href="https://tldraw.dev">
+                        tldraw
+                    </a>{" "}
+                    and{" "}
+                    <a class="Link" href="https://airtable.com">
+                        Airtable
+                    </a>
+                    , I’ve worked on everything from{" "}
+                    <a class="Link" href="https://x.com/tldraw/status/1747625230036529643">
+                        AI
+                    </a>{" "}
+                    <a class="Link" href="https://computer.tldraw.com/">
+                        prototypes
+                    </a>
+                    ,{" "}
+                    <a class="Link" href="https://x.com/SomeHats/status/1656605608844435456">
+                        canvas
+                    </a>{" "}
+                    <a class="Link" href="https://x.com/SomeHats/status/1896986654923219093">
+                        interactions
+                    </a>
+                    , and drag-and-drop{" "}
+                    <a class="Link" href="https://www.airtable.com/platform/interface-designer">
+                        UI builders
+                    </a>{" "}
+                    to{" "}
+                    <a class="Link" href="https://tldraw.dev/quick-start">
+                        developer SDKs
+                    </a>
+                    ,{" "}
+                    <a
+                        class="Link"
+                        href="https://medium.com/airtable-blog/creating-a-scripting-environment-for-airtable-that-anyone-can-use-21a43e5de841"
+                    >
+                        scripting
+                    </a>{" "}
+                    <a class="Link" href="https://airtable.com/developers/scripting">
+                        environments
+                    </a>
+                    , and{" "}
+                    <a class="Link" href="https://tldraw.dev/docs/sync">
+                        sync engines
+                    </a>
+                    .
                 </p>
                 <p>
-                    A long time ago, I started{" "}
+                    A long time ago, I founded{" "}
                     <a class="Link" href="https://eraseallkittens.com">
                         Erase All Kittens
                     </a>
-                    , an award-winning game that teaches children aged 8+ how to code. You should
-                    have a go! Over the last few years, E.A.K. has introduced hundreds of thousands
-                    of children to coding.
+                    , an award-winning game that has introduced hundreds of thousands of children
+                    aged 8+ to coding. You should have a go!
                 </p>
                 <p>
-                    You can hire me to help build your cool JavaScript thing!{" "}
+                    As a teacher &amp; facilitator, I’ve designed degree-level software engineering
+                    courses, taught business executives to build IoT devices, and introduced
+                    7-year-olds to game design.
+                </p>
+                <p>
+                    Hire me to help build your cool internet thing. I like figuring out who it’s
+                    for, what it should be, how it feels, the plumbing inside, and everything else.{" "}
                     <a class="Link" href="/contact">
                         Get in touch
                     </a>
-                    ! 🦄
+                    !
                 </p>
             </section>
         </div>
@@ -68,9 +111,12 @@ import profile from "../assets/profile.jpg";
     .Home-heading {
         padding-top: 2rem;
     }
+    .Home-tagline {
+        font-size: 1.3rem;
+    }
     .Home-lead {
         width: 33%;
-        margin-right: 4rem;
+        margin-right: 3rem;
         flex: 0 0 auto;
     }
     .Home-profilePic {
@@ -100,6 +146,7 @@ import profile from "../assets/profile.jpg";
         }
         .Home-lead {
             width: 100% !important;
+            margin-bottom: 1rem;
         }
     }
     @media screen and (max-width: 600px) {

@@ -28,6 +28,7 @@ body {
     line-height: 1.7;
     background: var(--primary);
     color: var(--text);
+    text-wrap: pretty;
 }
 html,
 body {
