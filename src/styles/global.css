@@ -57,6 +57,9 @@ p {
     body {
         background: white;
     }
+    @page {
+        margin: 1.7cm 1.5cm;
+    }
 }
 
 /* Headings */
@@ -128,9 +131,9 @@ h6 {
     transform-origin: left;
 }
 @media print {
-    .Link:not(.Link--noPrintUrl)::after {
+    /*.Link:not(.Link--noPrintUrl)::after {
         content: " (" attr(href) ")";
-    }
+    }*/
     .Link--noPrintUrl {
         color: inherit;
     }
@@ -169,4 +172,8 @@ h6 {
     ::view-transition-new(page) {
         animation: none;
     }
+}
+
+li {
+    margin-bottom: 0.5em;
 }

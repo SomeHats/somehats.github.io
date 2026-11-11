@@ -9,7 +9,7 @@ import profile from "../assets/profile.jpg";
 const contacts = [
     { href: "https://alex.dytry.ch", icon: "web", title: "Website", text: "alex.dytry.ch" },
     { href: "https://github.com/somehats", icon: "github", title: "GitHub", text: "SomeHats" },
-    { href: "https://twitter.com/somehats", icon: "twitter", title: "Twitter", text: "@SomeHats" },
+    { href: "https://x.com/somehats", icon: "x", title: "X", text: "@SomeHats" },
 ] as const;
 ---
 
@@ -18,15 +18,13 @@ const contacts = [
         <header class="CvHeader">
             <section class="CvHeader-nameSection">
                 <h1>Alex Dytrych</h1>
-                <h4 class="CvHeader-jobTitle">
+                <h2 class="CvHeader-jobTitle">
                     Staff product engineer
                     <br /> Interaction designer
-                </h4>
-                <p class="CvHeader-locationUpdate">
-                    She/her • London, UK / Remote • Updated September 2022
-                </p>
+                </h2>
+                <p class="CvHeader-locationUpdate">She/her • Remote, NZ • Updated November 2026</p>
             </section>
-            <section class="CvHeader-imageSection">
+            <!-- <section class="CvHeader-imageSection">
                 {/* Not `priority`: the CV hides this image on narrow screens, where an eager image would still download. */}
                 <Picture
                     src={profile}
@@ -36,7 +34,7 @@ const contacts = [
                     widths={[180, 360, 540]}
                     sizes="180px"
                 />
-            </section>
+            </section> -->
             <section class="CvHeader-contactSection">
                 <ul class="CvContact">
                     <li class="CvContactItem" data-email-container hidden>
@@ -57,196 +55,176 @@ const contacts = [
 
         <section class="CvSummary">
             <p>
-                I'm a staff product engineer &amp; interaction designer with ~10 years experience
-                building apps, games, and tools for the web. I specialize in creative tools,
-                developer experience, and education. I spent the last few years at Airtable leading
-                work on their{" "}
-                <a class="Link Link--noPrintUrl" href="https://www.airtable.com/developers">
-                    developer platform
-                </a>{" "}
-                and{" "}
-                <a
-                    class="Link Link--noPrintUrl"
-                    href="https://www.airtable.com/product/interface-designer"
-                >
-                    interface designer
-                </a>{" "}
-                products.
+                <strong>I make things for people who make things.</strong>
             </p>
             <p>
-                I spend a lot of time thinking about coding, computational thinking, and how we
-                teach it. As a teacher/facilitator, I've designed &amp; delivered degree-level
-                software engineering courses, taught business executives to build their own IoT
-                devices, and introduced 7-year-olds to game design. I'm also the creator of{" "}
-                <a class="Link" href="https://eraseallkittens.com">
-                    Erase All Kittens
-                </a>
-                , an award-winning game that teaches children aged 8+ to code.
+                I'm a staff product engineer with 13 years of experience building creative tools and
+                developer platforms at companies like tldraw and Airtable. I work across the whole
+                product, from who it's for and what it should be, to how it feels and the plumbing
+                inside. Good tools feel like superpowers. Giving people that feeling is what drives
+                my work.
             </p>
         </section>
 
         <section class="CvSection">
             <h3>Work History</h3>
 
+            <CvItem date="January 2023 - October 2025">
+                <Fragment slot="name">
+                    Staff Product Engineer •{" "}
+                    <a class="Link" href="https://tldraw.dev">
+                        tldraw
+                    </a>
+                </Fragment>
+                <p>
+                    tldraw makes an infinite-canvas SDK used by teams like Autodesk, ClickUp, and
+                    Mobbin. I joined as the fifth hire and owned work across the canvas, SDK,
+                    releases, support, and product.
+                </p>
+                <ul>
+                    <li>
+                        Point person for SDK design. Designed APIs every tldraw app builds on,
+                        including shape relationships, custom styles, snapping, undo/redo, and image
+                        exports. Built canvas features alongside them, such as elbow arrows and the
+                        highlighter.
+                    </li>
+                    <li>
+                        Ran the SDK's regular releases, including 4.0, and wrote most of the release
+                        notes. Stayed in constant contact with customers on Discord and GitHub to
+                        get them unblocked and inform what we needed to build in the SDK next.
+                    </li>
+                    <li>
+                        Led our most-requested feature, multiplayer sync, from internal code to
+                        product. I defined what the product should be, designed the public API and
+                        extension points, and shipped it with hosting templates and docs. Customers
+                        used it to replace in-house sync and ship new multiplayer features.
+                    </li>
+                    <li>
+                        Built early AI-on-canvas experiments, from prototypes (agents drawing
+                        directly on the canvas in 2023) to public launches such as tldraw computer,
+                        teach and draw fast.
+                    </li>
+                    <li>
+                        Ran the starter kits initiative to get people building on the SDK faster: I
+                        built npm create tldraw, the most-requested starter kits (workflows, chat,
+                        multiplayer), and set up the process for other team members to contribute
+                        kits easily.
+                    </li>
+                    <li>
+                        Managed external contractors, and stepped in to get a partner project with
+                        an external agency and major cloud provider back on track.
+                    </li>
+                </ul>
+            </CvItem>
+
             <CvItem date="January 2019 - July 2022">
                 <Fragment slot="name">
                     Staff Product Engineer •{" "}
-                    <a class="Link" href="http://airtable.com">
+                    <a class="Link" href="https://airtable.com">
                         Airtable
                     </a>
                 </Fragment>
                 <p>
-                    In my time at Airtable my role grew and changed with the company as it scaled
-                    from 70 to over 1,000 people. As tech lead on the platform/ecosystem team, I was
-                    responsible for developing our ecosystem strategy, leading the team to ship our
-                    3rd party extension tools &amp; marketplace, and coordinating work with a group
-                    of external contractors.
+                    My role grew and changed with the company as it scaled from 70 to over 1,000
+                    people.
                 </p>
+                <ul>
+                    <li>
+                        Tech lead on the platform and ecosystem team. I developed our ecosystem
+                        strategy, led the team to ship our third-party extension tools and
+                        marketplace, and coordinated a group of external contractors.
+                    </li>
+                    <li>
+                        Created Airtable's scripting environment. My initial idea and one-week
+                        prototype proved popular with users and internal stakeholders, and scripting
+                        became a key priority as the company stepped from no-code to low-code.{" "}
+                        <a class="Link" href="https://alex.dytry.ch/creating-scripting">
+                            Read more
+                        </a>
+                        .
+                    </li>
+                    <li>
+                        Delivered customer training webinars on our developer tools, and spoke at
+                        AWS re:Invent 2020 about how we run untrusted scripts safely.
+                    </li>
+                    <li>
+                        One of three founding engineers on Interface Designer, a major 0→1
+                        initiative to build the third pillar of Airtable's product strategy after
+                        data and automations. I designed and built the drag-and-drop layout builder
+                        at the core of the product.
+                    </li>
+                    <li>
+                        After the launch of interface designer, we rolled out a number of tooling
+                        and process improvements from the project to the whole engineering org.
+                    </li>
+                </ul>
+            </CvItem>
+
+            <CvItem date="October 2025 - Present">
+                <Fragment slot="name">Sabbatical and freelance</Fragment>
                 <p>
-                    One of my most significant contributions was Airtable's scripting environment.
-                    After my initial idea and 1-week prototype proved popular with users and
-                    internal stakeholders, scripting became one of the top priorities for our
-                    developer ecosystem strategy as the company made the step from
-                    &lsquo;no-code&rsquo; to &lsquo;low-code&rsquo;. I wrote and delivered customer
-                    facing training webinars on these tools, and gave a talk at AWS re:Invent 2020
-                    about some of the security considerations for scripting.
-                </p>
-                <p>
-                    After the platform/ecosystem team, I moved on to become one of 3 founding
-                    engineers on the newly formed Interface Designer team. ID was the most ambitious
-                    project I've workded on. We went from nothing to shipping the 3rd and final
-                    pillar of Airtable's overall product strategy in less than a year. I was
-                    responsible for designing and implementing an intuitive drag and drop layout
-                    builder sitting at the core of the product. The project was an opportunity to
-                    question some of the ways Airtable was building software at the time, and after
-                    launch we rolled out improvements to our tooling and processes to the entire
-                    engineering org.
+                    A year in New Zealand's mountains. Part-time R&D for friends' startups on AI
+                    agents, realtime partial sync for SQLite, mobile app prototypes, and building
+                    with agentic coding tools.
                 </p>
             </CvItem>
 
-            <CvItem date="March 2017 - January 2019">
-                <Fragment slot="name">Consultant Product Engineer &amp; Facilitator</Fragment>
-                <p>
-                    In my two years consulting, I worked for a range of clients as a one-person
-                    digital product design &amp; dev shop. Most clients were smaller non-profit orgs
-                    in London without tech experience. I would help develop a rough idea into a
-                    fully fledged product concept before iterating towards an MVP through the
-                    design, implementation, and user testing process.
-                </p>
-                <p>
-                    I also offered services as an educator and facilitator. For one of my clients,
-                    an apprenticeship provider, I designed and delivered an intensive degree-level
-                    software engineering boot-camp program. The course has seen candidates grow from
-                    absolute beginners to valued members of their software teams at companies like
-                    Google, Facebook, and EY.
-                </p>
+            <CvItem>
+                <Fragment slot="name">Earlier</Fragment>
+                <ul style="text-align: left">
+                    <li>
+                        <strong>Consultant product engineer and facilitator, 2017–2019</strong>. A
+                        one-person product shop, taking UK non-profits from rough idea to tested
+                        MVP.
+                    </li>
+                    <li>
+                        <strong>
+                            Software Engineer,{" "}
+                            <a class="Link" href="https://www.musicglue.com/">
+                                Music Glue
+                            </a>
+                            , 2016–2017
+                        </strong>
+                        . Rebuilt the e-commerce platform as Node.js services behind a single
+                        GraphQL API, with a fast React storefront.
+                    </li>
+                    <li>
+                        <strong>
+                            Co-founder and CTO,{" "}
+                            <a class="Link" href="https://eraseallkittens.com/">
+                                Erase All Kittens
+                            </a>
+                            , 2013–2016
+                        </strong>
+                        . Created an award-winning game where children edit a level's HTML and CSS
+                        as they play. It is still active and has introduced hundreds of thousands of
+                        children to coding.
+                    </li>
+                    <li>
+                        <strong>
+                            Developer,{" "}
+                            <a class="Link" href="https://decoded.com/">
+                                Decoded
+                            </a>
+                            , 2013–2014
+                        </strong>
+                        . Designed workshops &amp; built the live coding environment used in every
+                        Decoded workshop.
+                    </li>
+                </ul>
             </CvItem>
 
-            <CvItem date="March 2016 - March 2017">
-                <Fragment slot="name">
-                    Software Engineer •{" "}
-                    <a class="Link" href="https://musicglue.com">
-                        Music Glue
-                    </a>
-                </Fragment>
+            <CvItem>
+                <Fragment slot="name">Teaching &amp; facilitating</Fragment>
                 <p>
-                    As a Software Engineer, I helped design, develop, and architect a rewrite of
-                    Music Glue's e-commerce system. We replaced a legacy PHP &amp; MySQL monolith
-                    with a collection of Node.js &amp; PostgreSQL services, exposed to clients via a
-                    single unified GraphQL API. The new system was orders of magnitude faster and
-                    more scalable, with far greater flexibility for our users.
-                </p>
-                <p>
-                    On the client-side, I architected a light-weight, performance-oriented React
-                    shop frontend used on all Music Glue stores. We set a tight performance budget
-                    and were able to keep quite comfortably within it. I also created a new theming
-                    system that significantly increased the customization options available to
-                    customers.
+                    Before I got obsessed with building tools that let people be creative with
+                    computers, my focus was on teaching the skills to do so instead. I've designed
+                    and taught a degree-level software engineering bootcamp whose graduates joined
+                    Google, Meta and EY, taught business executives to build IoT devices, and
+                    introduced 7-year-olds to game design. Co-author of JavaScript Made Easy (DK,
+                    2018).
                 </p>
             </CvItem>
-
-            <CvItem date="September 2013 - February 2016">
-                <Fragment slot="name">
-                    Co-Founder &amp; CTO •{" "}
-                    <a class="Link" href="http://drumrollhq.com">
-                        Drum Roll HQ
-                    </a>
-                </Fragment>
-                <p>
-                    As co-founder &amp; CTO, I was responsible for all the technical work on our
-                    product Erase All Kittens, an award-winning game that teaches children how to
-                    code. I started the project in my bedroom, and by the time I left, we had
-                    introduced hundreds of thousands of children to coding.
-                </p>
-                <p>
-                    I was responsible for the educational content, and much of the mechanics &amp;
-                    puzzle design. I created a custom browser-based game engine to support E.A.K.'s
-                    core mechanic - the ability to edit the HTML and CSS source code to levels in
-                    real time, as you were playing.
-                </p>
-            </CvItem>
-
-            <CvItem date="September 2013 - September 2014">
-                <Fragment slot="name">
-                    Developer •{" "}
-                    <a class="Link" href="http://decoded.com">
-                        Decoded
-                    </a>
-                </Fragment>
-                <p>
-                    At Decoded I worked on a range of internal and external software products.
-                    Notably, I designed and built the live coding environment Decoded used to
-                    deliver all their coding workshops. The web-based editor was designed to have
-                    the lowest possible barrier to entry and a very tight feedback loop to help new
-                    coders understand the effects of their changes.
-                </p>
-            </CvItem>
-        </section>
-
-        <section class="CvSection">
-            <h3>Talks &amp; Publications</h3>
-
-            <CvItem date="December 2020">
-                <Fragment slot="name">Talk • How Airtable safely runs custom user scripts</Fragment>
-                <a class="Link" href="https://bit.ly/reinvent-scripting">
-                    Watch the talk.
-                </a>
-                A talk for AWS re:Invent 2020 about how Airtable securely runs untrusted code on the
-                server as part of scripting and automations. The talk describes the architecture of
-                our script runner and the security considerations that went into it.
-            </CvItem>
-
-            <CvItem date="March 2020">
-                <Fragment slot="name">Blog • Creating a scripting tool anyone can use</Fragment>
-                <a class="Link" href="https://bit.ly/creating-scripting">
-                    Read the post.
-                </a>
-                A detailed breakdown of the design decisions that went into Airtable Scripting. The
-                goal of the project was to build a JavaScript environment that felt like a natural
-                progression from spreadsheet formulas, and this post describes how we got there.
-            </CvItem>
-
-            <CvItem date="February 2018">
-                <Fragment slot="name">
-                    Co-Author &amp; Consultant • JavaScript Made Easy •{" "}
-                    <a class="Link" href="http://dk.com">
-                        DK
-                    </a>
-                </Fragment>
-                <a class="Link" href="https://amzn.to/2mIPmQc">
-                    The book on Amazon.
-                </a>
-                A short exercise book for children aimed 7-11, introducing them to programming in
-                JavaScript with a series of short, fun projects. The book was published by DK, part
-                of Penguin Random House.
-            </CvItem>
-
-            {/*
-            Hidden talks from the old site:
-            - Talk • Intro to GraphQL (August 2017): http://bit.ly/intro-graphql
-            - Talk • Teaching Tech (July 2017): http://bit.ly/teaching-tech
-            - Talk • Error Handling in GraphQL (January 2017): http://bit.ly/graphql-error-handling
-            */}
         </section>
     </article>
 </Layout>
@@ -309,7 +287,7 @@ const contacts = [
     }
 
     .CvSummary {
-        padding-top: 2rem;
+        padding-top: 1.5rem;
         text-align: justify;
     }
     .CvSection {

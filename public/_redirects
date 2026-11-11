@@ -2,3 +2,6 @@
 # before this one. Those routes do not match the paths with no trailing slash.
 /toys /toys/ 301
 /tentacles /tentacles/ 301
+
+# Short links.
+/creating-scripting https://medium.com/airtable-blog/creating-a-scripting-environment-for-airtable-that-anyone-can-use-21a43e5de841 302

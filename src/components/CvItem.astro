@@ -1,6 +1,6 @@
 ---
 interface Props {
-    date: string;
+    date?: string;
 }
 
 const { date } = Astro.props;
@@ -8,10 +8,10 @@ const { date } = Astro.props;
 
 <article class="CvItem">
     <header class="CvItem-head">
-        <h5 class="CvItem-name">
+        <h3 class="CvItem-name">
             <slot name="name" />
-        </h5>
-        <time class="CvItem-date">{date}</time>
+        </h3>
+        {date && <time class="CvItem-date">{date}</time>}
     </header>
     <div class="CvItem-desc">
         <slot />
