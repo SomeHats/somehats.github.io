@@ -40,7 +40,8 @@ const { date } = Astro.props;
         font-weight: 400;
         display: block;
         flex: 0 1 auto;
-        opacity: 0.5;
+        /* Not opacity: in a PDF, it puts the text out of reading order. */
+        color: color-mix(in srgb, var(--text) 50%, var(--bg));
         font-style: italic;
     }
     .CvItem-desc {

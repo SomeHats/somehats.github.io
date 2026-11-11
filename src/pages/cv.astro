@@ -259,7 +259,8 @@ const contacts = [
         font-family: var(--font-heading);
         font-weight: 400;
         font-style: italic;
-        opacity: 0.5;
+        /* Not opacity: in a PDF, it puts the text out of reading order. */
+        color: color-mix(in srgb, var(--text) 50%, var(--bg));
         font-size: 0.8rem;
     }
 

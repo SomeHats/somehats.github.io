@@ -9,6 +9,7 @@
         "preview": "astro build && wrangler dev",
         "deploy": "pnpm check && astro build && wrangler deploy",
         "check": "astro sync && tsc --noEmit --runExternalCode",
+        "cv:pdf": "astro build && node scripts/cv-pdf.mjs",
         "format": "prettier --write ."
     },
     "packageManager": "pnpm@12.18.0",

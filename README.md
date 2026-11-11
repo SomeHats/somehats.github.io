@@ -7,6 +7,7 @@ pnpm install
 pnpm dev       # Astro dev server
 pnpm preview   # build, then serve the built site locally with wrangler
 pnpm check     # type-check, including .astro files
+pnpm cv:pdf    # build, then print /cv to public/cv.pdf with headless Chrome
 pnpm deploy    # check, build and deploy with wrangler
 ```
 

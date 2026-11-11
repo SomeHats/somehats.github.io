@@ -131,6 +131,17 @@ h6 {
     transform-origin: left;
 }
 @media print {
+    /*
+     * In a PDF, each text-shadow is another copy of the text, and a positioned
+     * link is drawn after the rest of the page. Both break text selection.
+     */
+    .Link {
+        position: static;
+        text-shadow: none;
+    }
+    .Link::before {
+        display: none;
+    }
     /*.Link:not(.Link--noPrintUrl)::after {
         content: " (" attr(href) ")";
     }*/
